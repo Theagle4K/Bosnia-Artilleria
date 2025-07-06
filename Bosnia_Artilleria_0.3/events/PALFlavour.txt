@@ -1,0 +1,29 @@
+#Lost Czechia
+country_event = {
+
+	id = 27831
+	trigger = {
+		tag = SWI
+		NOT = {
+		   AUS_625 = { owned_by = SWI }
+		   AUS_626 = { owned_by = SWI }
+		   AUS_627 = { owned_by = SWI }	
+		}
+	}
+	
+	fire_only_once = yes
+    	title = "EVTNAME27831"
+    	desc = "EVTDESC27831"
+    	picture = "napoleon3"
+
+	option = {
+		name = "EVTOPTA27831"
+		SWI = { remove_accepted_culture = czech }
+		AUS_625 = { remove_core = SWI }
+		AUS_626 = { remove_core = SWI }
+		AUS_627 = { remove_core = SWI }	
+		PRU_682 = { remove_core = SWI }	
+		   
+	}
+
+}

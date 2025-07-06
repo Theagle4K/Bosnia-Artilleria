@@ -1,0 +1,64 @@
+#Leaders
+leader = {
+	name="Mack Onsen Lee"
+	date="1812.1.9"
+	type=land
+	personality="implacable"
+	background="cursed_luck" 
+}
+
+army = {
+	name="1st Army"
+	location=60
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=210
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=207
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=208
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=214	
+	}
+	regiment = {
+		name="Cavalry"
+		type=cavalry
+		home=211
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=211
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=260
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=213
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=215
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=217
+	}
+
+}

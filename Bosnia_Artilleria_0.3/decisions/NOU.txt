@@ -1,0 +1,97 @@
+political_decisions = {
+
+    greater_nouvellia = {
+        picture = greater_nou
+        potential = {
+            tag = NOU
+            state_n_government = 1
+            NOT = { has_country_flag = greater_nouvellia_flag }
+        }
+        allow = {
+            war = no
+            is_mobilised = no
+            OR = {
+                is_greater_power = yes
+                ruling_party_ideology = fascist
+                ruling_party_ideology = communist
+            }
+            nationalism_n_imperialism = 1
+            NOT = {
+                in_sphere = UNF
+                in_sphere = MEX
+                in_sphere = ANS
+                in_sphere = VRG
+        }
+            THIS = { all_core = { owned_by = THIS } }
+        }
+        effect = {
+            set_country_flag = greater_nouvellia_flag
+            prestige = 50
+            badboy = 10
+            145 = { add_core = THIS } #Fayetteville
+            TEX_132 = { add_core = THIS } #Texas
+            132 = { state_scope = { change_region_name = "Techase" } } 
+            USA_129 = { add_core = THIS } #Oklahoma
+            USA_148 = { add_core = THIS } #Missouri
+            210 = { 
+                add_core = THIS
+                change_province_name = "Oil-Derrière"
+             } #Wilmington
+            208 = { add_core = THIS } #Raleigh
+            207 = { 
+                add_core = THIS
+                change_province_name = "Verdeville"
+             } #Greenville
+            207 = { state_scope = { change_region_name = "Caroline du Nord" } } 
+            USA_211 = { add_core = THIS } #Virginia
+            211 = { state_scope = { change_region_name = "Virginie l'Est" } } 
+            any_neighbor_country = {
+                limit = {
+                    capital_scope = { continent = north_america }
+                }
+                relation = { who = THIS value = -100 }
+            }
+            ai_will_do = {
+                factor = 1
+                modifier = {
+                    factor = 0
+                    badboy = 15
+                }
+            }
+        }
+    }
+    integrate_afro_americans = {
+        picture = free_slaves
+        potential = {
+            capital_scope = { continent = north_america }
+            NOT = { 
+                tag = ANS
+                AND = {
+                    tag = UNF
+                    NOT = { has_country_flag = former_vrg }
+                }
+                has_country_flag = integrated_afro_americans
+            }
+            any_owned_province = {
+                culture = afro_american
+                is_colonial = no
+            }
+            NOT = {
+                primary_culture = afro_american
+                culture = afro_american
+            }
+        }
+        allow = {
+            nationalism_n_imperialism = 1
+            war = no
+            is_mobilised = no
+            slavery = no_slavery
+        }
+        effect = {
+            prestige = 5
+            add_accepted_culture = afro_american
+            set_country_flag = integrated_afro_americans
+            add_country_modifier = { name = slavery_lifted  duration = 3652  }
+        }
+    }
+}

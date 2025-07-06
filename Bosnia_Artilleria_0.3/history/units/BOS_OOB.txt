@@ -1,0 +1,485 @@
+#Sphere of Influence
+
+BOH = {
+	value = 58
+	influence_value = 2
+	level = 2
+}
+POR = {
+	value = 193
+	influence_value = 0
+	level = 2
+}
+RUS = {
+	value = -97
+	level = 2
+	truce_until = "1840.1.1"
+}
+DON = {
+	value = 200
+	influence_value = 5
+	level = 5
+}
+
+#Leaders
+leader = {
+	name="Aleksandar Subic"
+	date="1802.1.31"
+	type=land
+	personality="coolminded"
+	background="engineer"
+}
+
+leader = {
+	name="Stjepan Tomasevic Babonic"
+	date="1802.2.19"
+	type=land
+	personality="gallant"
+	background="amateur"
+}
+
+leader = {
+	name="Viktor Subic"
+	date="1802.3.8"
+	type=land
+	personality="choleric"
+	background="adventurer"
+}
+
+leader = {
+	name="Shimun Vukovic"
+	date="1802.3.24"
+	type=land
+	personality="polite"
+	background="nationalist"
+}
+
+leader = {
+	name="Jadranko Isakovic"
+	date="1803.1.24"
+	type=land
+	personality="vicious"
+	background="aristocrat"
+}
+
+leader = {
+	name="Aleksandar Kotromanic"
+	date="1805.2.2"
+	type=land
+	personality="persistant"
+	background="cavalry_school"
+}
+
+leader = {
+	name="Meho Kosaca"
+	date="1808.3.14"
+	type=sea
+	personality="stalwart"
+	background="generals_aide"
+}
+
+
+#Armies
+army = {
+	name = "Sarajevski Armija"
+	location = 788
+	regiment = {
+		name="1st Sarajevo Infantry"
+		type=infantry
+		home=2569
+	}
+	regiment = {
+		name="2nd Sarajevo Infantry"
+		type=infantry
+		home=2577
+	}
+	regiment = {
+		name="3rd Sarajevo Infantry"
+		type=infantry
+		home=870
+	}
+	regiment = {
+		name="4th Sarajevo Infantry"
+		type=infantry
+		home=864
+	}
+	regiment = {
+		name="1st Sarajevo Cavalry"
+		type=cavalry
+		home=864
+	}
+	regiment = {
+		name="1st Sarajevo Artillery"
+		type=artillery
+		home=865
+	}
+	regiment = {
+		name="2nd Sarajevo Artillery"
+		type=artillery
+		home=863
+	}
+	regiment = {
+		name="3rd Sarajevo Artillery"
+		type=artillery
+		home=863
+	}
+	regiment = {
+		name="4th Sarajevo Artillery"
+		type=artillery
+		home=783
+	}
+	regiment = {
+		name="1st Mostar Artillery"
+		type=artillery
+		home=788
+	}
+}
+
+army = {
+	name = "Cetinje Armija"
+	location = 794
+	regiment = {
+		name="1st Cetinje Infantry"
+		type=infantry
+		home=2583
+	}
+	regiment = {
+		name="2nd Cetinje Infantry"
+		type=infantry
+		home=2583
+	}
+	regiment = {
+		name="1st Shkoder Infantry"
+		type=infantry
+		home=850
+	}
+	regiment = {
+		name="1st Tirana Infantry"
+		type=infantry
+		home=849
+	}
+	regiment = {
+		name="1st Durres Cavalry"
+		type=cavalry
+		home=851
+	}
+	regiment = {
+		name="1st Pristina Artillery"
+		type=artillery
+		home=802
+	}
+	regiment = {
+		name="1st Prizren Artillery"
+		type=artillery
+		home=803
+	}
+	regiment = {
+		name="1st Skopje Artillery"
+		type=artillery
+		home=806
+	}
+	regiment = {
+		name="1st Leskovac Artillery"
+		type=artillery
+		home=799
+	}
+	regiment = {
+		name="1st Nis Artillery"
+		type=artillery
+		home=798
+	}
+}
+army = {
+	name = "Sofia Armija"
+	location = 783
+	regiment = {
+		name="1st Skopje Infantry"
+		type=infantry
+		home=806
+	}
+	regiment = {
+		name="1st Petrich Infantry"
+		type=infantry
+		home=808
+	}
+	regiment = {
+		name="1st Kavala Infantry"
+		type=infantry
+		home=823
+	}
+	regiment = {
+		name="1st Thesaloniki Infantry"
+		type=infantry
+		home=822
+	}
+	regiment = {
+		name="1st Thesaloniki Cavalry"
+		type=cavalry
+		home=822
+	}
+	regiment = {
+		name="1st Plovdiv Artillery"
+		type=artillery
+		home=815
+	}
+	regiment = {
+		name="1st Stara Zagora Artillery"
+		type=artillery
+		home=816
+	}
+	regiment = {
+		name="1st Tsarigrad Artillery"
+		type=artillery
+		home=860
+	}
+	regiment = {
+		name="1st Kragujevac Artillery"
+		type=artillery
+		home=796
+	}
+	regiment = {
+		name="1st Belgrad Artillery"
+		type=artillery
+		home=794
+	}
+}
+army = {
+	name = "Roma Armija"
+	location = 749
+	regiment = {
+		name="1st Roma Infantry"
+		type=infantry
+		home=749
+	}
+	regiment = {
+		name="2nd Roma Infantry"
+		type=infantry
+		home=749
+	}
+	regiment = {
+		name="3rd Roma Infantry"
+		type=infantry
+		home=749
+	}
+	regiment = {
+		name="4th Roma Infantry"
+		type=infantry
+		home=749
+	}
+	regiment = {
+		name="1st Roma Cavalry"
+		type=cavalry
+		home=749
+	}
+	regiment = {
+		name="1st Gaeta Artillery"
+		type=artillery
+		home=2567
+	}
+}
+army = {
+	name = "Sarajevska Armija"
+	location = 807
+	regiment = {
+		name="1st Sarajevo Infantry"
+		type=infantry
+		home=864
+	}
+	regiment = {
+		name="2nd Sarajevo Infantry"
+		type=infantry
+		home=864
+	}
+	regiment = {
+		name="3rd Sarajevo Infantry"
+		type=infantry
+		home=863
+	}
+	regiment = {
+		name="4th Sarajevo Infantry"
+		type=infantry
+		home=863
+	}
+	regiment = {
+		name="1st Sarajevo Cavalry"
+		type=cavalry
+		home=862
+	}
+	regiment = {
+		name="1st Sarajevo Artillery"
+		type=artillery
+		home=867
+	}
+	regiment = {
+		name="2nd Sarajevo Artillery"
+		type=artillery
+		home=866
+	}
+	regiment = {
+		name="3rd Sarajevo Artillery"
+		type=artillery
+		home=874
+	}
+	regiment = {
+		name="4th Sarajevo Artillery"
+		type=artillery
+		home=873
+	}
+	regiment = {
+		name="1st Mostar Artillery"
+		type=artillery
+		home=895
+	}
+}
+
+army = {
+	name = "Izmirska Armija"
+	location = 858
+	regiment = {
+		name="1st Sarajevo Infantry"
+		type=infantry
+		home=783
+	}
+	regiment = {
+		name="2nd Sarajevo Infantry"
+		type=infantry
+		home=783
+	}
+	regiment = {
+		name="3rd Sarajevo Infantry"
+		type=infantry
+		home=783
+	}
+	regiment = {
+		name="4th Sarajevo Infantry"
+		type=infantry
+		home=783
+	}
+	regiment = {
+		name="1st Sarajevo Cavalry"
+		type=cavalry
+		home=783
+	}
+	regiment = {
+		name="1st Sarajevo Artillery"
+		type=artillery
+		home=783
+	}
+	regiment = {
+		name="2nd Sarajevo Artillery"
+		type=artillery
+		home=783
+	}
+	regiment = {
+		name="3rd Sarajevo Artillery"
+		type=artillery
+		home=783
+	}
+	regiment = {
+		name="4th Sarajevo Artillery"
+		type=artillery
+		home=783
+	}
+	regiment = {
+		name="1st Mostar Artillery"
+		type=artillery
+		home=788
+	}
+}
+
+navy = {
+	name="1st Fleet"
+	location=2763
+	ship = {
+		name="Mitovica"
+		type=manowar
+	}
+	ship = {
+		name="Anatolija"
+		type=manowar
+	}
+	ship = {
+		name="Grcja"
+		type=manowar
+	}
+	ship = {
+		name="Mostar"
+		type=manowar
+	}
+	ship = {
+		name="Srbja"
+		type=manowar
+	}
+	ship = {
+		name="Italija"
+		type=manowar
+	}
+	ship = {
+		name="Hrvatska"
+		type=manowar
+	}
+	ship = {
+		name="Tsar Nikolas"
+		type=manowar
+	}
+	ship = {
+		name="Tsar Mikovic"
+		type=manowar
+	}
+	ship = {
+		name="Madarska"
+		type=manowar
+	}
+	ship = {
+		name="Bulgarska"
+		type=manowar
+	}
+	ship = {
+		name="Varnaska"
+		type=manowar
+	}
+	ship = {
+		name="America ya"
+		type=clipper_transport
+	}
+	ship = {
+		name="Danub"
+		type=clipper_transport
+	}
+	ship = {
+		name="Europa"
+		type=clipper_transport
+	}
+	ship = {
+		name="Selonika"
+		type=clipper_transport
+	}
+	ship = {
+		name="Hela"
+		type=clipper_transport
+	}
+	ship = {
+		name="Kraloviec"
+		type=clipper_transport
+	}
+	ship = {
+		name="Hudson"
+		type=clipper_transport
+	}
+	ship = {
+		name="Novi Jork"
+		type=clipper_transport
+	}
+	ship = {
+		name="Severna-Amerika"
+		type=clipper_transport
+	}
+	ship = {
+		name="Samir"
+		type=clipper_transport
+	}
+	ship = {
+		name="Pangani"
+		type=clipper_transport
+	}
+}

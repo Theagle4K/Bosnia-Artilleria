@@ -1,0 +1,21 @@
+owner=SWI
+controller=SWI
+add_core=SWI
+add_core=HIE
+trade_goods = iron
+life_rating = 34
+state_building={
+	level=1
+	building=machine_parts_factory
+	upgrade=yes
+}
+state_building={
+    level=1
+    building=steel_factory
+    upgrade=yes
+}
+state_building={
+    level=1
+    building=cement_factory
+    upgrade=yes
+}

@@ -1,0 +1,8 @@
+owner=DEN
+controller=DEN
+add_core=HND
+add_core=SIN
+colonial=2
+trade_goods = fruit
+life_rating = 35
+naval_base = 1

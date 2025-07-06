@@ -1,0 +1,9 @@
+owner=BYZ
+controller=BYZ
+add_core=BYZ
+add_core=HIE
+add_core=OCC
+add_core=FRA
+trade_goods = fruit
+life_rating = 32
+naval_base = 1

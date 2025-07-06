@@ -1,0 +1,7 @@
+owner = SCA
+controller = SCA
+add_core = HND
+add_core = MAH
+colonial=2
+trade_goods = fruit
+life_rating = 32

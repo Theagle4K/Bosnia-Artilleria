@@ -1,0 +1,9 @@
+owner=BOS
+controller=BOS
+add_core=BOS
+add_core=GRE
+add_core=TOR
+trade_goods = fruit
+life_rating = 45
+fort = 1
+naval_base = 1

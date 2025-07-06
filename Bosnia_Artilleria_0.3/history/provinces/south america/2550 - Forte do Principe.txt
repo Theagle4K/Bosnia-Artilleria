@@ -1,0 +1,7 @@
+owner = AND
+controller = AND
+add_core = AND
+add_core = BRZ
+trade_goods = tropical_wood
+life_rating = 31
+colonial=2

@@ -1,0 +1,64 @@
+#Leaders
+leader = {
+	name="Henry VI of Neufundland"
+	date="1808.4.16"
+	type=land
+	personality="aggressive"
+	background="engineer"
+}
+
+army = {
+	name="1st Army"
+	location=232
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=220
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=219
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=219
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=226	
+	}
+	regiment = {
+		name="Cavalry"
+		type=cavalry
+		home=223
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=232
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=234
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=235
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=228
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=241
+	}
+
+}

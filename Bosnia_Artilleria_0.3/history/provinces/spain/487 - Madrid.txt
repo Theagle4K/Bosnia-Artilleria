@@ -1,0 +1,18 @@
+owner=POR
+controller=POR
+add_core=POR
+add_core=SPA
+trade_goods = cattle
+life_rating = 40
+state_building=
+{
+	level=2
+	building = steel_factory
+	upgrade = yes
+}
+state_building=
+{
+	level=2
+	building = machine_parts_factory
+	upgrade = yes
+}

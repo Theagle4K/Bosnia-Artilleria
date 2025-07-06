@@ -1,0 +1,22 @@
+owner=PLC
+controller=PLC
+add_core=PLC
+add_core=PRU
+add_core=SLC
+add_core=GER
+add_core=HIE
+trade_goods = iron
+life_rating = 35
+fort = 1
+state_building=
+{
+	level=1
+	building = machine_parts_factory
+	upgrade = yes
+}
+state_building=
+{
+	level=1
+	building = steel_factory
+	upgrade = yes
+}

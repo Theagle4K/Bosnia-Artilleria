@@ -1,0 +1,6 @@
+owner=AGO
+controller=AGO
+add_core=AGO
+trade_goods = fish
+life_rating = 35
+

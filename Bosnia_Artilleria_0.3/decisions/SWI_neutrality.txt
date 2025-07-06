@@ -1,0 +1,284 @@
+political_decisions = {
+#    declare_neutrality = {
+#        potential = {
+#            tag = AUS
+#            NOT = {
+#                has_country_modifier = neutrality_modifier
+#                has_country_flag = abandoned_neutrality
+#                has_country_flag = neutrality_violated
+#            }
+#        }
+#        allow = {
+#            NOT = { any_owned_province = { is_core = THIS } }
+#            NOT = { badboy = 1 }
+#            #NOT = { is_vassal = yes }
+#        }
+#
+#        effect = {
+#            add_country_modifier = {
+#                name = neutrality_modifier
+#                duration = -1
+#            }
+#        }
+#
+#        ai_will_do = {
+#            factor = 1
+#            modifier = { factor = 0 government = fascist_dictatorship }
+#            modifier = { factor = 0 government = proletarian_dictatorship }
+#        }
+#    }
+
+
+    abandon_neutrality = {
+        picture = declare_neutrality
+        potential = {
+            has_country_modifier = neutrality_modifier
+            NOT = { has_country_flag = abandoned_neutrality }
+        }
+
+        allow = {
+            prestige = 20
+        }
+
+        effect = {
+            set_country_flag = abandoned_neutrality
+            prestige = -20
+            badboy = 5
+            remove_country_modifier = neutrality_modifier
+        }
+
+        ai_will_do = {
+            factor = 1
+            modifier = {
+                factor = 0
+                NOT = {
+                    OR = {
+                        badboy = 0.75
+                        government = fascist_dictatorship
+                        government = proletarian_dictatorship
+                    }
+                }
+            }
+        }
+    }
+
+    violate_neutrality = {
+        picture = declare_neutrality
+        alert = no
+        potential = {
+            ai = no
+            AUS = {
+                neighbour = THIS
+                has_country_modifier = neutrality_modifier
+            }
+        }
+
+        allow = {
+            AUS = { has_country_modifier = neutrality_modifier }
+            war_policy = jingoism
+            NOT = {
+                is_sphere_leader_of = AUS
+                truce_with = AUS
+                alliance_with = AUS
+            }
+        }
+
+        effect = {
+            badboy = 25
+            AUS = {
+                set_country_flag = neutrality_violated
+                remove_country_modifier = neutrality_modifier
+                relation = { who = THIS value = -200 }
+            }
+            diplomatic_influence = { who = AUS value = -200 }
+            any_country = {
+                limit = {
+                    OR = {
+                        alliance_with = AUS
+                        is_sphere_leader_of = AUS
+                        relation = { who = AUS value = 50 }
+                    }
+                }
+                leave_alliance = THIS
+                relation = { who = THIS value = -200 }
+                casus_belli = {
+                    target = THIS
+                    type = cut_down_to_size
+                    months = 60
+                }
+            }
+        }
+    }
+
+    enforce_neutrality = {
+        picture = declare_neutrality
+        potential = {
+            has_country_modifier = neutrality_modifier
+            ai = yes
+        }
+
+        allow = {
+            OR = {
+                any_greater_power = { military_access = THIS }
+                any_neighbor_country = { NOT = { vassal_of = THIS } military_access = THIS }
+                sphere_owner = { military_access = THIS }
+                AND = {
+                    num_of_allies = 1
+                    NOT = { NEH = { alliance_with = THIS } }
+                }
+                AND = {
+                    num_of_allies = 2
+                    NEH = { exists = yes alliance_with = THIS }
+                }
+                war = yes
+            }
+        }
+
+        effect = {
+            any_country = {
+                limit = {
+                    exists = yes
+                    NOT = { vassal_of = THIS }
+                    OR = {
+                        military_access = THIS
+                        alliance_with = THIS
+                    }
+                }
+                relation = { who = THIS value = -125 }
+            }
+            any_country = {
+                limit = {
+                    exists = yes
+                    alliance_with = THIS
+                    NOT = { vassal_of = THIS }
+                }
+                leave_alliance = THIS
+            }
+            any_country = {
+                limit = {
+                    exists = yes
+                    war_with = THIS
+                }
+                end_war = THIS
+            }
+            any_country = {
+                limit = {
+                    exists = yes
+                    military_access = THIS
+                    NOT = { vassal_of = THIS }
+                }
+                end_military_access = THIS
+            }
+            any_country = {
+                limit = {
+                    exists = yes
+                    NOT = {
+                        tag = AUS
+                        tag = NEH
+                    }
+                    any_pop = {
+                        type = soldiers
+                        has_pop_culture = austrian
+                    }
+                }
+                any_pop = {
+                    limit = {
+                        type = soldiers
+                        has_pop_culture = austrian
+                    }
+                    militancy = -7
+                    consciousness = -7
+                }
+            }
+        }
+    }
+
+    enforce_neutrality_on_player = {
+        picture = declare_neutrality
+        potential = {
+            ai = yes
+            exists = yes
+            AUS = {
+                has_country_modifier = neutrality_modifier
+                ai = no
+                OR = {
+                    any_greater_power = { military_access = AUS }
+                    any_neighbor_country = { NOT = { vassal_of = AUS } military_access = AUS }
+                    sphere_owner = { military_access = AUS }
+                    AND = {
+                        num_of_allies = 1
+                        NOT = { NEH = { alliance_with = AUS } }
+                    }
+                    AND = {
+                        num_of_allies = 2
+                        NEH = { exists = yes alliance_with = AUS }
+                    }
+                    war = yes
+                }
+            }
+        }
+
+        allow = {
+
+        }
+
+        effect = {
+            any_country = {
+                limit = {
+                    exists = yes
+                    NOT = { vassal_of = AUS }
+                    OR = {
+                        military_access = AUS
+                        alliance_with = AUS
+                    }
+                }
+                relation = { who = AUS value = -125 }
+            }
+            any_country = {
+                limit = {
+                    exists = yes
+                    alliance_with = AUS
+                    NOT = { vassal_of = AUS }
+                }
+                leave_alliance = AUS
+            }
+            any_country = {
+                limit = {
+                    exists = yes
+                    war_with = AUS
+                }
+                end_war = AUS
+            }
+            any_country = {
+                limit = {
+                    exists = yes
+                    military_access = AUS
+                    NOT = { vassal_of = AUS }
+                }
+                end_military_access = AUS
+            }
+            any_country = {
+                limit = {
+                    exists = yes
+                    NOT = {
+                        tag = AUS
+                        tag = NEH
+                    }
+                    any_pop = {
+                        type = soldiers
+                        has_pop_culture = austrian
+                    }
+                }
+                any_pop = {
+                    limit = {
+                        type = soldiers
+                        has_pop_culture = AUS
+                    }
+                    militancy = -7
+                    consciousness = -7
+                }
+            }
+        }
+
+    }
+}

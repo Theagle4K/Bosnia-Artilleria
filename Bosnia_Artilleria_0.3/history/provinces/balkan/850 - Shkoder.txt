@@ -1,0 +1,7 @@
+owner=BOS
+controller=BOS
+add_core=ALB
+add_core=BOS
+trade_goods = grain
+life_rating = 40
+naval_base = 1

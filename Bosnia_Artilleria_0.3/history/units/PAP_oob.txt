@@ -1,0 +1,91 @@
+#Sphere of Influence
+
+BOH = {
+	value = 186
+	influence_value = 34
+	level = 2
+}
+BOS = {
+	value = 50
+	level = 3
+}
+BRE = {
+	value = 192
+	influence_value = 35
+	level = 2
+}
+FRA = {
+	value = 126
+	influence_value = 19
+	level = 2
+}
+PLC = {
+	value = 214
+	influence_value = 41
+	level = 2
+}
+POR = {
+	value = 220
+	influence_value = 42
+	level = 2
+}
+WES = {
+	value = 79
+	influence_value = 7
+	level = 3
+}
+
+#Leaders
+leader = {
+	name="Leo Panaro"
+	date="1803.10.10"
+	type=land
+	personality="inspiring"
+	background="aristocrat"
+}
+
+leader = {
+	name="Clemens XV"
+	date="1818.9.7"
+	type=land
+	personality="resolute"
+	background="school_of_defense"
+}
+
+
+#Armies
+army = {
+	name="Armata di Niederlausitz"
+	location=687
+	regiment = {
+		name="1st Cottbus Infantry"
+		type=infantry
+		home=552
+	}
+	regiment = {
+		name="1st Cottbus Cavalry"
+		type=cavalry
+		home=552
+	}
+	regiment = {
+		name="1st Cottbus Artillery"
+		type=artillery
+		home=552
+	}
+	regiment = {
+		name="2nd Cottbus Infantry"
+		type=infantry
+		home=552
+	}
+	regiment = {
+		name="2nd Cottbus Cavalry"
+		type=cavalry
+		home=552
+	}
+	regiment = {
+		name="2nd Cottbus Artillery"
+		type=artillery
+		home=552
+	}
+}
+

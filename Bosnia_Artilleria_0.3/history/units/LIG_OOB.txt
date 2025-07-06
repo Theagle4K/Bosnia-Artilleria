@@ -1,0 +1,157 @@
+#Sphere of Influence
+FRA = {
+	value = -70
+	level = 2
+}
+WES = {
+	value = 20
+	level = 2
+}
+
+#Leaders
+leader = {
+	name="Jean Hauzeur"
+	date="1797.9.5"
+	type=land
+	personality="disciplined"
+	background="cavalry_school"
+}
+
+leader = {
+	name="Ferdinand II von Luxemburg"
+	date="1817.3.13"
+	type=land
+	personality="stalwart"
+	background="generals_aide"
+}
+
+leader = {
+	name="Augustijn de Lacu"
+	date="1817.3.15"
+	type=land
+	personality="coolminded"
+	background="cavalry_school"
+}
+
+
+#Armies
+
+army = {
+	name="2nd Army"
+	location=390
+	regiment = {
+		name="1st Aachen Infantry"
+		type=infantry
+		home=390
+	}
+	regiment = {
+		name="1st Namur Cavalry"
+		type=infantry
+		home=391
+	}
+	regiment = {
+		name="1st Namur Artillery"
+		type=infantry
+		home=389
+	}
+	regiment = {
+		name="2nd Namur Artillery"
+		type=infantry
+		home=389
+	}
+	regiment = {
+		name="1st Arlon Infantry"
+		type=cavalry
+		home=389
+	}
+	regiment = {
+		name="1st Aachen Cavalry"
+		type=artillery
+		home=388
+	}
+	regiment = {
+		name="1st Li ge Artillery"
+		type=artillery
+		home=388
+	}
+	regiment = {
+		name="1st Arlon Infantry"
+		type=artillery
+		home=388
+	}
+	regiment = {
+		name="1st Arlon Infantry"
+		type=artillery
+		home=400
+	}
+	regiment = {
+		name="1st Arlon Infantry"
+		type=artillery
+		home=399
+	}
+	regiment = {
+		name="1st Arlon Infantry"
+		type=artillery
+		home=399
+	}
+}
+
+army = {
+	name="3rd Army"
+	location=395
+	regiment = {
+		name="1st Aachen Infantry"
+		type=infantry
+		home=399
+	}
+	regiment = {
+		name="1st Namur Cavalry"
+		type=infantry
+		home=399
+	}
+	regiment = {
+		name="1st Namur Artillery"
+		type=infantry
+		home=401
+	}
+	regiment = {
+		name="2nd Namur Artillery"
+		type=infantry
+		home=404
+	}
+	regiment = {
+		name="1st Arlon Infantry"
+		type=cavalry
+		home=404
+	}
+	regiment = {
+		name="1st Aachen Cavalry"
+		type=artillery
+		home=393
+	}
+	regiment = {
+		name="1st Li ge Artillery"
+		type=artillery
+		home=393
+	}
+	regiment = {
+		name="1st Arlon Infantry"
+		type=artillery
+		home=394
+	}
+	regiment = {
+		name="1st Arlon Infantry"
+		type=artillery
+		home=394
+	}
+	regiment = {
+		name="1st Arlon Infantry"
+		type=artillery
+		home=392
+	}
+	regiment = {
+		name="1st Arlon Infantry"
+		type=artillery
+		home=392
+	}
+}

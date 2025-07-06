@@ -1,0 +1,84 @@
+#Sphere of Influence
+SWI = {
+	truce_until = "1838.1.1"
+
+}
+
+
+#Leaders
+
+#Armies
+army = {
+	name="1st Army"
+	location=599
+	regiment = {
+		name="1st Siauliai Infantry"
+		type=infantry
+		home=597
+	}
+	regiment = {
+		name="1st Radom Infantry"
+		type=infantry
+		home=595
+	}
+	regiment = {
+		name="1st Kaunas Cavalry"
+		type=cavalry
+		home=595
+	}
+	regiment = {
+		name="1st Kalisz Cavalry"
+		type=cavalry
+		home=598
+	}
+	regiment = {
+		name="1st Siauliai Artillery"
+		type=artillery
+		home=598
+	}
+	regiment = {
+		name="1st Torun Artillery"
+		type=artillery
+		home=602
+	}
+	regiment = {
+		name="1st Kalisz Artillery"
+		type=artillery
+		home=601
+	}
+	regiment = {
+		name="1st Polotsk Artillery"
+		type=artillery
+		home=592
+	}
+	regiment = {
+		name="1st Krakow Artillery"
+		type=artillery
+		home=592
+	}
+	regiment = {
+		name="5th Radom Infantry"
+		type=infantry
+		home=592
+	}
+	regiment = {
+		name="5th Kalisz Cavalry"
+		type=cavalry
+		home=599
+	}
+	regiment = {
+		name="1st Vitebsk Artillery"
+		type=artillery
+		home=599
+	}
+	regiment = {
+		name="1st Vitebsk Artillery"
+		type=artillery
+		home=599
+	}
+	regiment = {
+		name="1st Vitebsk Artillery"
+		type=artillery
+		home=599
+	}
+}

@@ -1,0 +1,5 @@
+owner=AGO
+controller=AGO
+add_core=AGO
+trade_goods = wool
+life_rating = 10

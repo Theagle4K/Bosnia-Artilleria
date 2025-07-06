@@ -1,0 +1,31 @@
+owner=NAP
+controller=NAP
+add_core=ITA
+add_core=NAP
+add_core=SIC
+trade_goods = iron
+life_rating = 40
+state_building=
+{
+	level=2
+	building = steel_factory
+	upgrade = yes
+}
+state_building=
+{
+	level=2
+	building = clipper_shipyard
+	upgrade = yes
+}
+state_building=
+{
+	level=2
+	building = artillery_factory
+	upgrade = yes
+}
+state_building=
+{
+	level=2
+	building = machine_parts_factory
+	upgrade = yes
+}

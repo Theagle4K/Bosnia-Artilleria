@@ -1,0 +1,438 @@
+#Discovery of Troy
+country_event = {
+
+    id = 31100
+    title = "EVTNAME31100"
+    desc = "EVTDESC31100"
+    news = yes
+    news_desc_long = "EVTDESC31100_NEWS_LONG"
+    news_desc_medium = "EVTDESC31100_NEWS_MEDIUM"
+    news_desc_short = "EVTDESC31100_NEWS_SHORT"
+    picture = "troy"
+
+    trigger = {
+        has_country_flag = search_for_the_aegean_civilizations
+        year = 1872
+    }
+
+    fire_only_once = yes
+    allow_multiple_instances = no
+
+    mean_time_to_happen =  {
+        months = 24
+
+        modifier = {
+            factor = 0.75 #increase likelihood to happen
+            year = 1873
+        }
+
+        modifier = {
+            factor = 0.95 #increase likelihood to happen
+            year = 1874
+        }
+
+        modifier = {
+            factor = 0.95 #increase likelihood to happen
+            is_greater_power = yes
+        }
+
+        modifier = {
+            factor = 0.95 #increase likelihood to happen
+            education_spending = 0.7
+        }
+
+        modifier = {
+            factor = 0.95 #increase likelihood to happen
+            education_spending = 0.8
+        }
+
+        modifier = {
+            factor = 0.95 #increase likelihood to happen
+            education_spending = 0.9
+        }
+    }
+
+    option = {
+        name = "EVTOPTA31100"
+        set_global_flag = troy_discovered
+        prestige = 25
+    }
+}
+
+###########################
+#	Bosnian Civil War     #
+###########################
+
+#Bosnia loses cores on Hungary
+country_event = {
+
+	id = 27802
+	trigger = {
+		year = 1840
+		ai = no
+		tag = BOS
+		NOT = {
+			BOS = { 
+				owns = 771
+				owns = 2538
+		 	}
+		}
+	}
+	
+	fire_only_once = yes
+    	title = "EVTNAME27802"
+    	desc = "EVTDESC27802"
+    	picture = "hungary"
+
+	option = {
+		name = "EVTOPTA27802"
+		HUN = { all_core = { remove_core = BOS } }
+	}
+
+}
+
+#Bosnia loses cores on Romania
+country_event = {
+
+	id = 27800
+	trigger = {
+		year = 1840
+		ai = no
+		tag = BOS
+		NOT = {
+			BOS = { 
+				owns = 818			
+		 	}
+		}
+	}
+	
+	fire_only_once = yes
+    	title = "Dobrudja Lost"
+    	desc = "EVTDESC27802"
+    	picture = "hungary"
+
+	option = {
+		name = "EVTOPTA27802"
+		ROM = { all_core = { remove_core = BOS } }
+	}
+
+}
+#Bosnia loses core on Greece
+country_event = {
+
+	id = 27803
+	trigger = {
+		year = 1840
+		tag = BOS
+		NOT = {
+			BOS = { owns = 834 }
+		}
+	}
+	
+	fire_only_once = yes
+    	title = "EVTNAME27803"
+    	desc = "EVTDESC27803"
+    	picture = "greece"
+
+	option = {
+		name = "EVTOPTA27803"
+		GRE = { all_core = { remove_core = BOS } }
+		861 = { remove_core = BOS }
+		set_country_flag = peace_w_greece
+	}
+
+}
+
+#Bosnia loses the capital
+country_event = {
+     id = 27805
+     fire_only_once = yes
+     title = "EVTNAME27805"
+     desc = "EVTDESC27805"
+	
+     trigger = {
+	tag = BOS
+	NOT = { 
+	   year = 1840
+	   783 = { controlled_by = BOS }
+	   has_country_flag = bscapita_lost
+	}
+	war = yes
+	
+
+    }
+    mean_time_to_happen = {
+    months = 2
+    }
+    option = {
+	name = "EVTOPTA27805"
+		  prestige = -20
+		  country_event = 27803
+		  country_event = 27802
+		  release_vasal = TOR
+		  release_vasal = TOR
+		  861 = { remove_core = BOS }
+		any_owned = {
+			limit = { is_core = TUR }
+			secede_province = TUR
+		}
+		any_owned = {
+			limit = { is_core = GRE }
+			secede_province = GRE
+		}
+		any_owned = {
+			limit = { is_core = ITA }
+			secede_province = NAP
+		}
+		any_owned = {
+			limit = { is_core = SYR }
+			secede_province = SYR
+		}
+		any_owned = {
+			limit = { is_core = EGY }
+			secede_province = EGY
+		}
+		any_owned = {
+			limit = { is_core = HDJ }
+			secede_province = HDJ
+		}
+		any_owned = {
+			limit = { is_core = CYP }
+			secede_province = CYP
+		}
+		set_country_flag = peace_w_greece
+		set_country_flag = peace_w_turkey
+		set_country_flag = peace_w_naples
+		set_country_flag = bscapita_lost
+    }
+}
+
+#Gives money for any country that starts in civil war
+country_event = {
+    id = 27806
+     title = "Money for Civil War"
+     desc = "Aid for the countries start in civil war"
+
+     trigger = {
+	OR = {
+	   tag = BOS
+	   tag = HUN
+	   tag = ROM
+	   tag = GRE
+	   tag = DEN
+	   tag = SWE
+	   tag = SCA
+	   tag = NOR
+	   tag = NAP
+        }
+	NOT = { 
+	   year = 1837
+	   has_country_flag = money_help
+	}
+	
+    }
+    option = {
+	name = "Good!"
+	money = 500000
+	set_country_flag = money_help
+    }
+}
+
+#Bosnia loses against Turkey
+country_event = {
+
+	id = 27807
+	title = "EVTNAME27807"
+	desc = "EVTDESC27807"
+	fire_only_once = yes
+	
+	trigger = {
+		tag = BOS
+		NOT = {
+			year = 1840
+			has_country_flag = peace_w_turkey
+			war_with = TUR
+			876 = { owned_by = BOS }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+		
+	}
+	
+	option = {
+		name = "EVTOPTA27807"
+		prestige = -10
+		any_owned = {
+			limit = { is_core = TUR }
+            secede_province = TUR
+        }
+		any_owned = {
+            limit = { is_core = SYR }
+            secede_province = SYR
+		}
+		any_owned = {
+            limit = { is_core = EGY }
+            secede_province = EGY
+        }
+		any_owned = {
+            limit = { is_core = HDJ }
+            secede_province = HDJ
+        }
+		any_owned = {
+            limit = { is_core = CYP }
+            secede_province = CYP
+        }
+		set_country_flag = peace_w_turkey	
+	}
+}
+
+#Bosnia fails to annex greece
+country_event = {
+
+	id = 27808
+	title = "EVTNAME27808"
+	desc = "EVTDESC27808"
+	fire_only_once = yes
+	
+	trigger = {
+		tag = BOS
+		NOT = {
+			year = 1840
+			has_country_flag = peace_w_greece
+			war_with = GRE
+			834 = { owned_by = BOS }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+		
+	}
+	
+	option = {
+		name = "EVTOPTA27807"
+		prestige = -10
+		any_owned = {
+			limit = { is_core = GRE }
+            secede_province = GRE
+        }
+		set_country_flag = peace_w_greece
+	}
+
+}
+
+#Bosnia loses to Naples
+country_event = {
+
+	id = 27811
+	title = "EVTNAME27811"
+	desc = "EVTDESC27811"
+	fire_only_once = yes
+	
+	trigger = {
+		tag = BOS
+		NOT = {
+			year = 1840
+			has_country_flag = peace_w_naples
+			war_with = NAP
+			754 = { owned_by = BOS }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+		
+	}
+	
+	option = {
+		name = "EVTOPTA27807"
+		prestige = -10
+		any_owned = {
+			limit = { is_core = NAP }
+            secede_province = NAP
+        }
+		set_country_flag = peace_w_naples
+	}
+
+}
+
+#Hungary loses to Bosnia
+country_event = {
+
+	id = 27812
+	title = "EVTNAME27812"
+	desc = "EVTDESC27812"
+	fire_only_once = yes
+	
+	trigger = {
+		tag = BOS
+		NOT = {
+			war_with = HUN
+		}
+		2538 = { owned_by = BOS }
+		771 = { owned_by = BOS }
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+		
+	}
+	
+	option = {
+		name = "EVTOPTA27812"
+		prestige = 30
+		HUN = {
+			any_owned = {
+				limit = { is_core = BOS }
+				secede_province = BOS
+			}
+		}
+		set_country_flag = win_over_HUN
+	}
+
+}
+
+#Josif Urbansko Theatre Event (from AUSFlavor)
+country_event = {
+
+    id = 31506
+
+    trigger = {
+        OR = {
+            tag = BOS
+        }
+        year = 1911
+        expressionism = 1 #has the expressionism tech
+        NOT = {
+            year = 1914
+        }
+    }
+
+    fire_only_once = yes
+
+    mean_time_to_happen =  {
+        months = 6
+
+        modifier = {
+            factor = 0.85 #increase likelihood to happen
+            year = 1912
+        }
+
+
+        modifier = {
+            factor = 0.95 #increase likelihood to happen
+            year = 1913
+        }
+    }
+
+    title = "EVTNAME31506"
+    desc = "EVTDESC31506"
+    picture = "theatre"
+
+    option = {
+        name = "EVTOPTA31502"
+        prestige = 3
+    }
+}

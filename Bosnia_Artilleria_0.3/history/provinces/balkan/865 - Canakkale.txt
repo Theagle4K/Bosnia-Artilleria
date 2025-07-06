@@ -1,0 +1,6 @@
+owner=BOS
+controller=BOS
+add_core=TUR
+add_core=TOR
+trade_goods = fish
+life_rating = 40

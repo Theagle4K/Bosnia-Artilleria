@@ -1,0 +1,1744 @@
+#Starter Event
+country_event = {
+	id = 27830
+	title = "EVTNAME27830"
+	desc = "EVTDESC27830"
+	picture = german_rhine
+	
+	trigger = {
+		tag = WES
+		year = 1836
+	}
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+
+	fire_only_once = yes
+	option = {
+		name = "EVTOPTA27830"
+		set_country_flag = weser_danube_league
+		ai_chance = { 
+			factor = 60 
+			modifier = {
+				factor = 0
+				BAV = { is_greater_power = yes}
+			}
+		}
+		relation = { who = BAV value = 200 }
+		diplomatic_influence = { who = BAV value = 100 }	
+	}
+	
+	option = {
+		name = "EVTOPTB27830"
+		set_country_flag = stralsund_league
+		ai_chance = { 
+			factor = 15
+			modifier = {
+				factor = 0
+				DEN = { is_greater_power = yes }
+			}
+		}
+		relation = { who = DEN value = 200 }
+		diplomatic_influence = { who = DEN value = 100 }	
+	}
+
+	option = {
+		name = "EVTOPTC27830"
+		set_country_flag = rhine_league
+		ai_chance = { 
+			factor = 15
+			modifier = {
+				factor = 0
+				LIG = { is_greater_power = yes }
+			}
+		}
+		relation = { who = LIG value = 200 }
+		diplomatic_influence = { who = LIG value = 100 }	
+	}
+	option = {
+		name = "EVTOPTD27830"
+		set_country_flag = unifier_of_germans
+		ai_chance = { factor = 0.1 }	
+		prestige = 50
+	}
+}
+#HIE Setup
+country_event = {
+	id = 27900
+	title = "EVTNAME27900"
+	desc = "EVTDESC27900"
+	picture = emperor_move_capital
+	
+	trigger = {
+		has_country_flag = member_hre
+		NOT = { 
+			has_country_flag = emperor_hre
+			has_country_modifier = hie_country
+		}
+	}
+	
+	
+	option = {
+		name = "EVTOPTA27900"
+		any_owned = {
+			limit = {
+				is_core = HIE
+			}
+			add_province_modifier = { name = hie_province duration = -1 }
+		}
+		add_country_modifier = { name = hie_country duration = -1 }
+	}
+	
+}
+#HIE Emperor Setup
+country_event = {
+	id =27901
+	title = "EVTNAME27901"
+	desc = "EVTDESC27901"
+	picture = emperor_move_capital
+	
+	trigger = {
+		has_country_flag = emperor_hre
+		NOT = {
+			has_country_modifier = hie_emperor
+			has_country_flag = end_of_hie
+		}
+	}
+	
+	fire_only_once = yes
+	option = {
+		name = "EVTOPTA27901"
+		add_country_modifier = { name = hie_emperor duration = -1 }
+	}
+}
+
+#Add Province to HIE
+province_event = {
+	id = 27902
+	title = "EVTNAME27902"
+	desc = "EVTDESC27902"
+
+	trigger = {
+		owner = {
+			has_country_modifier = hie_country
+		}
+		is_core = HIE
+		NOT = { has_province_modifier = hie_province }
+	}
+
+	option = {
+		name = "EVTOPTA27902"
+		state_scope = { 
+			any_owned = {
+				limit = {
+					NOT = { has_province_modifier = hie_province }
+				}
+				add_province_modifier = { name = hie_province duration = -1 }
+			} 
+		}
+	}
+}
+#End Of HIE
+country_event = {
+	id =27903
+	title = "EVTNAME27903"
+	desc = "EVTDESC27903"
+	picture = confederation
+	
+	trigger = {
+		tag = SWI
+		has_country_flag = emperor_hre
+		NOT = {	has_global_flag = end_of_hie }
+		OR = {
+			AND = {
+				year = 1872
+				any_greater_power = {
+					has_country_flag = member_hre
+				}
+			}
+			AND = {
+				year = 1872
+				LVN = {
+					in_sphere = NAP
+				}
+			}
+			is_greater_power = no 
+			NOT = {
+				government = hms_government
+				government = prussian_constitutionalism
+				government = absolute_monarchy
+			}
+		}
+	}
+
+	mean_time_to_happen ={
+		months = 6
+	}
+
+	fire_only_once = yes
+	option = {
+		name = "EVTOPTA27903"
+		HIE = { all_core = { remove_core = HIE }}
+		clr_country_flag = emperor_hre
+		clr_country_flag = member_hre
+		581 = { trade_goods = iron }
+		remove_country_modifier = hie_emperor
+		set_global_flag = end_of_hie
+		any_country = {
+			limit = {
+				exists = yes
+				has_country_modifier = hie_country
+				NOT = { tag = SWI }
+			}
+			country_event = 27904
+		}
+		any_country = {
+			limit = {
+				tag = AUS
+				vassal_of = SWI
+			}
+			SWI = { 
+				release_vassal = AUS
+				relation = { who = AUS value = -400 }
+				diplomatic_influence = { who = AUS value = -400 } 
+			}
+			remove_country_modifier = neutrality_modifier
+			country_event = 279041
+		}
+	}
+}
+#Austria secedes land
+country_event = {
+	id = 279041
+	title = "EVTNAME279041"
+	desc = "EVTDESC279041"
+	#picture = Picture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA279041"
+		any_owned = {
+			limit = {
+				OR = {
+					province_id = 612
+					province_id = 613
+					province_id = 614
+					province_id = 615
+					province_id = 735
+				}
+			}
+			secede_province = BAV
+			add_core= BAV
+		}
+	}
+}
+
+country_event = {
+	id = 27904
+	title = "EVTNAME27904"
+	desc = "EVTDESC27904"
+	picture = confederation
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA27904"
+		remove_country_modifier = hie_country
+		clr_country_flag = member_hre
+		any_owned = {
+			limit = {
+				has_province_modifier = hie_province
+			}
+			remove_province_modifier = hie_province
+		} 
+	}
+}
+country_event = {
+	id = 27906
+	title = "EVTNAME27906"
+	desc = "EVTDESC27906"
+	picture = bad_badboy
+	
+	trigger = {
+		tag = SWI
+		AND = {
+			has_country_flag = emperor_hre
+			any_greater_power = {
+				ai = yes
+				alliance_with = SWI 
+			}
+		}
+		NOT = { year = 1872 }
+		war = no
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	#fire_only_once = yes
+	option = {
+		name = "EVTOPTA27906"
+		any_greater_power = {
+			limit = {
+				alliance_with = SWI
+				ai = yes
+			}
+			leave_alliance = THIS
+			relation = { who = THIS value = -150 }
+		}	
+	}
+	
+}
+
+#HIE Path Event
+country_event = {
+	id = 27907
+	title = "EVTNAME27907"
+	desc = "EVTDESC27907"
+	picture = holy_court
+	
+	trigger = {
+		tag = HIE
+		HIE = { all_core = { owned_by = THIS }}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	fire_only_once = yes
+	option = {
+		name = "EVTOPTA27907"
+		add_accepted_culture = north_italian
+		TUS = { all_core = { add_core = THIS } }
+		set_country_flag = expansionist_hie
+	}
+	
+	option = {
+		name = "EVTOPTB27907"
+		add_accepted_culture = czech
+		add_accepted_culture = dutch
+		set_country_flag = peaceful_hie
+	}
+
+	option = {
+		name = "EVTOPTC27907"
+		add_accepted_culture = wallonian
+		add_accepted_culture = occitan
+		capital = 576
+		set_country_flag = true_heir_to_charlemagne
+	}
+	
+}
+
+#Weser-Donau Events
+
+#Stralsund Events
+#Frankish Uprising
+country_event = {
+	id = 12001
+	title = "EVTNAME12001"
+	desc = "EVTDESC12001"
+	picture = frankish_uprising
+	
+	trigger = {
+		tag = STU
+		nationalism_n_imperialism = 1
+		NOT = {
+			has_country_flag = frankish_uprising
+			has_global_flag = end_of_frankish_uprising
+			WES = { exists = yes }
+			OR = {
+				accepted_culture = frankish
+				citizens_rights = all_voting_pops
+			}
+			any_neighbor_country = {
+				primary_culture = frankish
+			}
+		}
+        any_state = {
+            is_colonial = no
+            any_owned_province = { any_pop = { has_pop_culture = frankish } }
+			average_consciousness = 2
+        }
+		
+	}
+	
+    mean_time_to_happen = {
+        months = 30 
+        modifier = {
+            factor = 2
+            average_consciousness = 4
+        }
+        modifier = {
+            factor = 4
+            average_consciousness = 6
+        }
+        modifier = {
+            factor = 2
+            NOT = { year = 1860 }
+        }
+        modifier = {
+            factor = 5
+            year = 1860
+            NOT = { year = 1875 }
+        }
+        modifier = {
+            factor = 10
+            year = 1875
+        }
+    }
+
+	fire_only_once = yes
+	option = {
+		name = "EVTOPTA12001"
+		set_country_flag = frankish_uprising
+		any_pop = {
+			limit ={
+				has_pop_culture = frankish
+			}
+			militancy = 1
+			consciousness = 1
+		}	
+	}
+}
+#Follow up event for Frankish Uprising
+country_event = {
+	id = 12002
+	title = "EVTNAME12002"
+	desc = "EVTDESC12002"
+	picture = frankish_meeting
+	
+	trigger = {
+		has_country_flag = frankish_uprising
+		NOT = { has_global_flag = end_of_frankish_uprising }
+		tag = STU	
+	}
+	
+	mean_time_to_happen = {
+		days = 19
+	}
+
+	fire_only_once = yes
+	option = {
+		name = "EVTOPTA12002"
+		any_owned = {
+			limit = {
+				culture = frankish
+			}
+			add_province_modifier = { name = frankish_winds duration = 3652 }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB12002"
+		any_owned = {
+			limit = {
+				culture = frankish
+			}
+			add_province_modifier = { name = frankish_aggression duration = 3652 }
+		}
+		
+	}
+	
+}
+#Event 2 for Frankish Uprising
+country_event = {
+	id = 12003
+	title = "EVTNAME12003"
+	desc = "EVTDESC12003"
+	picture = chartist_rally
+	
+	trigger = {
+		has_country_flag = frankish_uprising
+		tag = STU
+		WES = { exists = yes }
+		NOT = { 
+			has_global_flag = end_of_frankish_uprising
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 50
+        modifier = {
+            factor = 0.2
+            average_consciousness = 2
+        }
+        modifier = {
+            factor = 0.4
+            average_consciousness = 4
+        }
+        modifier = {
+            factor = 1
+            average_consciousness = 6
+        }
+	}
+
+
+	option = {
+		name = "EVTOPTA12003"
+		random = {
+			chance = 80
+			random_state = {
+				limit = {
+					is_colonial = no
+					any_owned_province = { any_pop = { has_pop_culture = frankish } }
+				}
+				any_pop = {
+					dominant_issue = { value = full_citizenship factor = 0.5 }
+					ideology = { value = liberal factor = 0.3 }
+					consciousness = 2
+				}
+			}
+		}    
+		random = {
+			chance = 20
+			any_pop = {
+				dominant_issue = { value = all_voting_pops factor = 0.1 }
+				ideology = { value = liberal factor = 0.07 }
+				consciousness = 8
+			}
+		}
+		prestige = -15    	
+	}
+	
+	option = {
+		name = "EVTOPTB12003"
+		random_state = {
+			limit = {
+				is_colonial = no
+				any_owned_province = { any_pop = { has_pop_culture = frankish } }
+			}
+			any_pop = {
+				dominant_issue = { value = primary_culture_only factor = 0.2 }
+				ideology = { value = conservative factor = 0.1 }
+				consciousness = -5
+				militancy = -5
+			}
+			any_pop = {
+				dominant_issue = { value = all_voting_pops factor = 0.2 }
+				ideology = { value = liberal factor = 0.1 }
+				militancy = 6
+			}
+		}
+		prestige = 5
+	}
+}
+#Event 3 for Frankish Uprising
+country_event = {
+	id = 12004
+	title = "EVTNAME12004"
+	desc = "EVTDESC12004"
+	picture = chartist_rally
+	
+	trigger = {
+		has_country_flag = frankish_uprising
+		tag = STU
+		WES = { exists = yes }
+		NOT = { 
+			has_global_flag = end_of_frankish_uprising
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 100
+        modifier = {
+            factor = 0.2
+            average_consciousness = 2
+        }
+        modifier = {
+            factor = 0.4
+            average_consciousness = 4
+        }
+        modifier = {
+            factor = 1.1
+            average_consciousness = 6
+        }
+	}
+
+
+	option = {
+		name = "EVTOPTA12004"    
+		random = {
+            chance = 90
+            random_state = {
+				limit = {
+					is_colonial = no
+					any_owned_province = {  NOT = { any_pop = { has_pop_culture = frankish } } }
+				}
+				any_pop = {
+					dominant_issue = { value = primary_culture_only factor = 0.1 }
+					ideology = { value = conservative factor = 0.2 }
+					consciousness = -5
+					militancy = -5
+				}
+			}
+        }
+		random = {
+            chance = 70
+            random_state = {
+				limit = {
+					is_colonial = no
+					any_owned_province = { NOT = { any_pop = { has_pop_culture = frankish } } }
+				}
+				any_pop = {
+					dominant_issue = { value = residency factor = 0.1 }
+					ideology = { value = conservative factor = 0.2 }
+					consciousness = -8
+					militancy = -8
+				}
+			}
+        }
+		
+	}
+	
+	option = {
+		name = "EVTOPTB12004"
+		random_state = {
+			limit = {
+				is_colonial = no
+				any_owned_province = { any_pop = { has_pop_culture = frankish } }
+			}
+			any_pop = {
+				dominant_issue = { value = all_voting_pops factor = 0.2 }
+				ideology = { value = liberal factor = 0.4 }
+				militancy = 10
+			}
+		}
+	}
+}
+province_event = {
+    id = 12005
+    title = "EVTNAME12005"
+    desc = "EVTDESC12005"
+
+    trigger = {
+        NOT = { is_core = WES }
+        owner = {
+            tag = STU
+            has_country_flag = frankish_uprising
+            NOT = { has_global_flag = end_of_frankish_uprising }
+        }
+		culture = frankish
+		average_militancy = 8
+		average_consciousness = 8
+    }
+
+    mean_time_to_happen = {
+        months = 12
+    }
+
+    option = {
+        name = "EVTOPTA12005"
+        state_scope = { any_owned = { add_core = WES }
+            any_pop = {
+                dominant_issue = {
+                    value = all_voting_pops
+                    factor = 0.2
+                }
+                militancy = 1
+            }
+        }
+    }
+}
+
+#Frankish Uprising - Uprising! Set up
+country_event = {
+    id = 12006
+    title = "EVTNAME12006"
+    desc = "EVTDESC12006"
+    picture = frankish_revolt
+
+    trigger = {
+        tag = STU
+        year = 1850
+        NOT = { has_global_flag = end_of_frankish_uprising }
+        OR = {
+			citizens_rights = primary_culture_only
+			citizens_rights = culture_voting_only
+        }
+		OR = {
+			average_consciousness = 6
+			average_militancy = 6
+		}
+		581 = { is_core = WES }
+		578 = { is_core = WES }
+		564 = { is_core = WES }
+    }
+
+    fire_only_once = yes
+
+    mean_time_to_happen = {
+        months = 6
+    }
+
+    immediate = {
+        set_country_flag = revolt_soon
+        release_vassal = WES
+        WES = {
+            set_country_flag = unreleasable_country
+            set_country_flag = exempt_from_vassal_contribution
+			clr_country_flag = unifier_of_germans
+			clr_country_flag = stralsund_league
+			clr_country_flag = rhine_league
+			primary_culture = frankish
+			remove_accepted_culture = north_german
+			remove_accepted_culture = danish
+			remove_accepted_culture = swedish
+			remove_accepted_culture = norwegian
+			remove_accepted_culture = dutch
+			remove_accepted_culture = south_german
+        }
+    }
+
+    option = {
+        name = "EVTOPTA12006"
+        WES = {
+            political_reform = mandatory_service
+            social_reform = all_voting_pops
+            capital = 581
+            leadership = 80
+            treasury = 80000
+
+            any_pop = { limit = { has_pop_culture = frankish } militancy = -9 }
+            random_list = {
+                581 = { add_country_modifier = { name = preparing_for_war duration = 210 } }
+                581 = { add_country_modifier = { name = preparing_for_war duration = 180 } }
+                581 = { add_country_modifier = { name = preparing_for_war duration = 150 } }
+                581 = { add_country_modifier = { name = preparing_for_war duration = 130 } }
+            }
+            any_owned = { limit = { port = yes } add_province_modifier = { name = war_economy_ships duration = 210 } }
+            any_owned = {
+                limit = {
+                    OR = {
+                        province_id = 543
+                        province_id = 540
+                        province_id = 539
+                    }
+                }
+                secede_province = STU
+            }
+        }
+
+        diplomatic_influence = { who = WES value = 400 }
+        relation = { who = WES value = -400 }
+
+        ai_chance = {
+            factor = 100
+        }
+    }
+
+    option = {
+        name = "EVTOPTB12006"
+        set_country_flag = revolt_soon
+        WES = {
+            political_reform = mandatory_service
+            social_reform = culture_voting_only
+            capital = 581
+            leadership = 80
+            treasury = 80000
+
+            any_pop = { limit = { has_pop_culture = frankish } militancy = -9 }
+            random_list = {
+                581 = { add_country_modifier = { name = preparing_for_war duration = 210 } }
+                581 = { add_country_modifier = { name = preparing_for_war duration = 180 } }
+                581 = { add_country_modifier = { name = preparing_for_war duration = 150 } }
+                581 = { add_country_modifier = { name = preparing_for_war duration = 130 } }
+            }
+            any_owned = { limit = { port = yes } add_province_modifier = { name = war_economy_ships duration = 210 } }
+            any_owned = {
+                limit = {
+                    OR = {
+                        province_id = 543
+                        province_id = 540
+                        province_id = 539
+                    }
+                }
+                secede_province = STU
+            }
+        }
+
+        diplomatic_influence = { who = WES value = 400 }
+        relation = { who = WES value = -400 }
+		change_tag_no_core_switch = WES
+        ai_chance = {
+            factor = 0
+        }
+    }
+}
+
+#Frankish Uprising - Uprising!
+country_event = {
+    id = 12007
+    title = "EVTNAME12007"
+    desc = "EVTDESC12007"
+	picture = frankish_revolt
+
+    trigger = {
+        tag = STU
+        NOT = { war_with = WES }
+        NOT = { truce_with = WES }
+        WES = { exists = yes }
+        has_country_flag = revolt_soon
+        OR = {
+            WES = { NOT = { has_country_modifier = preparing_for_war } }
+            NOT = { is_our_vassal = WES }
+        }
+        NOT = { has_global_flag = american_civil_war_has_happened }
+    }
+
+    immediate = {
+        clr_country_flag = frankish_uprising
+        clr_country_flag = revolt_soon
+        set_global_flag = end_of_frankish_uprising
+        release_vassal = WES
+        diplomatic_influence = { who = WES value = -400 }
+        relation = { who = WES value = -400 }
+    }
+
+    mean_time_to_happen = {
+        days = 1
+    }
+
+    option = {
+        name = "EVTOPTA12007"
+        any_pop = {
+            consciousness = -7
+            militancy = -3
+        }
+        war = {
+            target = WES
+            attacker_goal = { casus_belli = conquest_any }
+            defender_goal = { casus_belli = status_quo }
+        }
+    }
+}
+#Dutch Freedom Event
+
+
+#Rhineland Events
+#North-German Revolt
+country_event = {
+	id = 180170
+	title = "EVTNAME180170"
+	desc = "EVTDESC180170"
+	picture = german_revolt
+	
+	is_triggered_only = yes
+	
+
+	#fire_only_once = yes
+	#RHI/WSD Agrees
+	option = {
+		name = "EVTOPTA180170"
+		FROM = { country_event = 180171 }
+        ai_chance = {
+            factor = 0.25
+        }
+	}
+
+	#RHI/WSD Rejects
+	option = {
+		name = "EVTOPTB180170"
+		FROM = { country_event = 180172 }
+        ai_chance = {
+            factor = 0.75
+        }
+	}	
+}
+
+country_event = {
+	id = 180171
+	title = "EVTNAME180171"
+	desc = "EVTDESC180171"
+	picture = frankish_meeting
+	
+	is_triggered_only = yes
+	
+
+	#fire_only_once = yes
+	option = {
+		name = "EVTOPTA180171"
+		FROM = {
+			any_owned = {
+				limit = {
+					culture = north_german
+				}
+				secede_province = THIS
+				HAN_534 = { secede_province = THIS }
+				535 = { secede_province = THIS }
+			}
+			prestige = -5
+			badboy = -5
+			relation = { who = THIS value = 400 }
+			diplomatic_influence = { who = THIS value = 400 }
+			create_alliance = THIS
+		}
+		any_country = {
+			limit = {
+				primary_culture = north_german
+				NOT = { 
+					is_vassal = yes
+					war = yes
+					is_mobilised = yes
+				}
+			}
+			country_event = 11106
+		}
+	}
+	
+}
+
+country_event = {
+	id = 180172
+	title = "EVTNAME180172"
+	desc = "EVTDESC180172"
+	picture = frankish_meeting
+	
+	is_triggered_only = yes
+
+	#fire_only_once = yes
+	mean_time_to_happen = {
+		days = 15
+	}
+	option = {
+		name = "EVTOPTA180172"
+		FROM = {
+			any_owned = {
+				limit = {
+					culture = north_german
+				}
+				secede_province = THIS
+				HAN_534 = { secede_province = THIS }
+				535 = { secede_province = THIS }
+			}
+			relation = { who = THIS value = -400 }
+			diplomatic_influence = { who = THIS value = -400 }
+			leave_alliance = THIS
+		}
+		any_country = {
+			limit = {
+				primary_culture = north_german
+				NOT = { 
+					is_vassal = yes
+					war = yes
+					is_mobilised = yes
+				}
+			}
+			country_event = 11106
+		}
+		war = {
+			target = FROM
+			attacker_goal = {
+				casus_belli = status_quo
+				
+			}
+			defender_goal = {
+				casus_belli = acquire_all_cores
+				country = FROM
+			}
+			call_ally = no
+		}
+			
+	}
+
+	option = {
+		name = "EVTOPTB180172"
+		prestige = -20
+		badboy = 5
+	}
+	
+}
+#Annexation of Bremen Free City
+country_event = {
+	id = 27905
+	title = "EVTNAME27905"
+	desc = "EVTDESC27905"
+	picture = bremen_annexed
+	
+	trigger = {
+		OR = {
+			tag = GER
+			tag = NGF
+			tag = STU
+			tag = WSD
+			tag = RHI
+		}
+		exists = BRE
+		BRE = {
+			war = no
+			is_mobilised = no
+		}
+		is_sphere_leader_of = BRE
+	}
+	
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	fire_only_once = yes
+	option = {
+		name = "EVTOPTA27905"
+		BRE = {
+			all_core = { add_core = THIS }
+			country_event = 11106
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB27905"
+		BRE =  { annex_to = THIS }
+		release_vassal = BRE
+		relation = { who = BRE value = 400 }
+		diplomatic_influence = { who = BRE value = 400 } 
+	}
+	
+}
+#Unifier of All Germans!
+#Denmark vs Austrasia
+country_event = {
+	id = 27832
+	title = "EVTNAME27832"
+    desc = "EVTDESC27832"
+	picture = "danishgovernment"
+
+	trigger = { 
+		tag = WES
+		DEN = {
+			war = no
+			is_greater_power = no
+			any_owned_province = {
+				is_core = GER
+			}
+		}
+		has_country_flag = unifier_of_germans
+		state_n_government = 1
+		is_greater_power = yes
+		NOT = { war_with = DEN }
+		NOT = { truce_with = DEN }
+		war = no
+		554 = { owner = { in_sphere = WES }}
+		549 = { owner = { in_sphere = WES }}
+		NOT = { has_global_flag = denmark_against_austrasia }
+	}
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = "EVT27832OPTB"
+		DEN = {
+			country_event = 278321
+		}
+		ai_chance = { factor = 90 }
+	}
+	
+	option = {
+		name = "EVT27832OPTA"
+		prestige = -5
+		set_global_flag = denmark_against_austrasia
+		ai_chance = { 
+			factor = 10 
+		}
+	}
+	
+}
+
+#Denmark Answers 
+country_event = {
+	id = 278321
+	title = "EVTNAME278321"
+	desc = "EVTDESC278321"
+	picture = danishgovernment
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA278321"
+		WES = { country_event = 27834 }
+		ai_chance = {
+			factor = 55
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB278321"
+		any_owned = {
+			limit = { is_core = PML }
+			secede_province = PML
+			remove_core = THIS
+		}
+		WES = {
+			diplomatic_influence = { who = PML value = 400 }
+			relation = { who = PML value = 400 }
+		}
+		any_owned = {
+			limit = { is_core = GER }
+			secede_province = WES
+			remove_core = THIS
+			add_core= WES
+		}
+		remove_accepted_culture = north_german
+		set_country_flag = gave_pom
+		set_global_flag = denmark_against_austrasia
+		ai_chance = {
+			factor = 45
+		}
+	}
+	
+}
+
+#Denmark lost the war
+country_event = {
+	
+	id = 27833
+	title = "EVTNAME27833"
+	desc = "EVTDESC27833"
+	picture = danishgovernment
+	
+	trigger = {
+		tag = DEN
+		has_global_flag = denmark_against_austrasia
+		NOT = { has_country_flag = gave_pom }
+		530 = { owned_by = WES }
+	}
+	
+	option = {
+		name = "EVT27833OPTA"
+		any_owned = {
+			limit = { is_core = PML }
+			secede_province = PML
+			remove_core = THIS
+		}
+		WES = {
+			diplomatic_influence = { who = PML value = 400 }
+			relation = { who = PML value = 400 }
+		}
+		WES = { 
+			any_owned ={
+				limit = {
+					is_core = GER
+				}
+				remove_core = THIS
+				add_core= WES
+			}
+		}
+		remove_accepted_culture = north_german
+		set_country_flag = gave_pom
+	}
+}
+
+#Denmark Refuses!
+country_event = {
+	id = 27834
+	title = "EVTNAME27834"
+	desc = "EVTDESC27834"
+	picture = danishgovernment
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = "EVT27834OPTA"
+		relation = { who = FROM value = -400 }
+		diplomatic_influence = { who = FROM value = -400 }
+		DEN = {
+			any_owned = {
+				limit = { 
+					AND = {
+						is_core = GER
+						NOT = { is_core = PML }
+					}
+				}
+				add_core= WES
+			}
+		}
+		war = {
+			target = FROM
+			attacker_goal = {
+				casus_belli = acquire_all_cores
+				state_province_id = 369
+				country = WES
+			}
+			call_ally = yes
+			
+		}
+		ai_chance = { factor = 90 }
+		set_global_flag = denmark_against_austrasia
+	}
+	
+	option = {
+		DEN = {
+			any_owned = {
+				limit = { 
+					AND = {
+						is_core = GER
+						NOT = { is_core = PML }
+					}
+				}
+				add_core= WES
+			}
+		}
+		name = "EVT27834OPTB"
+		relation = { who = THIS value = -400 }
+		diplomatic_influence = { who = THIS value = -400 }
+		set_global_flag = denmark_against_austrasia
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+}
+
+#Crisis on the Rhineland
+country_event = {
+	id = 27101
+	title = "EVTNAME27101"
+	desc = "EVTDESC27101"
+	picture = rhineland
+
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	#Accepts the deal
+	option = {
+		name = "EVT27101OPTB"
+		any_owned = {
+			limit = { is_core = GER }
+			secede_province = WES
+			remove_core = THIS
+			add_core= WES
+		}
+		DEN = {
+			any_owned = {
+				limit = { is_core = NET }
+				secede_province = LIG
+				remove_core = DEN
+			}
+			treasury = 10000
+		}
+		GER = { all_core = { remove_core = THIS }}  
+		set_country_flag = traded_rhineland
+		set_global_flag = rhineland_crisis
+		ai_chance = { 
+			factor = 25
+			modifier = {
+				factor = 0.9
+				NOT = { in_sphere = SWI }
+			}
+			modifier = {
+				factor = 1
+				in_sphere = WES
+			} 
+		}
+	}
+	
+	#Rejects the deal
+	option = {
+		name = "EVT27101OPTA"
+		WES = {
+			country_event = 27102
+		}
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 0.9
+				in_sphere = SWI
+			} 
+		}
+	}
+	
+}
+
+#Liege Refuses
+country_event = {
+	id = 27102
+	title = "EVTNAME27102"
+	desc = "EVTDESC27102"
+	picture = rhineland
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = "EVT27102OPTA"
+		relation = { who = FROM value = -400 }
+		diplomatic_influence = { who = FROM value = -400 }
+		LIG = {
+			any_owned = {
+				limit = { is_core = GER }
+				add_core= WES
+			}
+		}
+		war = {
+			target = FROM
+			attacker_goal = {
+				casus_belli = acquire_all_cores
+				state_province_id = 575
+				country = WES
+			}
+			call_ally = yes
+			
+		}
+		ai_chance = { factor = 90 }
+		set_global_flag = rhineland_crisis
+	}
+	
+	option = {
+		LIG = {
+			any_owned = {
+				limit = { is_core = GER }
+				add_core= WES
+			}
+		}
+		name = "EVT27102OPTB"
+		relation = { who = THIS value = -400 }
+		diplomatic_influence = { who = THIS value = -400 }
+		set_global_flag = rhineland_crisis
+	}
+
+}
+
+#Liege lost the war
+country_event = {
+	
+	id = 27103
+	title = "EVTNAME27103"
+	desc = "EVTDESC27103"
+	picture = rhineland
+	
+	trigger = {
+		tag = LIG
+		has_global_flag = rhineland_crisis
+		NOT = { has_country_flag = traded_rhineland }
+		575 = { owned_by = WES }
+	}
+	
+	option = {
+		name = "EVT27103OPTA"
+		WES = { 
+			any_owned ={
+				limit = {
+					AND = {
+						is_core = GER
+						is_core = LIG
+					}
+				}
+				remove_core = THIS
+				add_core= WES
+			}
+		}
+		DEN = {
+			any_owned = {
+				limit = { is_core = NET }
+				add_core = LIG
+				remove_core = DEN
+			}
+		}
+		set_country_flag = traded_rhineland
+	}
+	
+	option = {
+		name = "EVT27103OPTB"
+		WES = { 
+			any_owned ={
+				limit = {
+					AND = {
+						is_core = GER
+						is_core = LIG
+					}
+				}
+				add_core= WES
+			}
+		}
+		set_country_flag = traded_rhineland
+	}
+}
+
+#Poland vs Austrasia
+country_event = {
+	id = 27104
+	title = "EVTNAME27104"
+	desc = "EVTDESC27104"
+	picture = prussian_crisis
+	
+	trigger = {
+		PRU = {
+			OR = {
+				vassal_of = PLC
+				vassal_of = POL
+				vassal_of = PLV
+				vassal_of = KYV
+				vassal_of = SLC
+			}
+		}
+		has_global_flag = rhineland_crisis
+		has_country_flag = unifier_of_germans
+	}
+	
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	fire_only_once = yes
+	option = {
+		name = "EVTOPTA27104"
+		any_country = {
+			limit = {
+				is_our_vassal = PRU
+			}
+			country_event = 27105
+		}
+		any_owned = {
+			limit = {
+				is_core = PRU
+			}
+			secede_province = PRU
+		}
+		
+		set_global_flag = prussian_crisis
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 0.9
+				war_policy = jingoism
+			}
+			modifier = {
+				factor = 0.8
+				war_policy = pro_military
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB27104"
+		prestige = -5
+		set_global_flag = prussian_crisis
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor 0.75
+				war_policy = anti_military
+			}
+			modifier = {
+				factor 0.75
+				war_policy = pacifism
+			}
+		}
+	}
+}
+
+#Poland Gets to Decide
+country_event = {
+	id = 27105
+	title = "EVTNAME27105"
+	desc = "EVTDESC27105"
+	picture = prussian_crisis
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA27105"
+		FROM = { country_event = 27106 }
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 0.9
+				war_policy = jingoism
+			}
+			modifier = {
+				factor = 0.8
+				war_policy = pro_military
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB27105"
+		release_vassal = PRU
+		FROM  = {
+			relation = { who = PRU  value = 400 }
+			diplomatic_influence = { who = PRU value = 400 }
+		}
+		diplomatic_influence = { who = PRU value = -350 }
+
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor 0.75
+				war_policy = anti_military
+			}
+			modifier = {
+				factor 0.75
+				war_policy = pacifism
+			}
+		}
+	}
+}
+
+#Westphalia declares the war
+country_event = {
+	id = 27106
+	title = "EVTNAME27106"
+	desc = "EVTDESC27106"
+	picture = prussian_crisis
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA27106"
+		FROM = {
+			release_vassal = PRU
+			diplomatic_influence = { who = PRU value = -350 }
+		}	
+		relation = { who = PRU value = 400 }
+		diplomatic_influence = { who = PRU value = 400 }
+		create_alliance = PRU
+		war = {
+			target = FROM
+			attacker_goal = {
+				casus_belli = status_quo
+			}
+			defender_goal = {
+				casus_belli = take_from_sphere
+				country = PRU
+			}
+			call_ally = yes
+		}
+	}
+}
+
+#Annexation Event
+country_event = {
+    id = 27000
+    title = "EVTNAME27000"
+    desc = "EVTDESC27000"
+    #picture = "threehurrahs"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA27000"
+        any_pop = {
+            limit = { is_primary_culture = yes }
+            militancy = -1
+        }
+
+        any_country = {
+            limit = {
+                OR = {
+                    is_sphere_leader_of = THIS
+                    is_our_vassal = THIS
+                }
+                NOT = { tag = FROM }
+            }
+            relation = {
+                who = FROM
+                value = -25
+            }
+            casus_belli = {
+                target = FROM
+                type = free_peoples
+                months = 12
+            }
+            casus_belli = {
+                target = FROM
+                type = humiliate
+                months = 12
+            }
+        }
+        any_country = {
+            limit = {
+                is_culture_group = THIS
+                is_greater_power = yes
+                NOT = { tag = FROM }
+            }
+            casus_belli = {
+                target = FROM
+                type = free_peoples
+                months = 36
+            }
+        }
+        FROM = { 
+			inherit = THIS
+			THIS = { all_core = { remove_core = THIS } }
+		}
+        ai_chance = {
+            factor = 75
+            modifier = {
+                factor = 0.8
+                NOT = {
+                    relation = { who = FROM value = 50 }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                NOT = {
+                    relation = { who = FROM value = 0 }
+                }
+            }
+        }
+    }
+
+    option = {
+        name = "EVTOPTB27000"
+        prestige = 1
+        relation = {
+            who = FROM
+            value = -200
+        }
+        FROM = {
+            diplomatic_influence = {
+                who = THIS
+                value = -200
+            }
+        }
+        leave_alliance = FROM
+        any_pop = {
+            militancy = 3
+            consciousness = 2
+        }
+        ai_chance = {
+            factor = 25
+            modifier = {
+                factor = 0
+                has_country_flag = wants_to_unify
+            }
+            modifier = {
+                factor = 0
+                vassal_of = FROM
+            }
+            modifier = {
+                factor = 0
+                in_sphere = FROM
+                FROM = { NOT = { has_country_flag = secondary_union_formation } }
+            }
+            modifier = {
+                factor = 2
+                NOT = { in_sphere = FROM }
+                FROM = { has_country_flag = secondary_union_formation }
+            }
+            modifier = {
+                factor = 0
+                FROM = { tag = NGF }
+                NOT = {
+                    OR = {
+                        any_owned_province = { port = yes }
+                        any_neighbor_country = { primary_culture = south_german }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#AI Events
+country_event = {
+	id = 271071
+	title = "Conference of Munster"
+	desc = "EVTDESC27107"
+	#picture = Picture
+	
+	trigger = {
+		tag = WES
+		ai = yes
+		SWI = { ai = yes }
+		BAV = { 
+			ai = yes
+			is_greater_power = no 
+		}
+		has_country_flag = weser_danube_league
+		#has_country_flag = stralsund_league 
+		#has_country_flag = rhine_league
+		nationalism_n_imperialism = 1
+		NOT = { has_country_flag = conference_of_munich }
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	fire_only_once = yes
+	option = {
+		name = "EVTOPTA27107"
+		BAV = { annex_to = THIS }
+		set_country_flag = conference_of_munich
+		
+	}
+	
+}
+country_event = {
+	id = 271073
+	title = "Conference of Munster"
+	desc = "EVTDESC271073"
+	#picture = Picture
+	
+	trigger = {
+		tag = WES
+		ai = yes
+		SWI = { ai = yes }
+		DEN = { 
+			ai = yes
+			is_greater_power = no 
+		}
+		#has_country_flag = weser_danube_league
+		has_country_flag = stralsund_league 
+		#has_country_flag = rhine_league
+		nationalism_n_imperialism = 1
+		NOT = { has_country_flag = conference_of_munich }
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	fire_only_once = yes
+	option = {
+		name = "EVTOPTA271073"
+		DEN = { annex_to = THIS }
+		set_country_flag = conference_of_munich
+	}
+	
+}
+country_event = {
+	id = 271072
+	title = "Conference of Munster"
+	desc = "EVTDESC271072"
+	#picture = Picture
+	
+	trigger = {
+		tag = WES
+		ai = yes
+		SWI = { ai = yes }
+		LIG = {
+			ai = yes
+			is_greater_power = no
+		}
+		#has_country_flag = weser_danube_league
+		#has_country_flag = stralsund_league 
+		has_country_flag = rhine_league
+		nationalism_n_imperialism = 1
+		NOT = { has_country_flag = conference_of_munich }
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	fire_only_once = yes
+	option = {
+		name = "Annex Them"
+		LIG = { annex_to = THIS }
+		set_country_flag = conference_of_munich
+	}
+	
+}
+
+

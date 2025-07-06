@@ -1,0 +1,6 @@
+owner=VRG
+controller=VRG
+add_core=VRG
+add_core=ANS
+trade_goods = cattle
+life_rating = 31

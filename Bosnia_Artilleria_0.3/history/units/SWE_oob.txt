@@ -1,0 +1,143 @@
+#Leaders
+leader = {
+	name = "C. Cederström"
+	date = 1824.1.1
+	type = land
+	personality = strange
+	background = hated
+	prestige = 0.1
+}
+
+leader = {
+	name = "af Billbergh"
+	date = 1814.1.1
+	type = land
+	personality = diplomatic
+	background = toady
+	prestige = 0.2
+}
+
+leader = {
+	name = "Gustaf Peyron"
+	date = 1827.1.1
+	type = land
+	personality = imperious
+	background = exranker
+	prestige = 0.1
+}
+
+#Armies
+	army = {
+		name="1st Army"
+		location=322
+		regiment = {
+			name="Infantry"
+			type=infantry
+			home=334
+		}
+		regiment = {
+			name="Infantry"
+			type=infantry
+			home=322
+		}
+		regiment = {
+			name="Infantry"
+			type=infantry
+			home=322
+		}
+		regiment = {
+			name="Infantry"
+			type=infantry
+			home=326
+		}
+		regiment = {
+			name="Cavalry"
+			type=cavalry
+			home=326
+		}
+		regiment = {
+			name="Artillery"
+			type=artillery
+			home=325
+		}
+		regiment = {
+			name="Artillery"
+			type=artillery
+			home=325
+		}
+		regiment = {
+			name="Artillery"
+			type=artillery
+			home=333
+		}
+		regiment = {
+			name="Artillery"
+			type=artillery
+			home=332
+		}
+		regiment = {
+			name="Artillery"
+			type=artillery
+			home=332
+		}
+
+	}
+
+army = {
+	name="2nd Army"
+	location=323
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=335
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=334
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=334
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=330
+	}
+	regiment = {
+		name="Cavalry"
+		type=cavalry
+		home=330
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=329
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=329
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=328
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=328
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=327
+	}
+
+}
+
+
+

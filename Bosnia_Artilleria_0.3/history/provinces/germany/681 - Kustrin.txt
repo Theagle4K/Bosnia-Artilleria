@@ -1,0 +1,8 @@
+owner=PAP
+controller=PAP
+add_core=PAP
+add_core=SLC
+add_core=GER
+add_core=HIE
+trade_goods = grain
+life_rating = 35

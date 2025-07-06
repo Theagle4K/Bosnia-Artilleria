@@ -1,0 +1,24 @@
+name = "Restoration Of Caucasia"
+
+1835.10.2 = {
+	add_attacker=BOS
+	add_defender=TCA
+
+	war_goal = {
+		casus_belli = conquest
+		actor = BOS
+		receiver = TCA
+		country = TCA
+	}
+		war_goal = {
+		casus_belli = status_quo
+		actor = TCA
+		receiver = BOS
+		country = BOS
+	}
+
+}
+1836.6.6 = {
+	rem_attacker = BOS
+	rem_defender = TCA
+}

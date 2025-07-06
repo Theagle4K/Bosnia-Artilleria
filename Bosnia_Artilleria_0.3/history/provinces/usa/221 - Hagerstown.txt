@@ -1,0 +1,7 @@
+owner=ANS
+controller=ANS
+add_core=ANS
+add_core=VRG
+trade_goods = tobacco
+life_rating = 35
+terrain = montane_forest

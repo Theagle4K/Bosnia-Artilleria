@@ -1,0 +1,197 @@
+#Sphere of Influence
+
+
+#Leaders
+leader = {
+	name="Peter Griffmadar"
+	date="1805.2.2"
+	type=land
+	personality="implacable"
+	background="cavalry_school"
+}
+leader = {
+	name="Laszlo Aulich"
+	date="1805.2.2"
+	type=land
+	personality="au_fait"
+	background="exranker"
+}
+leader = {
+	name="Janos Torok"
+	date="1805.2.2"
+	type=land
+	personality="coolminded"
+	background="megalomaniac"
+}
+leader = {
+	name="Simon Osterreicher"
+	date="1805.2.2"
+	type=land
+	personality="persistant"
+	background="cavalry_school"
+}
+
+#Armies
+army = {
+	name = "Magyaroszag Armia 1"
+	location =641
+	regiment = {
+		name="Gyalogsag"
+		type=infantry
+		home=641
+	}
+	regiment = {
+		name="Gyalogsag"
+		type=infantry
+		home=641
+	}
+	regiment = {
+		name="Gyalogsag"
+		type=infantry
+		home=650
+	}
+	regiment = {
+		name="Gyalogsag"
+		type=infantry
+		home=650
+	}
+	regiment = {
+		name="Lovassag"
+		type=cavalry
+		home=649
+	}
+	regiment = {
+		name="Tuzersegi"
+		type=artillery
+		home=649
+	}
+	regiment = {
+		name="Tuzersegi"
+		type=artillery
+		home=648
+	}
+	regiment = {
+		name="Tuzersegi"
+		type=artillery
+		home=648
+	}
+	regiment = {
+		name="Tuzersegi"
+		type=artillery
+		home=648
+	}
+	regiment = {
+		name="Tuzersegi"
+		type=artillery
+		home=646
+	}
+}
+army = {
+	name = "Magyaroszag Armia 2"
+	location =2538
+	regiment = {
+		name="Gyalogsag"
+		type=infantry
+		home=660
+	}
+	regiment = {
+		name="Gyalogsag"
+		type=infantry
+		home=657
+	}
+	regiment = {
+		name="Gyalogsag"
+		type=infantry
+		home=2533
+	}
+	regiment = {
+		name="Gyalogsag"
+		type=infantry
+		home=655
+	}
+	regiment = {
+		name="Lovassag"
+		type=cavalry
+		home=656
+	}
+	regiment = {
+		name="Tuzersegi"
+		type=artillery
+		home=647
+	}
+	regiment = {
+		name="Tuzersegi"
+		type=artillery
+		home=647
+	}
+	regiment = {
+		name="Tuzersegi"
+		type=artillery
+		home=652
+	}
+	regiment = {
+		name="Tuzersegi"
+		type=artillery
+		home=652
+	}
+	regiment = {
+		name="Tuzersegi"
+		type=artillery
+		home=792
+	}
+}
+army = {
+	name = "Magyaroszag Armia 3"
+	location =779
+	regiment = {
+		name="Gyalogsag"
+		type=infantry
+		home=792
+	}
+	regiment = {
+		name="Gyalogsag"
+		type=infantry
+		home=792
+	}
+	regiment = {
+		name="Gyalogsag"
+		type=infantry
+		home=2538
+	}
+	regiment = {
+		name="Gyalogsag"
+		type=infantry
+		home=2538
+	}
+	regiment = {
+		name="Lovassag"
+		type=cavalry
+		home=2538
+	}
+	regiment = {
+		name="Tuzersegi"
+		type=artillery
+		home=2538
+	}
+	regiment = {
+		name="Tuzersegi"
+		type=artillery
+		home=2538
+	}
+	regiment = {
+		name="Tuzersegi"
+		type=artillery
+		home=791
+	}
+	regiment = {
+		name="Tuzersegi"
+		type=artillery
+		home=791
+	}
+	regiment = {
+		name="Tuzersegi"
+		type=artillery
+		home=642
+	}
+}
+

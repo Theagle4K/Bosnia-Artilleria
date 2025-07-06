@@ -1,0 +1,8 @@
+owner=OMA
+controller=OMA
+add_core=OMA
+add_core=ARA
+trade_goods = fish
+life_rating = 34
+terrain = semidesert
+fort = 1

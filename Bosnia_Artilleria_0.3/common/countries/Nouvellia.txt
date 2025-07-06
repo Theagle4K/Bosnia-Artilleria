@@ -1,0 +1,156 @@
+graphical_culture = ConfederateGC
+color = { 129 179 236 }
+
+party = {
+	name = "NOU_anarcho_liberal"
+	start_date = 1830.1.1
+	end_date = 2000.1.1
+
+	ideology = anarcho_liberal
+
+	citizenship_policy = residency
+	economic_policy = laissez_faire
+	religious_policy = pluralism
+	social_policy = no_state_interference
+	trade_policy = free_trade
+	war_policy = jingoism
+}
+
+party = {
+	name = "NOU_conservative"
+	start_date = 1000.1.1
+	end_date = 2000.1.1
+
+	ideology = conservative
+
+	citizenship_policy = residency
+	economic_policy = interventionism
+	religious_policy = pluralism
+	social_policy = no_position_set
+	trade_policy = protectionism
+	war_policy = pro_military
+}
+
+party = {
+	name = "NOU_liberal"
+	start_date = 1680.1.1
+	end_date = 2000.1.1
+
+	ideology = liberal
+
+	citizenship_policy = limited_citizenship
+	economic_policy = interventionism
+	religious_policy = pluralism
+	social_policy = no_position_set
+	trade_policy = protectionism
+	war_policy = pro_military
+}
+
+
+party = {
+	name = "NOU_liberal_2"
+	start_date = 1830.1.1
+	end_date = 2000.1.1
+
+	ideology = liberal
+
+	citizenship_policy = residency
+	economic_policy = laissez_faire
+	religious_policy = pluralism
+	social_policy = no_position_set
+	trade_policy = protectionism
+	war_policy = anti_military
+}
+
+party = {
+	name = "NOU_socialist"
+	start_date = 1848.1.1
+	end_date = 2000.1.1
+
+	ideology = socialist
+
+	citizenship_policy = full_citizenship
+	economic_policy = state_capitalism
+	religious_policy = pro_atheism
+	social_policy = welfare_state
+	trade_policy = protectionism
+	war_policy = pro_military
+}
+
+party = {
+	name = "NOU_reactionary"
+	start_date = 1790.1.1
+	end_date = 2000.1.1
+
+	ideology = reactionary
+
+	citizenship_policy = residency
+	economic_policy = state_capitalism
+	religious_policy = moralism
+	social_policy = no_position_set
+	trade_policy = protectionism
+	war_policy = jingoism
+}
+
+party = {
+	name = "NOU_communist"
+	start_date = 1848.1.1
+	end_date = 2000.1.1
+
+	ideology = communist
+
+	citizenship_policy = full_citizenship
+	economic_policy = planned_economy
+	religious_policy = pro_atheism
+	social_policy = populist_welfare
+	trade_policy = protectionism
+	war_policy = pro_military
+}
+
+party = {
+	name = "NOU_fascist"
+	start_date = 1900.1.1
+	end_date = 2000.1.1
+
+	ideology = fascist
+
+	citizenship_policy = residency
+	economic_policy = state_capitalism
+	religious_policy = moralism
+	social_policy = populist_welfare
+	trade_policy = protectionism
+	war_policy = jingoism
+}
+
+unit_names = {
+	dreadnought = {
+		"L'Étoile du Sud" "La Rébellion" "L'Indépendance" "Le Courage du Sud" "La Conquête" "L'Honoré de la Guerre" "Le Dix-Sept Juin" "Le Vengeur" "La Liberté du Sud" "Le Chant de la Cité" "La Gloire du Sud" "Le Chevalier de la Cours" "L'Admirable Sud" "Le Foudre du Sud" "Le Téméraire" "La Vaillance" "Le Faucon du Sud" "Le Vaillant Défenseur" "La Victoire"
+	}
+	battleship = {
+		
+	}
+	ironclad = {
+		"L'Étoile du Sud" "La Rébellion" "L'Indépendance" "Le Courage du Sud" "La Conquête" "L'Honoré de la Guerre" "Le Dix-Sept Juin" "Le Vengeur" "La Liberté du Sud" "Le Chant de la Cité" "La Gloire du Sud" "Le Chevalier de la Cours" "L'Admirable Sud" "Le Foudre du Sud" "Le Téméraire" "La Vaillance" "Le Faucon du Sud" "Le Vaillant Défenseur" "La Victoire"	
+		}
+	manowar = {
+		"L'Étoile du Sud" "La Rébellion" "L'Indépendance" "Le Courage du Sud" "La Conquête" "L'Honoré de la Guerre" "Le Dix-Sept Juin" "Le Vengeur" "La Liberté du Sud" "Le Chant de la Cité" "La Gloire du Sud" "Le Chevalier de la Cours" "L'Admirable Sud" "Le Foudre du Sud" "Le Téméraire" "La Vaillance" "Le Faucon du Sud" "Le Vaillant Défenseur" "La Victoire"
+	}
+	cruiser = {
+		"L'Étoile du Sud" "La Rébellion" "L'Indépendance" "Le Courage du Sud" "La Conquête" "L'Honoré de la Guerre" "Le Dix-Sept Juin" "Le Vengeur" "La Liberté du Sud" "Le Chant de la Cité" "La Gloire du Sud" "Le Chevalier de la Cours" "L'Admirable Sud" "Le Foudre du Sud" "Le Téméraire" "La Vaillance" "Le Faucon du Sud" "Le Vaillant Défenseur" "La Victoire"
+	}
+	frigate = {
+		"L'Étoile du Sud" "La Rébellion" "L'Indépendance" "Le Courage du Sud" "La Conquête" "L'Honoré de la Guerre" "Le Dix-Sept Juin" "Le Vengeur" "La Liberté du Sud" "Le Chant de la Cité" "La Gloire du Sud" "Le Chevalier de la Cours" "L'Admirable Sud" "Le Foudre du Sud" "Le Téméraire" "La Vaillance" "Le Faucon du Sud" "Le Vaillant Défenseur" "La Victoire"
+	}
+	monitor = {
+		"L'Étoile du Sud" "La Rébellion" "L'Indépendance" "Le Courage du Sud" "La Conquête" "L'Honoré de la Guerre" "Le Dix-Sept Juin" "Le Vengeur" "La Liberté du Sud" "Le Chant de la Cité" "La Gloire du Sud" "Le Chevalier de la Cours" "L'Admirable Sud" "Le Foudre du Sud" "Le Téméraire" "La Vaillance" "Le Faucon du Sud" "Le Vaillant Défenseur" "La Victoire"
+	}
+	clipper_transport = {
+		"L'Étoile du Sud" "La Rébellion" "L'Indépendance" "Le Courage du Sud" "La Conquête" "L'Honoré de la Guerre" "Le Dix-Sept Juin" "Le Vengeur" "La Liberté du Sud" "Le Chant de la Cité" "La Gloire du Sud" "Le Chevalier de la Cours" "L'Admirable Sud" "Le Foudre du Sud" "Le Téméraire" "La Vaillance" "Le Faucon du Sud" "Le Vaillant Défenseur" "La Victoire"
+	}
+	steam_transport = {
+		"L'Étoile du Sud" "La Rébellion" "L'Indépendance" "Le Courage du Sud" "La Conquête" "L'Honoré de la Guerre" "Le Dix-Sept Juin" "Le Vengeur" "La Liberté du Sud" "Le Chant de la Cité" "La Gloire du Sud" "Le Chevalier de la Cours" "L'Admirable Sud" "Le Foudre du Sud" "Le Téméraire" "La Vaillance" "Le Faucon du Sud" "Le Vaillant Défenseur" "La Victoire"
+	}
+	commerce_raider = {
+		"L'Étoile du Sud" "La Rébellion" "L'Indépendance" "Le Courage du Sud" "La Conquête" "L'Honoré de la Guerre" "Le Dix-Sept Juin" "Le Vengeur" "La Liberté du Sud" "Le Chant de la Cité" "La Gloire du Sud" "Le Chevalier de la Cours" "L'Admirable Sud" "Le Foudre du Sud" "Le Téméraire" "La Vaillance" "Le Faucon du Sud" "Le Vaillant Défenseur" "La Victoire"
+	}
+}

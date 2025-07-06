@@ -1,0 +1,60 @@
+#Sphere of Influence
+
+
+#Leaders
+
+#Armies
+army = {
+	name="Arm e de Ferrara"
+	location=467
+	regiment = {
+		name="1st Vannes Infantry"
+		type=infantry
+		home=470
+	}
+	regiment = {
+		name="1st Vannes Infantry"
+		type=infantry
+		home=470
+	}
+	regiment = {
+		name="1st Vannes Infantry"
+		type=infantry
+		home=470
+	}
+	regiment = {
+		name="1st Vannes Infantry"
+		type=infantry
+		home=470
+	}
+	regiment = {
+		name="1st Vannes Infantry"
+		type=hussar
+		home=470
+	}
+	regiment = {
+		name="1st Vannes Infantry"
+		type=artillery
+		home=470
+	}
+	regiment = {
+		name="1st Vannes Infantry"
+		type=artillery
+		home=468
+	}
+	regiment = {
+		name="1st Vannes Infantry"
+		type=artillery
+		home=467
+	}
+	regiment = {
+		name="1st Vannes Infantry"
+		type=artillery
+		home=467
+	}
+	regiment = {
+		name="1st Vannes Infantry"
+		type=artillery
+		home=471
+	}
+}

@@ -1,0 +1,70 @@
+#Sphere of Influence
+
+
+#Leaders
+
+#Armies
+army = {
+	name="5th Army"
+	location=1680
+	regiment = {
+		name="Al_Silahi"
+		type=irregular
+		home=1680
+	}
+	regiment = {
+		name="Al_Silahi"
+		type=irregular
+		home=1682
+	}
+	regiment = {
+		name="Al_Silahi"
+		type=irregular
+		home=1291
+	}
+	regiment = {
+		name="Al_Silahi"
+		type=cavalry
+		home=1690
+	}
+	regiment = {
+		name="Al_Caveli"
+		type=cavalry
+		home=2563
+	}
+	regiment = {
+		name="Al_Caveli"
+		type=cavalry
+		home=2694
+	}
+	regiment = {
+		name="Al_Topari"
+		type=artillery
+		home=1687
+	}
+	regiment = {
+		name="Al_Topari"
+		type=artillery
+		home=1681
+	}
+	regiment = {
+		name="Al_Topari"
+		type=artillery
+		home=1688
+	}
+	regiment = {
+		name="Al_Topari"
+		type=artillery
+		home=1705
+	}
+	regiment = {
+		name="Al_Topari"
+		type=artillery
+		home=1705
+	}
+	regiment = {
+		name="Al_Topari"
+		type=artillery
+		home=1705
+	}
+}

@@ -1,0 +1,8 @@
+owner=LIG
+controller=LIG
+add_core=LIG
+add_core=GER
+add_core=HIE
+trade_goods = coal
+life_rating = 35
+terrain = mining_district

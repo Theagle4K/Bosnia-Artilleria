@@ -1,0 +1,110 @@
+Key;English;French;German;Polish;Spanish;Italian;Swedish;Czech;Hungarian;Dutch;Portuguese;Russian;Finnish;
+LIG;Liege;
+LIG_ADJ;Wallonian;
+LIG_anarcho_liberal;Radical Party;
+LIG_communist;Communist Party;
+LIG_conservative;Conservative Party;
+LIG_fascist;Fascist Party;
+LIG_liberal;Liberal Party;
+LIG_reactionary;National Party;
+LIG_socialist;Socialist Party;
+LVN;Lombardy-Venice;
+LVN_ADJ;Lombard-Venetian;
+RIG;Riga;
+RIG_ADJ;Rigan;
+RIG_anarcho_liberal;Radical Party;
+RIG_communist;Communist Party;
+RIG_conservative;Conservative Party;
+RIG_fascist;Fascist Party;
+RIG_liberal;Liberal Party;
+RIG_reactionary;National Party;
+RIG_socialist;Socialist Party;
+NAP;Naples;
+NAP_ADJ;Neapolitan;
+AND;United States of Andies;
+AND_ADJ;Andean;x
+HIE;Holy Italian Empire;x
+HIE_ADJ;Italian;x
+ITA_democracy;Rome;;;;;;;;;;;;;
+ITA_ADJ;Roman;
+ITA_bourgeois_dictatorship_ADJ;Roman;;;;;;;;;;;;;
+ITA_proletarian_dictatorship;The People's Republic of Rome;;;;;;;;;;;;;
+ITA_proletarian_dictatorship_ADJ;Roman;;;;;;;;;;;;;
+ITA;Rome;x
+SER;Odchrivania;x
+SER_ADJ;Serbian;x
+MCK;Russian China;;;;;;;;;;;;;
+MCK_fascist_dictatorship;RNROC;RRNDC;RRVC;;;;;;;;;;;
+MCK_presidential_dictatorship;Fengskyij China;;;;;;;;;;;;;
+MCK_ADJ;Russian;Russie;Russisch;;;;;;;;;;;
+MCK_presidential_dictatorship_ADJ;Fengskyij;;;;;;;;;;;;;
+UNF;United Federation;;;;;;;;;;;;;;
+UNF_ADJ;American;;;;;;;;;;;;;
+UNF_absolute_monarchy;United Kingdom;;;;;;;;;;;;;;
+UNF_prussian_constitutionalism;United Kingdom;;;;;;;;;;;;;;
+UNF_hms_government;United Kingdom;;;;;;;;;;;;;;
+UNF_democracy;United Federation;;;;;;;;;;;;;;
+UNF_proletarian_dictatorship;United Republics;;;;;;;;;;;;;;
+UNF_presidential_dictatorship;Guardian Units of Nations;;;;;;;;;;;;;;
+UNF_bourgeois_dictatorship;United Federation;;;;;;;;;;;;;;
+UNF_fascist_dictatorship;United Provinces;;;;;;;;;;;;;;
+TCW;The Commonwealth;x
+TCW_ADJ;English;x
+WSD;Wesser-Donau Confederation;x
+WSD_ADJ;Wesern;x
+AST;Soudria;;;;;;;;;;;;;x
+NOU;Nouvellia;;;;;;;;;;;;x
+NOU_ADJ;Nouvellien;;;;;;;;;;;;;x
+VRG;Virginia;;;;;;;;;;;;x
+VRG_ADJ;Virginian;;;;;;;;;;;;;x
+ANS;United States of Anglicana;;;;;;;;;;;;;x
+ANS_ADJ;State's;;;;;;;;;;;;;x
+HLL;Holland;x
+HLL_ADJ;Dutch;x
+NST;Neustria;
+NST_ADJ;Neustrian;x
+RHI;Frankia;;;;;;;;;
+RHI_ADJ;Frankish;;;;;;;;;
+RHI_liberal;Liberaldem. Partei;Liberaldem. Partei;Liberaldem. Partei;;;;;;;;;;;
+RHI_conservative;Zentrumspartei;Zentrumspartei;Zentrumspartei;;;;;;;;;;;
+RHI_liberal_2;Nationalliberale ;Nationalliberale ;Nationalliberale ;;;;;;;;;;;
+RHI_liberal_3;Freisinnige Partei;Freisinnige Partei;Freisinnige Partei;;;;;;;;;;;
+RHI_socialist;Deutscher Arbeiterverein;Deutscher Arbeiterverein;Deutscher Arbeiterverein;;;;;;;;;;;
+RHI_socialist_2;Sozialdem. Arbeiterpartei ;Sozialdem. Arbeiterpartei ;Sozialdem. Arbeiterpartei ;;;;;;;;;;;
+RHI_socialist_3;Sozial. Arbeiterpartei ;Sozial. Arbeiterpartei ;Sozial. Arbeiterpartei ;;;;;;;;;;;
+RHI_reactionary;Nationale Partei;Nationale Partei;Nationale Partei;;;;;;;;;;;
+RHI_conservative_2;Konservative Partei;Konservative Partei;Konservative Partei;;;;;;;;;;;
+RHI_conservative_3;Christsoz. Arbeiterpartei;Christsoz. Arbeiterpartei;Christsoz. Arbeiterpartei;;;;;;;;;;;
+RHI_anarcho_liberal;Radical Arbeiterpartei;Arbeiterpartei radical;Radikale Arbeiterpartei;;;;;;;;;;;
+RHI_communist;Communist Arbeiterpartei;Arbeiterpartei communiste;Kommunistische Arbeiterpartei;;;;;;;;;;;
+RHI_fascist;NSDP;NSDP;NSDP;;;;;;;;;;;
+SLC;Slovincia;x
+SLC_ADJ;Slovincian;x
+PLC;Trislavia;;;;;;;;;;;;;
+PLC_ADJ;Trislavian;;;;;;;;;;;;;
+PLC_proletarian_dictatorship;Szojus Commonwealth;;;;;;;;;;;;;
+PLC_fascist_dictatorship;Szojus Rejch;;;;;;;;;;;;;
+PLC_presidential_dictatorship;Commonwealth;;;;;;;;;;;;;
+PLC_democracy;Trislavia;;;;;;;;;;;;;
+PLV;Zapadoslavia;;;;;;;;;;;;;
+PLV_ADJ;Slavic;;;;;;;;;;;;;
+PLV_proletarian_dictatorship;ZSSR;;;;;;;;;;;;;
+PLV_fascist_dictatorship;Pomeranian League;;;;;;;;;;;;;
+PLV_presidential_dictatorship;Commonunion;;;;;;;;;;;;;
+PLV_democracy;Zapadoslav Republic;;;;;;;;;;;;;
+KYV;Kievan Rus';;;;;;;;;;;;;
+KYV_ADJ;Russian;;;;;;;;;;;;;
+KYV_proletarian_dictatorship;Soviet Union;;;;;;;;;;;;;
+KYV_fascist_dictatorship;Russia;;;;;;;;;;;;;
+KYV_presidential_dictatorship;Principality of Kiev;;;;;;;;;;;;;
+KYV_democracy;Republic of Rus';;;;;;;;;;;;;
+RUC_ADJ;Turkic;Turkic;Turkic;;;;;;;;;;;x;
+RUC;Golden Horde of Russia;Golden Horde of Russia;Golden Horde of Russia;;;;;;;;;;;x;
+RUC_proletarian_dictatorship;Turkic SSR;Turkic SSR;Turkic SSR;;;;;;;;;;;x;
+RUC_presidential_dictatorship;Turkistan;Turkistan;Turkistan;;;;;;;;;;;x;
+RUC_bourgeois_dictatorship;Turkistan;Turkistan;Turkistan;;;;;;;;;;;x;
+RUC_fascist_dictatorship;Turkic Caliphate;Turkic Caliphate;Turkic Caliphate;;;;;;;;;;;x;
+RUC_absolute_monarchy;Golden Horde of Russia;Golden Horde of Russia;Golden Horde of Russia;;;;;;;;;;;x;
+RUC_prussian_constitutionalism;Golden Horde of Russia;Golden Horde of Russia;Golden Horde of Russia;;;;;;;;;;;x;
+RUC_hms_government;Golden Horde of Russia;Golden Horde of Russia;Golden Horde of Russia;;;;;;;;;;;x;
+RUC_democracy;Turkistan;Turkistan;Turkistan;;;;;;;;;;;x;

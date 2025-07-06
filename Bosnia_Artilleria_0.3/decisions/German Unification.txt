@@ -1,0 +1,1118 @@
+political_decisions = {
+    #end_hie = {
+    #    picture = end_hie
+    #    potential = {
+    #        war_with = SWI
+    #        NOT = { 
+    #            has_global_flag = end_of_hie
+    #            tag = SWI
+    #        }
+    #        OR = {
+    #            has_country_flag = member_hre 
+    #            any_neighbor_country = {
+    #                OR = {
+    #                    tag = SWI
+    #                    has_country_flag = member_hre
+    #                }
+    #            }
+    #        }
+    #    }
+    #    allow = {
+    #        year = 1845
+    #        controls = 603
+    #    }
+    #    effect = {
+    #        SWI = { country_event = 27903}
+    #        prestige = 100
+    #        badboy = 10
+    #        set_global_flag = end_of_hie
+    #    }
+    #}
+    change_focus = {
+        picture = return_cores_img
+        potential = {
+            tag = WES
+            OR = {
+                has_country_flag = unifier_of_germans
+                has_country_flag = rhine_league
+                has_country_flag = weser_danube_league
+                has_country_flag = stralsund_league
+            }
+            NOT = { has_country_modifier = changed_focus }
+        }
+
+        allow = {
+
+        }
+        effect = {
+            clr_country_flag = unifier_of_germans
+            clr_country_flag = rhine_league
+            clr_country_flag = weser_danube_league
+            clr_country_flag = stralsund_league
+            country_event = 27830
+            add_country_modifier = { name = changed_focus duration = 3655  }
+        }
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                factor = 1
+                has_country_flag = weser_danube_league
+                BAV = { is_greater_power = yes} 
+            }
+            modifier = {
+                factor = 1
+                has_country_flag = rhine_league
+                LIG = { is_greater_power = yes} 
+            }
+            modifier = {
+                factor = 1
+                has_country_flag = stralsund_league
+                DEN = { is_greater_power = yes} 
+            }
+        }
+    }
+    form_WSD = {
+        picture = become_wesser_donau
+        potential = {
+            OR = {
+                tag = BAV
+                AND = {
+                    tag = WES
+                    has_country_flag = weser_danube_league
+                }
+            }
+            NOT = { 
+                exists = WSD 
+                has_country_flag = wes_formed
+            }
+        }
+        allow = {
+            war = no
+            is_mobilised = no
+            nationalism_n_imperialism = 1
+            is_greater_power = yes
+            has_global_flag = end_of_hie
+            WES = {
+                all_core ={
+                    OR ={
+                        owned_by = THIS
+                        owner = {
+                            OR = {
+                                in_sphere = THIS
+                                is_vassal = yes
+                            }
+                            war = no
+                            is_mobilised = no
+                            is_greater_power = no
+						}
+                    }
+                }
+            }
+            BAV = {
+                all_core ={
+                    OR ={
+                        owned_by = THIS
+                        owner = {
+                            OR = {
+                                in_sphere = THIS
+                                is_vassal = yes
+                            }
+                            war = no
+                            is_mobilised = no
+                            is_greater_power = no
+						}
+                        owned_by = AUS
+                    }
+                }
+            }
+            WEI = {
+                all_core ={
+                    OR ={
+                        owned_by = THIS
+                        owner = {
+                            OR = {
+                                in_sphere = THIS
+                                is_vassal = yes
+                            }
+                            war = no
+                            is_mobilised = no
+                            is_greater_power = no
+						}
+                    }
+                }
+            }
+        }
+        effect = {
+            change_tag = WSD
+            prestige = 20
+            add_accepted_culture = frankish
+            add_accepted_culture = south_german
+            add_accepted_culture = austrian
+            remove_accepted_culture = north_german
+            WES = { all_core = { add_core = WSD remove_core = WES }}
+            BAV = { all_core = { add_core = WSD remove_core = BAV }}
+            WEI = { all_core = { add_core = WSD remove_core = WEI}}
+            any_country = {
+                limit = {
+                    OR = {
+                        tag = BAV
+                        tag = WEI
+                        tag = WES
+                    }
+                    in_sphere = WSD
+                    OR = {
+                        is_vassal = no
+                        vassal_of = WSD
+                    }
+                }
+                annex_to = WSD
+            }
+            #PRU_553 = { secede_province = PAP add_core = PAP remove_core = WSD}
+            capital = 564
+            set_country_flag = wes_formed
+        }
+    }
+
+    expansion_WSD = {
+        picture = expand_wsd
+        potential = {
+            tag = WSD
+            is_greater_power = yes
+            NOT = {  has_country_flag =  expended_wsd }
+        }
+        allow = {
+            all_core = { owned_by = THIS } 
+            nationalism_n_imperialism = 1
+            NOT = { AUS = { has_country_modifier = neutrality_modifier } }
+            AUS = {
+                all_core = {
+                    OR = {
+                        owned_by = THIS
+                        owner = {
+                            OR = {
+                                in_sphere = THIS
+                                is_vassal = yes
+                            }
+                            war = no
+                            is_mobilised = no
+                            is_greater_power = no
+						}
+                    }
+                }
+            }
+            BAD = {
+                OR = {
+                    exists = no
+                    is_vassal = no
+                }
+            }
+            WUR = {
+                OR = {
+                    exists = no
+                    is_vassal = no
+                }
+            }
+            war = no
+            is_mobilised = no
+        }
+        effect = {
+            set_country_flag = expended_wsd
+            prestige = 20
+            badboy = 12
+            any_country = {
+                limit = {
+                    OR = {
+                        primary_culture = austrian
+                        primary_culture = south_german
+                    }
+                    NOT = { tag = SWI }
+                    in_sphere = THIS
+                }
+                country_event = 11106
+            }
+            BAD = { all_core = { add_core = WSD } }
+            WUR = { all_core = { add_core = WSD } }
+            AUS = { all_core = { add_core = WSD } }  
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+
+    expansion_WSD_west = {
+        picture = southern_expedition
+        potential = {
+            tag = WSD
+            is_greater_power = yes
+            NOT = {  has_country_flag =  expended_wsd }
+        }
+        allow = {
+            all_core = { owned_by = THIS } 
+            nationalism_n_imperialism = 1
+            #AUS = { has_country_modifier = neutrality_modifier } 
+            BAD = {
+                OR = {
+                    exists = no
+                    is_vassal = no
+                }
+            }
+            WUR = {
+                OR = {
+                    exists = no
+                    is_vassal = no
+                }
+            }
+            war = no
+            is_mobilised = no
+        }
+        effect = {
+            set_country_flag = expended_wsd
+            prestige = 20
+            remove_accepted_culture = austrian
+            any_owned = { limit = { is_core = AUS } secede_province = AUS remove_core = THIS } 
+            any_country = {
+                limit = {
+                    primary_culture = south_german
+                    NOT = { tag = SWI }
+                    in_sphere = THIS
+                }
+                country_event = 11106
+            }
+            BAD = { all_core = { add_core = WSD } }
+            WUR = { all_core = { add_core = WSD } }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+	form_STU = {
+		picture = concede_finland
+        potential = {
+            tag = WES
+            has_country_flag = stralsund_league
+			NOT = { 
+				has_country_flag =  formed_STU 
+				exists = STU
+                exists = NGF
+                exists = GER
+			}
+        }
+		allow = {
+			war = no
+            is_mobilised = no
+            nationalism_n_imperialism = 1
+            is_greater_power = yes
+            has_global_flag = end_of_hie
+			PAP = {
+				all_core = {
+					OR = { 
+						owned_by = THIS
+                        owner = {
+                            OR = {
+                                in_sphere = THIS
+                                is_vassal = yes
+                            }
+                            war = no
+                            is_mobilised = no
+                            is_greater_power = no
+						}
+					}
+				}
+			}
+			DEN = {
+				all_core = {
+					OR = { 
+						owned_by = THIS
+                        owner = {
+                            OR = {
+                                in_sphere = THIS
+                                is_vassal = yes
+                            }
+                            war = no
+                            is_mobilised = no
+                            is_greater_power = no
+						}
+					}
+				}
+			}
+            WES = { all_core = { owned_by = THIS } }
+		}
+		effect = {
+			change_tag = STU
+			DEN = { all_core = { remove_core = DEN add_core=STU } }
+			PML = { all_core = { remove_core = PML add_core=STU } }
+			WES = { all_core = { remove_core = WES } }
+			#PAP = { all_core = { remove_core = PAP #add_core=STU } }
+			prestige = 15
+            remove_accepted_culture = frankish
+            primary_culture = north_german
+            add_accepted_culture = danish
+            capital = 372
+            any_country = {
+                limit = {
+                    NOT = { 
+                        tag = PRU
+                        tag = BRE 
+                    }
+                    OR = {
+                        primary_culture = north_german
+                        primary_culture = frankish
+                        primary_culture = danish
+                    }
+                    in_sphere = THIS
+                    NOT = { tag = THIS }
+                    NOT = { has_country_flag = post_colonial_country }
+                    OR = {
+                        is_vassal = no
+                        vassal_of = THIS
+                    }
+                }
+                country_event = 27000
+                all_core = { add_core= THIS}
+            }
+			set_country_flag = formed_STU 
+		}
+        ai_will_do = {
+            factor = 1
+        }
+	}
+
+    expansion_STU = {
+        picture = map_of_prussia
+        potential = {
+            tag = STU
+            nationalism_n_imperialism = 1
+            has_global_flag = end_of_hie
+            NOT = { has_country_flag = expended_stu }
+        }
+        allow = {
+            nationalism_n_imperialism = 1
+            is_greater_power = yes
+            war = no
+            is_mobilised = no
+            PRU = {
+                OR = {
+                    exists = no
+                    is_vassal = no
+                }
+            }
+        }
+        effect = {
+            PRU_701 = { add_core= STU }
+            PRU_695 = { add_core= STU }
+            PRU_690 = { add_core= STU }
+            prestige = 10
+            badboy = 10
+            relation = { who = PLC value = -200 }
+            set_country_flag = expended_stu
+        }
+        ai_will_do = {
+            factor = 1
+            modifier = {
+                factor = 0
+                badboy = 15 
+            }
+            modifier = {
+                factor = 0
+                alliance_with = PLC
+            }
+        }
+    }
+	scandinavia_to_union = {
+		picture = SCA_political_union   
+		potential = {
+			tag = STU
+			NOT = { has_country_flag = scandinavia_unionized }
+		}
+		allow = {
+		    war = no
+			NOR = {
+				all_core = {
+					OR = { 
+						owned_by = THIS
+						owner = {
+                            in_sphere = THIS
+						    OR = {
+                                vassal_of = THIS
+								is_vassal = no
+							}
+							war = no
+							is_mobilised = no
+							is_greater_power = no
+						}
+					}
+				}
+			}
+			SWE = {
+				all_core = {
+					OR = { 
+						owned_by = THIS
+						owner = {
+                            in_sphere = THIS
+						    OR = {
+                                vassal_of = THIS
+								is_vassal = no
+							}
+							war = no
+							is_mobilised = no
+							is_greater_power = no
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			set_country_flag = scandinavia_unionized
+			prestige = 15
+			badboy = 10
+			SWE = { 
+                country_event = 27000
+                all_core = { add_core = STU }
+            }
+			NOR = { 
+                country_event = 27000
+                all_core = { add_core = STU }
+            }
+
+			add_accepted_culture = swedish
+			add_accepted_culture = norwegian
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				badboy = 15
+			}
+		}
+	}
+
+
+    form_RHI = {
+        picture = form_frankia
+        potential = {
+            OR = {
+                tag = LIG
+                AND = {
+                    tag = WES
+                    has_country_flag = rhine_league
+                }
+            }
+            NOT = { 
+                exists = RHI
+                has_country_flag = rhi_formed
+            }
+        }
+        allow = {
+            war = no
+            is_mobilised = no
+            nationalism_n_imperialism = 1
+            is_greater_power = yes
+            has_global_flag = end_of_hie
+            WES = {
+                all_core ={
+                    OR ={
+                        owned_by = THIS
+                        owner = {
+                            OR = {
+                                in_sphere = THIS
+                                is_vassal = yes
+                            }
+                            war = no
+                            is_mobilised = no
+                            is_greater_power = no
+						}
+                    }
+                }
+            }
+            LIG = {
+                all_core ={
+                    OR ={
+                        owned_by = THIS
+                        owner = {
+                            OR = {
+                                in_sphere = THIS
+                                is_vassal = yes
+                            }
+                            war = no
+                            is_mobilised = no
+                            is_greater_power = no
+						}
+                    }
+                }
+            }
+        }
+        effect = {
+            change_tag = RHI
+            prestige = 20
+            add_accepted_culture = frankish
+            add_accepted_culture = dutch
+            remove_accepted_culture = north_german 
+            HLL = { all_core = { add_core = RHI }}
+            WES = { all_core = { add_core = RHI }}
+            WES = { all_core = { remove_core = WES }}
+            LIG = { all_core = { add_core = RHI }}
+            LIG = { all_core = { remove_core = LIG }}
+            any_country = {
+                limit = {
+                    OR = {
+                        tag = WES
+                        tag = LIG
+                    }
+                    in_sphere = RHI
+                    OR = {
+                        is_vassal = no
+                        vassal_of = RHI
+                    }
+                }
+                annex_to = RHI
+            }
+            capital = 576
+            set_country_flag = rhi_formed
+        }
+    }
+
+    german_revolt = {
+        picture = appoint_von_bismarck
+        potential = {
+            OR = {
+                tag = DEN
+                primary_culture = north_german
+            }
+            NOT = { has_global_flag = german_revolt }
+            accepted_culture = north_german
+            OR = {
+                is_secondary_power = yes
+                is_greater_power = yes
+            }
+            nationalism_n_imperialism = 1
+        }
+        allow = {
+            is_mobilised = no
+            war = no
+            NOT = {
+                in_sphere = WSD
+                in_sphere = RHI
+            }
+            OR = {
+                WSD = { exists = yes }
+                RHI = { exists = yes }
+            }
+            WES = { exists = no }
+            nationalism_n_imperialism = 1
+        }
+        effect = {
+            set_global_flag = german_revolt
+            any_country = {
+                limit = {
+                    OR = {
+                        tag = WSD
+                        tag = RHI
+                    }
+                    exists = yes
+                }
+                country_event = 180170
+            }
+            prestige = 25
+            badboy = 5
+        }
+        ai_will_do = {
+            factor = 1
+            modifier = {
+                factor = 0
+                badboy = 20 
+            }
+            modifier = {
+                factor = 0
+                alliance_with = WSD
+            }
+            modifier = {
+                factor = 0
+                alliance_with = RHI
+            }
+        }
+    }
+
+    form_south_german_confederation = {
+        potential = {
+            capital_scope = { continent = europe }
+            is_greater_power = yes
+            primary_culture = south_german
+            NOT = {
+                has_country_flag = post_colonial_country
+                exists = SGF
+                exists = GER
+                tag = WSD
+				tag = HIE
+                has_country_flag = emperor_hre
+            }
+        }
+        allow = {
+            war = no
+            nationalism_n_imperialism = 1
+            GER = {
+                all_core = {
+                    OR = {
+                        OR = {
+                            owned_by = THIS
+                            owner = {
+                                in_sphere = THIS
+                                OR = {
+                                    is_vassal = no
+                                    vassal_of = THIS
+                                }
+                                war = no
+                                is_mobilised = no
+                                is_greater_power = no
+                            }
+                        }
+                        NOT = { culture = south_german }
+                    }
+                }
+            }
+        }
+
+        effect = {
+            clr_country_flag = crown_from_the_gutter
+            clr_country_flag = secondary_union_formation
+            random_owned = { limit = { owner = { accepted_culture = french } } owner = { remove_accepted_culture = french } }
+            random_owned = { limit = { owner = { accepted_culture = polish } } owner = { remove_accepted_culture = polish } }
+            random_owned = { limit = { owner = { accepted_culture = danish } } owner = { remove_accepted_culture = danish } }
+            random_owned = { limit = { owner = { accepted_culture = hungarian } } owner = { remove_accepted_culture = hungarian } }
+            prestige = 10
+            random_owned = {
+                limit = { owner = { tag = KUK } }
+                HUN = { all_core = { remove_core = KUK } }
+                CRO = { all_core = { remove_core = KUK } }
+                owner = { remove_accepted_culture = hungarian }
+            }
+            all_core = { add_core = SGF }
+            any_owned = {
+                limit = {
+                    NOT = { is_core = THIS }
+                    any_core = {
+                        exists = no
+                        primary_culture = south_german
+                        #has_country_flag = wants_to_unify
+                        NOT = { has_country_flag = post_colonial_country }
+                    }
+                }
+                add_core = SGF
+            }
+            random_owned = {
+                limit = { owner = { tag = KUK } }
+                owner = {
+                    all_core = {
+                        remove_core = KUK
+                        add_core = AUS
+                    }
+                }
+            }
+            change_tag = SGF
+            any_country = {
+                limit = {
+                    primary_culture = south_german
+                    in_sphere = THIS
+                    NOT = {
+                        has_country_flag = post_colonial_country
+                        tag = THIS
+                        tag = KUK
+                        tag = AUS
+                        tag = DNB
+                        tag = BAN
+                    }
+                    OR = {
+                        is_vassal = no
+                        vassal_of = THIS
+                    }
+                }
+                all_core = { add_core = SGF }
+                country_event = 11106
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    rhinish_crisis = {
+        picture = the_rhine_crisis
+    
+        potential = { 
+            tag = WES
+            has_country_flag = unifier_of_germans
+            has_global_flag = denmark_against_austrasia
+            NOT = { has_global_flag = rhineland_crisis }
+        }
+    
+        allow = {
+            war = no
+            state_n_government = 1
+            is_greater_power = yes
+            OR = {
+                is_sphere_leader_of = DEN
+                is_sphere_leader_of = WES
+            }
+            NOT = { 
+                OR = {
+                    war_with = LIG 
+                    truce_with = LIG 
+                }
+            }			
+            treasury = 10000
+            NOT = { 
+                DEN = { is_greater_power = yes }
+                exists = GER
+                exists = NET
+            }
+            DEN = {
+                has_country_flag = gave_pom
+            }
+        }
+    
+        effect = {
+            LIG = { country_event = 27101 }
+        }
+    
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    form_north_german_confederation = {
+        potential = {
+            is_greater_power = yes
+			OR = {
+				primary_culture = north_german
+				AND = {
+                    tag = WES
+                    has_country_flag = unifier_of_germans
+                }
+			}
+            capital_scope = { continent = europe }
+            NOT = {
+                has_country_flag = post_colonial_country
+                exists = GER
+                exists = NGF
+                exists = STU
+                exists = WSD
+                exists = RHI
+                tag = UBD
+                tag = STU
+                tag = WSD
+                tag = RHI
+            }
+        }
+        allow = {
+            war = no
+            nationalism_n_imperialism = 1
+            has_global_flag = end_of_hie
+            GER = {
+                all_core = {
+                    OR = {
+                        OR = {
+                            owned_by = THIS
+                            owner = {
+                                NOT = { tag = DEN }
+                                in_sphere = THIS
+                                OR = {
+                                    is_vassal = no
+                                    vassal_of = THIS
+                                }
+                                war = no
+                                is_mobilised = no
+                                is_greater_power = no
+                            }
+                        }
+                        NOT = {
+                            OR = {
+                                culture = north_german
+                                culture = frankish
+                            }
+						}
+                    }
+                }
+            }
+        }
+
+        effect = {
+            prestige = 15
+            clr_country_flag = crown_from_the_gutter
+            clr_country_flag = secondary_union_formation
+            random_owned = { limit = { owner = { accepted_culture = french } } owner = { remove_accepted_culture = french } }
+            random_owned = { limit = { owner = { accepted_culture = polish } } owner = { remove_accepted_culture = polish } }
+            random_owned = { limit = { owner = { accepted_culture = danish } } owner = { remove_accepted_culture = danish } }
+            random_owned = { limit = { owner = { accepted_culture = hungarian } } owner = { remove_accepted_culture = hungarian } }
+            all_core = { add_core = NGF remove_core = THIS }
+            any_owned = {
+                limit = {
+                    NOT = { is_core = THIS }
+                    any_core = {
+                        exists = no
+                        OR = {
+                            primary_culture = north_german
+                            primary_culture = frankish
+                        }
+                        NOT = { has_country_flag = post_colonial_country }
+                    }
+                }
+                add_core = NGF
+            }
+            change_tag = NGF
+            PRU_682 = { add_core= NGF }
+            any_pop = {
+                limit = { is_primary_culture = yes }
+                militancy = -1
+            }
+            random_owned = {
+                limit = { owner = { ai = yes } }
+                owner = { add_country_modifier = { name = law_changed_by_force duration = 365 } }
+            }
+            any_country = {
+                limit = {
+                    NOT = { tag = UBD }
+                    OR = {
+                        primary_culture = north_german
+                        primary_culture = frankish
+                        tag = SCH
+						tag = WES
+                    }
+                    in_sphere = THIS
+                    NOT = { tag = THIS }
+                    NOT = { has_country_flag = post_colonial_country }
+                    OR = {
+                        is_vassal = no
+                        vassal_of = THIS
+                    }
+                }
+                all_core = { add_core = THIS }
+                country_event = 11106
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+    form_north_german_confederation2 = {
+        picture = form_north_german_confederation
+        potential = {
+            is_greater_power = yes
+            OR = {
+                primary_culture = north_german
+                AND = {
+                    primary_culture = frankish
+                    has_country_flag = unifier_of_germans
+                }
+            }
+            capital_scope = { continent = europe }
+            NOT = {
+                has_country_flag = post_colonial_country
+                exists = GER
+                exists = NGF
+                tag = UBD
+            }
+            revolution_n_counterrevolution = 1
+        }
+        allow = {
+            war = no
+            revolution_n_counterrevolution = 1
+            GER = {
+                all_core = {
+                    OR = {
+                        OR = {
+                            owned_by = THIS
+                            owner = {
+                                in_sphere = THIS
+                                OR = {
+                                    is_vassal = no
+                                    vassal_of = THIS
+                                }
+                                war = no
+                                is_mobilised = no
+                                is_greater_power = no
+                            }
+                        }
+                        NOT = { culture = north_german }
+                        owner = {
+                            NOT = { is_culture_group = germanic }
+                        }
+                    }
+                }
+            }
+        }
+
+        effect = {
+            prestige = 10
+            badboy = 5
+            clr_country_flag = crown_from_the_gutter
+            random_owned = { limit = { owner = { accepted_culture = french } } owner = { remove_accepted_culture = french } }
+            random_owned = { limit = { owner = { accepted_culture = polish } } owner = { remove_accepted_culture = polish } }
+            random_owned = { limit = { owner = { accepted_culture = danish } } owner = { remove_accepted_culture = danish } }
+            random_owned = { limit = { owner = { accepted_culture = hungarian } } owner = { remove_accepted_culture = hungarian } }
+            all_core = { add_core = NGF }
+            any_owned = {
+                limit = {
+                    NOT = { is_core = THIS }
+                    any_core = {
+                        exists = no
+                        primary_culture = north_german
+                        has_country_flag = wants_to_unify
+                        NOT = { has_country_flag = post_colonial_country }
+                    }
+                }
+                add_core = NGF
+            }
+            change_tag = NGF
+            set_country_flag = secondary_union_formation
+            any_country = {
+                limit = {
+                    OR = {
+                        primary_culture = north_german
+                        tag = SCH
+                    }
+                    in_sphere = THIS
+                    NOT = { tag = THIS }
+                    NOT = { tag = UBD }
+                    NOT = { has_country_flag = post_colonial_country }
+                    OR = {
+                        is_vassal = no
+                        vassal_of = THIS
+                    }
+                }
+                country_event = 11106
+            }
+        }
+        ai_will_do = {
+            factor = 1
+            modifier = {
+                factor = 0
+                badboy = 0.8
+            }
+        }
+    }
+
+    form_germany = {
+        news = yes
+        news_desc_long = "form_germany_NEWS_LONG"
+        news_desc_medium = "form_germany_NEWS_MEDIUM"
+        news_desc_short = "form_germany_NEWS_SHORT"
+        potential = {
+            capital_scope = { continent = europe }
+            NOT = { has_country_flag = post_colonial_country }
+            OR = {
+                tag = NGF
+                tag = SGF
+            }
+            NOT = { exists = GER }
+        }
+
+        allow = {
+            prestige = 45
+            nationalism_n_imperialism = 1
+            is_greater_power = yes
+            war = no
+            GER = {
+                all_core = {
+                    OR = {
+                        owned_by = THIS
+                        owner = {
+                            in_sphere = THIS
+                            OR = {
+                                is_vassal = no
+                                vassal_of = THIS
+                            }
+                            war = no
+                            is_mobilised = no
+                            is_greater_power = no
+                        }
+                    }
+                }
+            }
+        }
+
+        effect = {
+            prestige = 20
+            all_core = {
+                remove_core = THIS
+                add_core = GER
+            }
+            change_tag = GER
+            add_accepted_culture = north_german
+            add_accepted_culture = south_german
+			add_accepted_culture = frankish
+            add_accepted_culture = austrian
+            random_owned = { limit = { owner = { accepted_culture = french } } owner = { remove_accepted_culture = french } }
+            random_owned = { limit = { owner = { accepted_culture = polish } } owner = { remove_accepted_culture = polish } }
+            random_owned = { limit = { owner = { accepted_culture = danish } } owner = { remove_accepted_culture = danish } }
+            random_owned = { limit = { owner = { accepted_culture = hungarian } } owner = { remove_accepted_culture = hungarian } }
+            set_global_flag = 3hurrahs
+
+            any_country = {
+                limit = {
+                    OR = {
+                        is_culture_group = germanic
+                        primary_culture = austrian
+                    }       
+                    exists = no
+                    NOT = { tag = KUK }
+                    NOT = { tag = DNB }
+                    NOT = { tag = BAN }
+                    NOT = { tag = UBD }
+                    NOT = { tag = SWI }
+                    NOT = { has_country_flag = post_colonial_country }
+                    OR = {
+                        all_core = { owned_by = THIS }
+                        tag = NGF
+                        tag = SGF
+                    }
+                }
+                country_event = 11105
+            }
+            any_country = {
+                limit = {
+                    OR = {
+                        tag = KUK
+                        tag = DNB
+                        tag = SWI
+                    }
+                    exists = no
+                    THIS = { capital = 619 }
+                }
+                country_event = 11105
+            }
+            any_country = {
+                limit = {
+                    tag = PRU
+                    exists = no
+                    THIS = { capital = 549 }
+                }
+                country_event = 11105
+            }
+            any_country = {
+                limit = {
+                    in_sphere = THIS
+                    OR = {
+                        is_culture_group = germanic
+                        tag = SCH
+                        tag = AUS
+                    }
+                    NOT = {
+                        tag = KUK
+                        tag = DNB
+                        tag = BAN
+                        tag = UBD
+                        tag = SWI
+                    }
+                    OR = {
+                        is_vassal = no
+                        vassal_of = THIS
+                    }
+                    NOT = { has_country_flag = post_colonial_country }
+                }
+                country_event = 11101
+            }
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+}

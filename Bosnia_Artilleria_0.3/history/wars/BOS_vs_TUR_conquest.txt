@@ -1,0 +1,25 @@
+name = "Restoration Of Turkey"
+
+1835.10.2 = {
+	add_attacker=BOS
+	add_defender=TUR
+
+	war_goal = {
+		casus_belli = conquest
+		actor = BOS
+		receiver = TUR
+		country = TUR
+	}
+		war_goal = {
+		casus_belli = status_quo
+		actor = TUR
+		receiver = BOS
+		country = BOS
+	}
+
+}
+
+1836.6.6 = {
+	rem_attacker = BOS
+	rem_defender = TUR
+}

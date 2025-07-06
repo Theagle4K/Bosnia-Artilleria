@@ -1,0 +1,7 @@
+owner = POR
+controller = POR
+add_core = AND
+add_core = BRZ
+add_core = VNZ
+trade_goods = fish
+life_rating = 33

@@ -1,0 +1,633 @@
+#Sphere of Influence
+
+BYZ = {
+	value = 200
+	influence_value = 200
+	level = 5
+}
+ENG = {
+	value = 0
+	level = 2
+	#truce_until = "1838.1.1"
+}
+NOU = {
+	value = 0
+	level = 2
+	truce_until = "1837.1.1"
+}
+GYN = {
+	value = 200
+	influence_value = 200
+	level = 5
+}
+JAP = {
+	value = 88
+	influence_value = 9
+	level = 2
+}
+KOR = {
+	value = 85
+	influence_value = 8
+	level = 2
+}
+LIG = {
+	value = -78
+	level = 2
+}
+
+RUS = {
+	value = 67
+	influence_value = 4
+	level = 2
+}
+SWI = {
+	value = 0
+	level = 2
+	#truce_until = "1838.1.1"
+}
+WES = {
+	value = 50
+	level = 2
+}
+
+#Leaders
+leader = {
+	name="Louis XIX de Valois"
+	date="1799.1.9"
+	type=land
+	personality="unflinching"
+	background="cavalry_school"
+}
+
+leader = {
+	name="Pascal de Pellefort"
+	date="1799.1.12"
+	type=land
+	personality="coolminded"
+	background="uncommonly_young"
+}
+
+leader = {
+	name="Jean de Vibien"
+	date="1800.11.21"
+	type=land
+	personality="unflinching"
+	background="cavalry_school"
+}
+
+leader = {
+	name="Guy de Chevigny"
+	date="1802.7.30"
+	type=land
+	personality="unflinching"
+	background="school_of_defense"
+}
+
+leader = {
+	name="Maximilien de La Ferrandie"
+	date="1806.6.14"
+	type=land
+	personality="resolute"
+	background="uncommonly_young"
+}
+
+leader = {
+	name="Ignace d'Aulnay"
+	date="1806.12.3"
+	type=land
+	personality="resolute"
+	background="cavalry_school"
+}
+
+leader = {
+	name="Armand de Luynes"
+	date="1811.9.14"
+	type=sea
+	personality="balanced_p"
+	background="generals_aide"
+}
+
+leader = {
+	name="Denis du Valentinois"
+	date="1813.10.17"
+	type=sea
+	personality="disciplined"
+	background="war_college"
+}
+
+leader = {
+	name="Jules du Valentinois"
+	date="1815.1.18"
+	type=sea
+	personality="polite"
+	background="pawn"
+}
+
+
+#Armies
+army = {
+	name="5th Army"
+	location=1423
+	regiment = {
+		name="1st Alen on Infantry"
+		type=infantry
+		home=417
+	}
+	regiment = {
+		name="1st Montpellier Infantry"
+		type=infantry
+		home=461
+	}
+	regiment = {
+		name="1st Troyes Cavalry"
+		type=cavalry
+		home=406
+	}
+	regiment = {
+		name="1st Tours Artillery"
+		type=artillery
+		home=441
+	}
+	regiment = {
+		name="1st Le Mans Artillery"
+		type=artillery
+		home=436
+	}
+	regiment = {
+		name="2nd Toulon Infantry"
+		type=infantry
+		home=470
+	}
+	regiment = {
+		name="1st Marseilles Cavalry"
+		type=cavalry
+		home=467
+	}
+	regiment = {
+		name="1st La Roche Cavalry"
+		type=cavalry
+		home=437
+	}
+	regiment = {
+		name="1st Moulins Artillery"
+		type=artillery
+		home=430
+	}
+}
+
+
+
+
+navy = {
+	name="2nd Fleet"
+	location=2922
+	ship = {
+		name="1st Vannes Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Kiritimati Clipper Transport"
+		type=clipper_transport
+	}
+}
+
+army = {
+	name="Arm e de Blois"
+	location=1405
+	regiment = {
+		name="1st Moulins Infantry"
+		type=infantry
+		home=439
+	}
+	regiment = {
+		name="1st Turin Infantry"
+		type=infantry
+		home=446
+	}
+	regiment = {
+		name="1st Orl ans Artillery"
+		type=artillery
+		home=438
+	}
+	regiment = {
+		name="1st La Roche Artillery"
+		type=artillery
+		home=437
+	}
+	regiment = {
+		name="1st Angoul me Infantry"
+		type=infantry
+		home=444
+	}
+	regiment = {
+		name="6th La Roche Artillery"
+		type=artillery
+		home=437
+	}
+}
+
+
+
+navy = {
+	name="12th Fleet"
+	location=2738
+	ship = {
+		name="Condor"
+		type=frigate
+	}
+	ship = {
+		name="Epervier"
+		type=frigate
+	}
+	ship = {
+		name="Magicienne"
+		type=frigate
+	}
+}
+
+
+navy = {
+	name="Escadre Rouge"
+	location=2738
+	ship = {
+		name="Faucon"
+		type=frigate
+	}
+	ship = {
+		name="Vautour"
+		type=frigate
+	}
+	ship = {
+		name="Wattignies"
+		type=frigate
+	}
+	ship = {
+		name="Junon"
+		type=frigate
+	}
+}
+
+navy = {
+	name="Escadre de M diterran e"
+	location=2920
+	ship = {
+		name="Levrier"
+		type=frigate
+	}
+	ship = {
+		name="Casablanca"
+		type=frigate
+	}
+	ship = {
+		name="Flore"
+		type=frigate
+	}
+}
+
+navy = {
+	name="1st Fleet"
+	location=2753
+	ship = {
+		name="D'Iberville"
+		type=frigate
+	}
+	ship = {
+		name="Th mis"
+		type=frigate
+	}
+}
+
+
+navy = {
+	name="Escadre de la Manche"
+	location=2003
+	ship = {
+		name="Lahire"
+		type=frigate
+	}
+	ship = {
+		name="Armorique"
+		type=frigate
+	}
+}
+
+army = {
+	name="Arm e d'Italie"
+	location=1999
+	regiment = {
+		name="2nd Troyes Infantry"
+		type=infantry
+		home=406
+	}
+	regiment = {
+		name="1st Toulon Artillery"
+		type=artillery
+		home=470
+	}
+	regiment = {
+		name="2nd Chartres Artillery"
+		type=artillery
+		home=426
+	}
+	regiment = {
+		name="3rd Toulon Infantry"
+		type=infantry
+		home=470
+	}
+}
+
+army = {
+	name="Arm e d'Italie"
+	location=1427
+	regiment = {
+		name="2nd Troyes Infantry"
+		type=infantry
+		home=1427
+	}
+	regiment = {
+		name="1st Toulon Artillery"
+		type=artillery
+		home=1423
+	}
+	regiment = {
+		name="2nd Chartres Artillery"
+		type=artillery
+		home=1429
+	}
+	regiment = {
+		name="3rd Toulon Infantry"
+		type=infantry
+		home=1430
+	}
+}
+
+army = {
+	name="Arm e des Flandres"
+	location=425
+	regiment = {
+		name="2nd Beauvais Infantry"
+		type=infantry
+		home=2570
+	}
+	regiment = {
+		name="1st Tours Infantry"
+		type=infantry
+		home=427
+	}
+	regiment = {
+		name="4th Angoul me Artillery"
+		type=artillery
+		home=425
+	}
+	regiment = {
+		name="4th La Roche Artillery"
+		type=artillery
+		home=425
+	}
+	regiment = {
+		name="2nd Tours Artillery"
+		type=artillery
+		home=425
+	}
+	regiment = {
+		name="2nd Tours Infantry"
+		type=infantry
+		home=425
+	}
+	regiment = {
+		name="5th La Roche Artillery"
+		type=artillery
+		home=425
+	}
+}
+army = {
+	name="Arm e des Flandres"
+	location=417
+	regiment = {
+		name="2nd Beauvais Infantry"
+		type=infantry
+		home=417
+	}
+	regiment = {
+		name="1st Tours Infantry"
+		type=infantry
+		home=418
+	}
+	regiment = {
+		name="4th Angoul me Artillery"
+		type=artillery
+		home=418
+	}
+	regiment = {
+		name="4th La Roche Artillery"
+		type=artillery
+		home=435
+	}
+	regiment = {
+		name="2nd Tours Artillery"
+		type=artillery
+		home=434
+	}
+	regiment = {
+		name="2nd Tours Infantry"
+		type=infantry
+		home=442
+	}
+	regiment = {
+		name="5th La Roche Artillery"
+		type=artillery
+		home=443
+	}
+}
+army = {
+	name="Arm e des Flandres"
+	location=442
+	regiment = {
+		name="2nd Beauvais Infantry"
+		type=infantry
+		home=447
+	}
+	regiment = {
+		name="1st Tours Infantry"
+		type=infantry
+		home=447
+	}
+	regiment = {
+		name="4th Angoul me Artillery"
+		type=artillery
+		home=445
+	}
+	regiment = {
+		name="4th La Roche Artillery"
+		type=artillery
+		home=448
+	}
+	regiment = {
+		name="2nd Tours Artillery"
+		type=artillery
+		home=449
+	}
+	regiment = {
+		name="2nd Tours Infantry"
+		type=infantry
+		home=450
+	}
+	regiment = {
+		name="5th La Roche Artillery"
+		type=artillery
+		home=462
+	}
+}
+
+
+navy = {
+	name="4th Fleet"
+	location=437
+	ship = {
+		name="Alexandre"
+		type=manowar
+	}
+	ship = {
+		name="Breslaw"
+		type=manowar
+	}
+	ship = {
+		name="Prince J r me"
+		type=manowar
+	}
+	ship = {
+		name="Ville de Paris"
+		type=manowar
+	}
+	ship = {
+		name="Ville de Nantes"
+		type=manowar
+	}
+	ship = {
+		name="Duguay-Trouin"
+		type=manowar
+	}
+	ship = {
+		name="Tage"
+		type=manowar
+	}
+	ship = {
+		name="Donawerth"
+		type=manowar
+	}
+	ship = {
+		name="Saint Louis"
+		type=manowar
+	}
+	ship = {
+		name="Circ "
+		type=frigate
+	}
+	ship = {
+		name="Hermione"
+		type=frigate
+	}
+	ship = {
+		name="Pallas"
+		type=frigate
+	}
+	ship = {
+		name="S miramis"
+		type=frigate
+	}
+	ship = {
+		name="1st Bordeaux Man'o'war"
+		type=manowar
+	}
+}
+navy = {
+	name="4th Fleet"
+	location=1423
+	ship = {
+		name="Donawerth"
+		type=clipper_transport
+	}
+	ship = {
+		name="Saint Louis"
+		type=clipper_transport
+	}
+	ship = {
+		name="Circ "
+		type=clipper_transport
+	}
+	ship = {
+		name="Hermione"
+		type=clipper_transport
+	}
+	ship = {
+		name="Pallas"
+		type=clipper_transport
+	}
+	ship = {
+		name="S miramis"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Bordeaux Man'o'war"
+		type=clipper_transport
+	}
+}
+
+
+navy = {
+	name="Escadre Bleue"
+	location=437
+	ship = {
+		name="Fontenoy"
+		type=manowar
+	}
+	ship = {
+		name="Turenne"
+		type=manowar
+	}
+	ship = {
+		name="Ville de Bordeaux"
+		type=manowar
+	}
+	ship = {
+		name="Castiglione"
+		type=manowar
+	}
+	ship = {
+		name="Mass na"
+		type=manowar
+	}
+	ship = {
+		name="Bayard"
+		type=manowar
+	}
+	ship = {
+		name="Ville de Lyon"
+		type=manowar
+	}
+	ship = {
+		name="Louis XIV"
+		type=manowar
+	}
+	ship = {
+		name="1st Gunungsitoli Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st La Rochelle Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="3rd Rouen Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="2nd La Rochelle Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="5th Tarakan Clipper Transport"
+		type=clipper_transport
+	}
+}
+

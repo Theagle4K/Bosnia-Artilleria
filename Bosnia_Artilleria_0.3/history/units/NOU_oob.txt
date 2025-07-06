@@ -1,0 +1,131 @@
+FRA = {
+	value = 0
+	level = 2
+	truce_until = "1840.1.1"
+}
+#Leaders
+leader = {
+	name="Monsieur Glenn des États d'Anglicane"
+	date="1795.7.21"
+	type=land
+	personality="coolminded"
+	background="school_of_defense"
+}
+leader = {
+	name="Legleur de Montserrat"
+	date="1795.7.21"
+	type=land
+	personality="balanced_p "
+	background="nationalist"
+}
+army = {
+	name="1st Army"
+	location=204
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=139
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=140
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=194
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=192	
+	}
+	regiment = {
+		name="Cavalry"
+		type=cavalry
+		home=193
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=197
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=195
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=195
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=196
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=204
+	}
+
+}
+
+army = {
+	name="2nd Army"
+	location=188
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=2555
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=201
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=205
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=206	
+	}
+	regiment = {
+		name="Cavalry"
+		type=cavalry
+		home=206
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=197
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=209
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=195
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=2556
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=190
+	}
+
+}

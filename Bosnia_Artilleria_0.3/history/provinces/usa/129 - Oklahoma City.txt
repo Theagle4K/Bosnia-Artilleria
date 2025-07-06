@@ -1,0 +1,6 @@
+owner = DAK
+controller = DAK
+add_core = DAK
+colonial = 2
+trade_goods = grain
+life_rating = 35

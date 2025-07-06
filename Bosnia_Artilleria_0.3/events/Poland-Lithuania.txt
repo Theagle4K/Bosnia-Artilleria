@@ -1,0 +1,1184 @@
+country_event = {
+    id = 270000
+    title = "EVTNAME270000"
+    desc = "EVTDESC270000"
+    #picture = Picture
+    
+    is_triggered_only = yes
+    
+    #fire_only_once = yes
+
+    option = {
+        name = "EVTOPTA270000"
+        FROM = {
+            release_vassal = THIS
+        }
+        
+        ai_chance = {
+            factor = 90
+        }
+    }
+    
+    option = {
+        name = "EVTOPTB270000"
+
+        ai_chance = {
+            factor = 10
+        }
+    }
+    
+}
+
+#Trislavia starting event
+country_event = {
+    id = 313100
+    title = "EVTNAME313100"
+    desc = "EVTDESC313100"
+    picture = polish_court
+    #major = yes
+    
+    trigger = {
+        tag = PLC
+        year = 1836
+    }
+    
+    mean_time_to_happen = {
+        months = 6
+    }
+
+    fire_only_once = yes
+    #We are the kings of Slovincians
+    option = {
+        name = "EVTOPTA313100"
+        set_country_flag = western_focus_plc
+    }
+    #We are the kings of Polish and the Lithuanians
+    option = {
+        name = "EVTOPTB313100"
+        set_country_flag = central_focus_plc
+    }
+    #We are the true heirs of the Rus'
+    option = {
+        name = "EVTOPTC313100"
+        set_country_flag = eastern_focus_plc
+    }
+    #We are the Emperor of Slavs
+    option = {
+        name = "EVTOPTD313100"
+        set_country_flag = maintain_trislavia_plc
+    }    
+}
+
+#Events for Slovincian focus
+#Our King died!
+country_event = {
+    id = 31311
+    title = "EVTNAME31311"
+    desc = "EVTDESC31311"
+    picture = dead_king
+    
+    trigger = {
+        tag = PLC
+        year = 1840
+        NOT = { has_country_flag = polish_rebellion_soon }  
+        OR = {
+            government = absolute_monarchy
+            government = prussian_constitutionalism
+            government = hms_government
+        } 
+    }
+    
+    mean_time_to_happen = {
+        months = 24
+    }
+
+    fire_only_once = yes
+
+    #Entrusts the small child
+    option = {
+        name = "EVTOPTA31311"
+        random = {
+            chance = 60
+            set_country_flag = failed_plc
+            clr_country_flag = stable_plc
+            prestige = -10
+        }
+
+        random = {
+            chance = 20
+            set_country_flag = stable_plc
+            prestige = 2
+        }
+
+        random = {
+            chance = 20
+            set_country_flag = genius_child_plc
+            set_country_flag = stable_plc
+            prestige = 5
+        }
+
+        ai_chance = {
+            factor = 0
+        }
+    }
+    #Put a regent
+    option = {
+        name = "EVTOPTB31311"
+        random = {
+            chance = 80
+            set_country_flag = stable_plc
+            prestige = 2
+        }
+        random = {
+            chance = 20
+            set_country_flag = failed_plc
+            clr_country_flag = stable_plc
+            prestige = -10
+        }
+
+        ai_chance = {
+            factor = 100
+        }
+    } 
+}
+
+#Child Genius 
+country_event = {
+    id = 313112
+    title = "EVTNAME313112"
+    desc = "EVTDESC313112"
+    picture = la_trinitaria
+    
+    trigger = {
+        tag = PLC
+        has_country_flag = genius_child_plc
+        OR = {
+            government = absolute_monarchy
+            government = prussian_constitutionalism
+            government = hms_government
+        } 
+    }
+    
+    mean_time_to_happen = {
+        months = 50
+    }
+
+    fire_only_once = yes
+
+    #Child Grows into A mighty king, reforms the country
+    option = {
+        name = "EVTOPTA313112"
+        #set_country_flag = strong_plc_slc
+        prestige = 25
+        random = {
+            chance = 33
+            add_country_modifier = { name = genius_kid duration = 18262  }
+        }
+        random = {
+            chance = 33
+            add_country_modifier = { name = genius_kid duration = 14600  }
+        }
+        random = {
+            chance = 33
+            add_country_modifier = { name = genius_kid duration = 10950  }
+        }
+    }  
+}
+
+#Poland Rebellion Preparation
+country_event = {
+    id = 313113
+    title = "EVTNAME313113"
+    desc = "EVTDESC313113"
+    picture = january_uprising
+    
+    trigger = {
+        tag = PLC
+        has_country_flag = failed_plc
+        has_country_flag = western_focus_plc
+        year = 1850   
+    }
+    
+    mean_time_to_happen = {
+       months = 50
+        modifier = {
+            factor = 0.35
+            year = 1855
+        }
+        modifier = {
+            factor = 0.65
+            year = 1860
+        }
+        modifier = {
+            factor = 0.85
+            year = 1865
+        }
+        modifier = {
+            factor = 0.95
+            year = 1870
+        }
+    }
+
+    fire_only_once = yes
+
+    immediate = {
+        remove_accepted_culture = polish
+        remove_accepted_culture = ukrainian
+        clr_country_flag = stable_plc
+        any_neighbor_country = {
+            limit = {
+                vassal_of = THIS
+                NOT = { tag = UKR }
+            }
+            country_event = 270000
+        }
+        any_owned = {
+            limit = {
+                is_core = POL
+                POL = { exists = no }
+            }
+            THIS = {
+                release_vassal = POL
+            }
+        }
+        any_owned = {
+            limit = {
+                is_core = POL
+                POL = { 
+                    exists = yes
+                }
+            }
+            secede_province = POL
+        }
+        any_owned = {
+            limit = {
+                is_core = UKR
+                UKR = { exists = no }
+            }
+            THIS = {
+                release_vassal = UKR
+            }
+        }
+        any_owned = {
+            limit = {
+                is_core = UKR
+                UKR = { exists = yes }
+            }
+            secede_province = UKR
+        }
+        POL = {
+            set_country_flag = exempt_from_vassal_contribution
+            any_owned = {
+                limit = {
+                    OR ={
+                        province_id = 706
+                        province_id = 716
+                        province_id = 713
+                    }
+                }
+                secede_province = PLC
+            }
+        }
+        UKR = {
+            set_country_flag = exempt_from_vassal_contribution
+        }
+        capital = 706
+    }
+
+    #PLC is over, stay as plc and restore it
+    option = {
+        name = "EVTOPTA313113"
+        set_country_flag = polish_rebellion_soon
+        POL = {
+            political_reform = mandatory_service
+	        political_reform = universal_voting
+            capital = 715
+	        government = democracy
+            leadership = 80
+            treasury = 80000
+
+            any_pop = { limit = { has_pop_culture = polish } militancy = -9 }
+	        any_pop = { limit = { has_pop_culture = ukrainian } militancy = -9 }
+           
+        }
+        UKR = {
+            political_reform = mandatory_service
+	        political_reform = universal_voting
+            capital = 958
+	        government = democracy
+            leadership = 80
+            treasury = 80000
+
+            any_pop = { limit = { has_pop_culture = polish } militancy = -9 }
+	        any_pop = { limit = { has_pop_culture = ukrainian } militancy = -9 }
+           
+        }
+
+        diplomatic_influence = { who = POL value = 400 }
+        relation = { who = POL value = -400 }
+        diplomatic_influence = { who = UKR value = 400 }
+        relation = { who = UKR value = -400 }
+
+        ai_chance = {
+            factor = 100
+        }
+    }
+    #PLC is over, switch sides
+    option = {
+        name = "EVTOPTB313113"
+        set_country_flag = polish_rebellion_soon
+        POL = {
+            political_reform = mandatory_service
+	        political_reform = universal_voting
+            capital = 715
+	        government = democracy
+            leadership = 80
+            treasury = 80000
+
+            any_pop = { limit = { has_pop_culture = polish } militancy = -9 }
+	        any_pop = { limit = { has_pop_culture = ukrainian } militancy = -9 }
+           
+        }
+        UKR = {
+            political_reform = mandatory_service
+	        political_reform = universal_voting
+            capital = 958
+	        government = democracy
+            leadership = 80
+            treasury = 80000
+
+            any_pop = { limit = { has_pop_culture = polish } militancy = -9 }
+	        any_pop = { limit = { has_pop_culture = ukrainian } militancy = -9 }
+           
+        }
+
+        diplomatic_influence = { who = POL value = 400 }
+        relation = { who = POL value = -400 }
+        diplomatic_influence = { who = UKR value = 400 }
+        relation = { who = UKR value = -400 }
+
+        change_tag_no_core_switch = POL
+        ai_chance = {
+            factor = 0
+        }
+    }
+    #PLC is over, switch sides
+    option = {
+        name = "EVTOPTC313113"
+        set_country_flag = polish_rebellion_soon
+        POL = {
+            political_reform = mandatory_service
+	        political_reform = universal_voting
+            capital = 715
+	        government = democracy
+            leadership = 80
+            treasury = 80000
+
+            any_pop = { limit = { has_pop_culture = polish } militancy = -9 }
+	        any_pop = { limit = { has_pop_culture = ukrainian } militancy = -9 }
+           
+        }
+        UKR = {
+            political_reform = mandatory_service
+	        political_reform = universal_voting
+            capital = 958
+	        government = democracy
+            leadership = 80
+            treasury = 80000
+
+            any_pop = { limit = { has_pop_culture = polish } militancy = -9 }
+	        any_pop = { limit = { has_pop_culture = ukrainian } militancy = -9 }
+           
+        }
+
+        diplomatic_influence = { who = POL value = 400 }
+        relation = { who = POL value = -400 }
+        diplomatic_influence = { who = UKR value = 400 }
+        relation = { who = UKR value = -400 }
+
+        change_tag_no_core_switch = UKR
+        ai_chance = {
+            factor = 0
+        }
+        
+    }
+    
+}
+
+
+#Rebellion Event for Poland
+country_event = {
+    id = 313114
+    title = "EVTNAME313114"
+    desc = "EVTDESC313114"
+    
+    major = yes
+
+    trigger = {
+        tag = PLC
+        has_country_flag = polish_rebellion_soon
+        NOT = { has_global_flag = happened_polish_rebelllion } 
+        NOT = { war_with = POL }
+        NOT = { truce_with = POL }
+        POL = { exists = yes }   
+    }
+    
+    mean_time_to_happen = {
+        months = 3
+    }
+
+    fire_only_once = yes
+
+    option = {
+        name = "EVTOPTA313114"
+        clr_country_flag = polish_rebellion_soon
+        set_global_flag = happened_polish_rebelllion
+        release_vassal = POL
+		RELEASE_VASSAL = UKR
+		diplomatic_influence = { who = POL value = -400 }
+		relation = { who = POL value = -400 }
+		war = {
+			target = POL
+		 
+			attacker_goal = { casus_belli = annex_core_country }
+			defender_goal = { casus_belli = status_quo }
+		}
+		diplomatic_influence = { who = UKR value = -400 }
+		relation = { who = UKR value = -400 }
+		war = {
+			target = UKR
+		 
+			attacker_goal = { casus_belli = annex_core_country }
+			defender_goal = { casus_belli = status_quo }
+		}
+        POL = {
+            clr_country_flag = unreleasable_country
+        }
+        
+    }
+    
+}
+
+
+#Unification of Trislavia
+country_event = {
+    id = 313115
+    title = "EVTNAME313115"
+    desc = "EVTDESC313115"
+    picture = january_uprising
+    
+    trigger = {
+        tag = PLC
+        has_global_flag = happened_polish_rebelllion
+        war = no
+        is_mobilised = no
+        POL = {
+            exists = no
+        }
+    }
+    
+    mean_time_to_happen = {
+        months = 6    
+    }
+
+    fire_only_once = yes
+
+    #Poland is restored to the Empire
+    option = {
+        name = "EVTOPTA313115"
+        add_accepted_culture = polish
+        prestige = 20
+        any_pop = { limit = { has_pop_culture = polish } militancy = -5 }
+        any_pop = { limit = { has_pop_culture = polish } consciousness = 5 }
+        any_pop = { limit = { has_pop_culture = slovincian } militancy = 2 }
+        any_pop = { limit = { has_pop_culture = slovincian } consciousness = -9 }
+        set_global_flag = polish_rebellion_crushed
+        set_country_flag = stable_plc
+        clr_country_flag = failed_plc
+    }
+
+}
+
+#Poland Events
+#First Polish Nationalist Movement Protests
+country_event = {
+    id = 31312
+    title = "EVTNAME31312"
+    desc = "EVTDESC31312"
+    picture = krakow_uprising
+    
+    trigger = {
+        tag = PLC
+        year = 1844
+        NOT = { has_country_flag = polish_rebellion_soon }        
+    }
+    
+    mean_time_to_happen = {
+        months = 24
+    }
+
+    fire_only_once = yes
+
+    #Support the Demonstrations
+    option = {
+        name = "EVTOPTA31312"
+        any_pop = { limit = { culture = polish } consciousness = 9 }
+        any_pop = { limit = { culture = polish } militancy = -3 }
+        any_pop = { limit = { culture = slovincian } militancy = 5 }
+        set_country_flag = polish_freedom
+        random = {
+            chance = 70
+            set_country_flag = peaceful_dem
+            set_country_flag = stable_plc
+            #country_event = 313121
+            prestige = 10
+        }
+        random = {
+            chance = 30
+            set_country_flag = failed_plc
+            clr_country_flag = stable_plc
+            set_country_flag = violent_dem
+            #country_event = 313122
+            prestige = -10
+        }
+    }
+    
+    #Destroy the Demonstrations
+    option = {
+        name = "EVTOPTB31312"
+        any_pop = { limit = { culture = polish } consciousness = 9 }
+        any_pop = { limit = { culture = polish } militancy = 9 }
+        any_pop = { limit = { culture = slovincian } militancy = -9 }
+        random = {
+            chance = 10
+            set_country_flag = stable_plc
+            set_country_flag = peaceful_dem
+            #country_event = 313121
+            prestige = 10
+        }
+        random = {
+            chance = 50
+            set_country_flag = failed_plc
+            clr_country_flag = stable_plc
+            set_country_flag = violent_dem
+            #country_event = 313122
+            prestige = -10
+        }  
+        random = {
+            chance = 40
+            set_country_flag = stable_plc
+            set_country_flag = bloody_dem
+            #country_event = 313123
+            prestige = 25
+        }
+        
+    }
+    
+}
+
+
+#Polish Demonstrations went successfully
+country_event = {
+    id = 313121
+    title = "EVTNAME313121"
+    desc = "EVTDESC313121"
+    picture = krakow_uprising
+    
+    trigger = {
+        tag = PLC
+        has_country_flag = peaceful_dem
+    }
+
+    mean_time_to_happen = {
+        months = 1
+    }
+
+    fire_only_once = yes
+
+    option = {
+        name = "EVTOPTA313121"
+        any_owned = {
+            limit = {
+                culture = polish
+            }
+            add_province_modifier = { name = polish_golden_age duration = 1320 }
+        }
+    }
+}
+
+#Polish Demonstrations went violent
+country_event = {
+    id = 313122
+    title = "EVTNAME313122"
+    desc = "EVTDESC313122"
+    picture = anti_slavery_society
+    
+    trigger = {
+        tag = PLC
+        has_country_flag = violent_dem
+    }
+
+    mean_time_to_happen = {
+        months = 1
+    }
+    fire_only_once = yes
+
+    option = {
+        name = "EVTOPTA313122"
+        any_owned = {
+            limit = {
+                OR = {
+                    culture = polish
+                    culture = ukrainian
+                }
+            }
+            add_province_modifier = { name = ukranian_spirit duration = 1320 }
+        }        
+    }
+}
+
+#Polish Demonstrations were surpressed
+country_event = {
+    id = 313123
+    title = "EVTNAME313123"
+    desc = "EVTDESC313123"
+    picture = assault_on_russian_lands
+    
+    trigger = {
+        tag = PLC
+        has_country_flag = bloody_dem
+    }
+
+    mean_time_to_happen = {
+        months = 1
+    }
+
+    fire_only_once = yes
+
+    option = {
+        name = "EVTOPTA313123"
+        any_owned = {
+            limit = {
+                culture = polish
+            }
+            add_province_modifier = { name = polish_assimilation duration = 3320 }
+        }        
+    }
+}
+
+#Slovincia Rebellion Preparation
+country_event = {
+    id = 313124
+    title = "EVTNAME313124"
+    desc = "EVTDESC313124"
+    picture = january_uprising
+    
+    trigger = {
+        tag = PLC
+        has_country_flag = failed_plc
+        has_country_flag = central_focus_plc
+        year = 1850   
+    }
+    
+    mean_time_to_happen = {
+        months = 50
+        modifier = {
+            factor = 0.35
+            year = 1855
+        }
+        modifier = {
+            factor = 0.65
+            year = 1860
+        }
+        modifier = {
+            factor = 0.85
+            year = 1865
+        }
+        modifier = {
+            factor = 0.95
+            year = 1870
+        }
+    }
+
+    fire_only_once = yes
+
+    immediate = {
+        remove_accepted_culture = slovincian
+        remove_accepted_culture = ukrainian
+        remove_accepted_culture = polish
+        primary_culture = polish
+        clr_country_flag = stable_plc
+        any_neighbor_country = {
+            limit = {
+                vassal_of = THIS
+            }
+            country_event = 270000
+        }
+        any_owned = {
+            limit = {
+                is_core = SLC
+                SLC = { exists = no }
+            }
+            THIS = {
+                release_vassal = SLC
+            }
+        }
+        any_owned = {
+            limit = {
+                is_core = SLC
+                SLC = { 
+                    exists = yes
+                }
+            }
+            secede_province = SLC
+        }
+        any_owned = {
+            limit = {
+                is_core = UKR
+                NOT = { is_core = POL }
+                UKR = { exists = no }
+            }
+            THIS = {
+                release_vassal = UKR
+            }
+        }
+        any_owned = {
+            limit = {
+                is_core = UKR
+                UKR = { exists = yes }
+                NOT = { is_core = POL }
+            }
+            secede_province = UKR
+        }
+        SLC = {
+            set_country_flag = exempt_from_vassal_contribution
+            any_owned = {
+                limit = {
+                    OR ={
+                        province_id = 706
+                        province_id = 716
+                        province_id = 713
+                    }
+                }
+                secede_province = PLC
+            }
+        }
+        UKR = {
+            set_country_flag = exempt_from_vassal_contribution
+        }
+        capital = 706
+    }
+
+    #PLC is over, stay as plc and restore it
+    option = {
+        name = "EVTOPTA313124"
+        set_country_flag = slovincian_rebellion_soon
+        SLC = {
+            political_reform = mandatory_service
+	        political_reform = universal_voting
+            capital = 690
+	        government = democracy
+            leadership = 80
+            treasury = 80000
+
+            any_pop = { limit = { has_pop_culture = slovincian } militancy = -9 }
+	        any_pop = { limit = { has_pop_culture = ukrainian } militancy = -9 }
+           
+        }
+        UKR = {
+            political_reform = mandatory_service
+	        political_reform = universal_voting
+            capital = 958
+	        government = democracy
+            leadership = 80
+            treasury = 80000
+
+            any_pop = { limit = { has_pop_culture = slovincian } militancy = -9 }
+	        any_pop = { limit = { has_pop_culture = ukrainian } militancy = -9 }
+           
+        }
+
+        diplomatic_influence = { who = SLC value = 400 }
+        relation = { who = SLC value = -400 }
+        diplomatic_influence = { who = UKR value = 400 }
+        relation = { who = UKR value = -400 }
+
+        ai_chance = {
+            factor = 100
+        }
+    }
+    #PLC is over, switch sides
+    option = {
+        name = "EVTOPTB313124"
+        set_country_flag = slovincian_rebellion_soon
+        SLC = {
+            political_reform = mandatory_service
+	        political_reform = universal_voting
+            capital = 690
+	        government = democracy
+            leadership = 80
+            treasury = 80000
+
+            any_pop = { limit = { has_pop_culture = slovincian } militancy = -9 }
+	        any_pop = { limit = { has_pop_culture = ukrainian } militancy = -9 }
+           
+        }
+        UKR = {
+            political_reform = mandatory_service
+	        political_reform = universal_voting
+            capital = 958
+	        government = democracy
+            leadership = 80
+            treasury = 80000
+
+            any_pop = { limit = { has_pop_culture = slovincian } militancy = -9 }
+	        any_pop = { limit = { has_pop_culture = ukrainian } militancy = -9 }
+           
+        }
+
+        diplomatic_influence = { who = SLC value = 400 }
+        relation = { who = SLC value = -400 }
+        diplomatic_influence = { who = UKR value = 400 }
+        relation = { who = UKR value = -400 }
+
+        change_tag_no_core_switch = SLC
+        ai_chance = {
+            factor = 0
+        }
+    }
+    #PLC is over, switch sides
+    option = {
+        name = "EVTOPTC313124"
+        set_country_flag = slovincian_rebellion_soon
+        SLC = {
+            political_reform = mandatory_service
+	        political_reform = universal_voting
+            capital = 690
+	        government = democracy
+            leadership = 80
+            treasury = 80000
+
+            any_pop = { limit = { has_pop_culture = slovincian } militancy = -9 }
+	        any_pop = { limit = { has_pop_culture = ukrainian } militancy = -9 }
+           
+        }
+        UKR = {
+            political_reform = mandatory_service
+	        political_reform = universal_voting
+            capital = 958
+	        government = democracy
+            leadership = 80
+            treasury = 80000
+
+            any_pop = { limit = { has_pop_culture = slovincian } militancy = -9 }
+	        any_pop = { limit = { has_pop_culture = ukrainian } militancy = -9 }
+           
+        }
+
+        diplomatic_influence = { who = SLC value = 400 }
+        relation = { who = SLC value = -400 }
+        diplomatic_influence = { who = UKR value = 400 }
+        relation = { who = UKR value = -400 }
+
+        change_tag_no_core_switch = UKR
+        ai_chance = {
+            factor = 0
+        }
+        
+    }
+    
+}
+#Rebellion Event for Slovincia
+country_event = {
+    id = 313125
+    title = "EVTNAME313125"
+    desc = "EVTDESC313125"
+    
+    major = yes
+
+    trigger = {
+        tag = PLC
+        has_country_flag = slovincian_rebellion_soon
+        NOT = { has_global_flag = happened_slovincian_rebelllion } 
+        NOT = { war_with = SLC }
+        NOT = { truce_with = SLC }
+        SLC = { exists = yes }   
+    }
+    
+    mean_time_to_happen = {
+        months = 3
+    }
+
+    fire_only_once = yes
+
+    option = {
+        name = "EVTOPTA313125"
+        clr_country_flag = slovincian_rebellion_soon
+        set_global_flag = happened_slovincian_rebelllion
+        release_vassal = SLC
+		RELEASE_VASSAL = UKR
+		diplomatic_influence = { who = SLC value = -400 }
+		relation = { who = SLC value = -400 }
+		war = {
+			target = SLC
+		 
+			attacker_goal = { casus_belli = annex_core_country }
+			defender_goal = { casus_belli = status_quo }
+		}
+		diplomatic_influence = { who = UKR value = -400 }
+		relation = { who = UKR value = -400 }
+		war = {
+			target = UKR
+		 
+			attacker_goal = { casus_belli = annex_core_country }
+			defender_goal = { casus_belli = status_quo }
+		}
+        SLC = {
+            clr_country_flag = unreleasable_country
+        }
+        
+    }
+    
+}
+
+#Unification of Trislavia
+country_event = {
+    id = 313126
+    title = "EVTNAME313126"
+    desc = "EVTDESC313126"
+    picture = january_uprising
+    
+    trigger = {
+        tag = PLC
+        has_global_flag = happened_slovincian_rebelllion
+        war = no
+        is_mobilised = no
+        SLC = {
+            exists = no
+        }
+    }
+    
+    mean_time_to_happen = {
+        months = 6    
+    }
+
+    fire_only_once = yes
+
+    #Slovincia is restored to the Empire
+    option = {
+        name = "EVTOPTA313126"
+        add_accepted_culture = slovincian
+        prestige = 20
+        any_pop = { limit = { has_pop_culture = slovincian } militancy = -5 }
+        any_pop = { limit = { has_pop_culture = slovincian } consciousness = 5 }
+        any_pop = { limit = { has_pop_culture = polish } militancy = 2 }
+        any_pop = { limit = { has_pop_culture = polish } consciousness = -9 }
+        set_global_flag = slovincian_rebellion_crushed
+        set_country_flag = stable_plc
+        clr_country_flag = failed_plc
+    }
+}
+
+#Ukranian Events
+#Panslavism Event 1
+country_event = {
+    id = 31313
+    title = "EVTNAME31313"
+    desc = "EVTDESC31313"
+    picture = pan_slavism
+    
+    trigger = {
+        tag = PLC
+        OR = {
+            is_our_vassal = UKR
+            any_owned_province = { is_core = UKR }
+        }
+        year = 1849
+        NOT = { has_country_flag = polish_rebellion_soon }        
+    }
+    
+    mean_time_to_happen = {
+        months = 20
+        modifier = {
+            factor = 0.75
+            has_country_flag = eastern_focus_plc
+        }
+    }
+
+    fire_only_once = yes
+
+    #Eastern-Panslavism rejected
+    option = {
+        name = "EVTOPTA31313"
+        set_country_flag = stable_plc
+
+        modifier = {
+            factor = 0
+            has_country_flag = eastern_focus_plc
+        }
+        
+    }
+
+    #Eastern-Panslavism accepted
+    option = {
+        name = "EVTOPTB31313"
+        set_country_flag = failed_plc
+        clr_country_flag = stable_plc
+        set_country_flag = panslav_reaction
+        modifier = {
+            factor = 1
+            has_country_flag = eastern_focus_plc
+        }
+    }
+    
+}
+
+#Panslavism Event 2
+country_event = {
+    id = 313131
+    title = "EVTNAME313131"
+    desc = "EVTDESC313131"
+    picture = pan_slavism
+    
+    trigger = {
+        is_our_vassal = LIT
+        is_our_vassal = UKR
+        has_country_flag = panslav_reaction
+    }
+
+    mean_time_to_happen = {
+        months = 5
+    }
+    
+    fire_only_once = yes
+
+    option = {
+        name = "EVTOPTA313131"
+        any_neighbor_country = { 
+            limit = {
+                tag = LIT
+                vassal_of = THIS
+            }
+            country_event = 3131312   
+        }
+    }   
+}
+
+#Panslavism Event 3
+#Annexation of Belarus
+country_event = {
+    id = 3131312
+    title = "EVTNAME3131312"
+    desc = "EVTDESC3131312"
+    picture = pan_slavism
+    
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+    option = {
+        name = "EVTOPTA3131312"
+        any_owned = {
+            limit = {
+                is_core = BYE
+                NOT = { is_core = LIT }
+            }
+            secede_province = UKR
+        }
+        UKR = {
+            add_accepted_culture = byelorussian
+        }
+        set_global_flag = eastern_panslavism
+    } 
+}
+
+#Panslavism Event 4
+country_event = {
+    id = 313132
+    title = "EVTNAME313132"
+    desc = "EVTDESC313132"
+
+    major = yes
+    
+    trigger = {
+        has_global_flag = eastern_panslavism
+        has_country_flag = eastern_focus_plc
+        tag = PLC
+        is_our_vassal = UKR
+    }
+    
+    mean_time_to_happen = {
+        months = 30
+    }
+
+    fire_only_once = yes
+
+    option = {
+        name = "EVTOPTA313132"
+        set_country_flag = ruthenian_ambition
+        clr_country_flag = failed_plc
+        set_country_flag = stable_plc
+        UKR ={
+            annex_to = THIS
+        }
+        remove_accepted_culture = slovincian
+        add_accepted_culture = byelorussian
+        remove_accepted_culture = ukrainian
+        primary_culture = ukrainian
+        any_owned = {
+            limit = {
+                is_core = SLC
+            }
+            remove_core = THIS
+        }
+        LIT = {
+            all_core = {
+                remove_core = THIS
+            }
+        }
+        PRU = {
+            all_core = {
+                remove_core = THIS
+            }
+        }
+        2584 = { add_core = SLV }
+        AUS_702 = { add_core = SLV }
+        AUS_662 = { add_core = SLV }
+
+        any_neighbor_country = {
+            limit = {
+                vassal_of = THIS
+            }
+            country_event = 270000
+        }
+    }
+    
+}
+
+#Minister fixes the country
+country_event = {
+    id = 313133
+    title = "EVTNAME313133"
+    desc = "EVTDESC313133"
+    picture = polish_court
+    
+    trigger = {
+        has_country_flag = maintain_trislavia_plc
+        year = 1850
+    }
+    
+    mean_time_to_happen = {
+        months = 20
+    }
+
+    fire_only_once = yes
+
+    option = {
+        name = "EVTOPTA313133"
+        clr_country_flag = failed_plc
+        set_country_flag = stable_plc
+        prestige = 20 
+    }
+    
+}
+

@@ -1,0 +1,54 @@
+	army = {
+		name="1st Army"
+		location=962
+		regiment = {
+			name="Infantry"
+			type=infantry
+			home=962
+		}
+		regiment = {
+			name="Infantry"
+			type=infantry
+			home=962
+		}
+		regiment = {
+			name="Infantry"
+			type=infantry
+			home=962
+		}
+		regiment = {
+			name="Infantry"
+			type=infantry
+			home=963
+		}
+		regiment = {
+			name="Cavalry"
+			type=cavalry
+			home=963
+		}
+		regiment = {
+			name="Artillery"
+			type=artillery
+			home=963
+		}
+		regiment = {
+			name="Artillery"
+			type=artillery
+			home=963
+		}
+		regiment = {
+			name="Artillery"
+			type=artillery
+			home=963
+		}
+		regiment = {
+			name="Artillery"
+			type=artillery
+			home=963
+		}
+		regiment = {
+			name="Artillery"
+			type=artillery
+			home=977
+		}
+	}

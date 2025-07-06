@@ -1,0 +1,25 @@
+name = "Restoration Of Greece"
+
+1835.10.2 = {
+	add_attacker=BOS
+	add_defender=GRE
+
+	war_goal = {
+		casus_belli = conquest
+		actor = BOS
+		receiver = GRE
+		country = GRE
+	}
+		war_goal = {
+		casus_belli = acquire_core_state
+		actor = GRE
+		receiver = BOS
+		country = BOS
+		state_province_id = 805
+	}
+
+}
+1836.6.6 = {
+	rem_attacker = BOS
+	rem_defender = GRE
+}

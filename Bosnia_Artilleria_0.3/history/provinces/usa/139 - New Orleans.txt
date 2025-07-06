@@ -1,0 +1,6 @@
+owner=NOU
+controller=NOU
+add_core=NOU
+trade_goods = grain
+life_rating = 35
+naval_base = 1

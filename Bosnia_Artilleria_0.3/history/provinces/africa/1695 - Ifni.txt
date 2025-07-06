@@ -1,0 +1,8 @@
+owner=POR
+controller=POR
+add_core=AGO
+trade_goods = fish
+life_rating = 30
+terrain = semidesert
+colonial = 2
+naval_base = 2

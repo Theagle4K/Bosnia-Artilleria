@@ -1,0 +1,9 @@
+owner=HUN
+controller=HUN
+add_core=AUS
+add_core=HUN
+#add_core=GER
+add_core=HIE
+trade_goods = grain
+life_rating = 35
+fort = 1

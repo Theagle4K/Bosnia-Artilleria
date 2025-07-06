@@ -1,0 +1,50 @@
+#Armies
+army = {
+	name = "Armija Prusow"
+	location = 695 	
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=698
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=698
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=695
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=695
+	}
+	regiment = {
+		name="Cavalry"
+		type=cavalry
+		home=696
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=696
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=693
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=693
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=699
+	}
+}

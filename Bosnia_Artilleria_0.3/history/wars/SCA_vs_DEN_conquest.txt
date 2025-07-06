@@ -1,0 +1,26 @@
+name = "Scandinavian Revolts - Denmark"
+
+1835.10.2 = {
+	add_attacker=SCA
+	add_defender=DEN
+
+	war_goal = {
+		casus_belli = conquest
+		actor = SCA
+		receiver = DEN
+		country = DEN
+		state_province_id = 372
+	}
+		war_goal = {
+		casus_belli = place_in_the_sun
+		actor = DEN
+		receiver = SCA
+		country = SCA
+		state_province_id = 1297
+	}
+
+}
+1836.6.6 = {
+	rem_attacker = SCA
+	rem_defender = DEN
+}

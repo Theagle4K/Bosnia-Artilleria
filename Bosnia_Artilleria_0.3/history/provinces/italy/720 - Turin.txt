@@ -1,0 +1,15 @@
+owner=SVY
+controller=SVY
+add_core=SVY
+add_core=NRR
+add_core=ITA
+add_core=HIE
+trade_goods = fruit
+life_rating = 40
+fort = 1
+state_building=
+{
+	level=1
+	building = luxury_clothes_factory
+	upgrade = yes
+}

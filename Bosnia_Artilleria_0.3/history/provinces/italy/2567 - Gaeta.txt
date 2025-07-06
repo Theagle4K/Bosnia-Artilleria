@@ -1,0 +1,8 @@
+owner=NAP
+controller=NAP
+add_core=SIC
+add_core=NAP
+add_core=ITA
+trade_goods = silk
+life_rating = 40
+naval_base = 1

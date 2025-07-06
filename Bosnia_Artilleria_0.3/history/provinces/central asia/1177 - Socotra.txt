@@ -1,0 +1,7 @@
+owner=SOM
+controller=SOM
+add_core=ARA
+add_core=MHR
+trade_goods = fish
+life_rating = 20
+terrain = semidesert

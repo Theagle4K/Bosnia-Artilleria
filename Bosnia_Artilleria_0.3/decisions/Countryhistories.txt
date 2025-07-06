@@ -1,0 +1,122 @@
+political_decisions = {
+	history_of_anglicana = {
+		potential = {
+			tag = ANS
+			ai = no
+			NOT = { year = 1840 }
+		}
+		allow = {
+
+		}
+		effect = {
+			country_event = 31001
+		}
+	}
+	history_of_virginia = {
+		potential = {
+			tag = VRG
+			ai = no
+			NOT = { year = 1840 }
+		}
+		allow = {
+
+		}
+		effect = {
+			country_event = 31002
+		}
+	}
+	history_of_nouvellia = {
+		potential = {
+			tag = NOU
+			ai = no
+			NOT = { year = 1840 }
+		}
+		allow = {
+
+		}
+		effect = {
+			country_event = 31003
+		}
+	}
+	history_of_switzerland = {
+		potential = {
+			tag = SWI
+			ai = no
+			NOT = { year = 1840 }
+		}
+		allow = {
+
+		}
+		effect = {
+			country_event = 31004
+		}
+	}
+
+	history_of_austrasia = {
+		potential = {
+			tag = WES
+			ai = no
+			NOT = { year = 1840 }
+		}
+		allow = {
+
+		}
+		effect = {
+			country_event = 31005
+		}
+	}
+	history_of_liege = {
+		potential = {
+			tag = LIG
+			ai = no
+			NOT = { year = 1840 }
+		}
+		allow = {
+
+		}
+		effect = {
+			country_event = 31006
+		}
+	}
+	history_of_bavaria = {
+		potential = {
+			tag = BAV
+			ai = no
+			NOT = { year = 1840 }
+		}
+		allow = {
+
+		}
+		effect = {
+			country_event = 31007
+		}
+	}
+
+	history_of_Trislavia = {
+		potential = {
+			tag = PLC
+			ai = no
+			NOT = { year = 1840 }
+		}
+		allow = {
+
+		}
+		effect = {
+			country_event = 31008
+		}
+	}
+	history_of_russia = {
+		potential = {
+			tag = RUS
+			ai = no
+			NOT = { year = 1840 }
+		}
+		allow = {
+
+		}
+		effect = {
+			country_event = 31009
+		}
+	}
+
+}

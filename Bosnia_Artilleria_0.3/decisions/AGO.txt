@@ -1,0 +1,43 @@
+political_decisions = {
+
+    annex_augustinian_order = {
+		potential = {
+		OR = {
+				tag = POR
+				tag = ITA
+				tag = SIC
+				tag = BOS
+		}
+		NOT = { has_country_flag  = fight_ago }
+	
+		}
+		allow = {
+		AGO = { 
+				in_sphere = THIS
+				ai = yes
+		}
+			year = 1880
+			is_greater_power = yes
+		}
+		effect = {
+			set_country_flag = fight_ago
+			badboy = 10
+			prestige = 20
+			diplomatic_influence = { who = AGO value = -400 }
+			any_pop = {
+				limit = { has_pop_culture = andalucian }
+				consciousness = 2
+				militancy = 4
+			}
+			relation = { who = AGO value = -400 }
+			war = {
+				target = AGO
+			
+				attacker_goal = { casus_belli = conquest_any }
+				defender_goal = { casus_belli = status_quo }
+			}
+		}
+
+	}
+
+}

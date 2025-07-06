@@ -1,0 +1,37 @@
+#Serbian Autonomy over Virginian Land
+country_event = {
+    
+    id = 27031
+    trigger = {
+       tag = VRG
+       year = 1836
+       
+       NOT = {
+            has_country_flag = serbian_locals_added
+			exists = SER
+		}
+    }
+    fire_only_once = yes
+
+    mean_time_to_happen =  {
+        months = 5
+
+		modifier = {
+           factor = 0.95 #increase likelihood to happen
+           year = 1836
+		}
+     }
+
+     title = "EVTNAME27031"
+     desc = "EVTDESC27031"
+
+    option = {
+		name = "EVTOPTA27031"
+		any_owned = {
+            limit = { is_core = SER }
+            add_province_modifier = { name = serbian_locals  duration = 5113 }
+        }
+        set_country_flag = serbian_locals_added
+    }
+
+}

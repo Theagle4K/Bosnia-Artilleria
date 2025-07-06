@@ -1,0 +1,5 @@
+owner=VRG
+controller=VRG
+add_core=VRG
+trade_goods = timber
+life_rating = 35

@@ -1,0 +1,60 @@
+#Sphere of Influence
+
+#Leaders
+
+#Armies
+army = {
+	name = "Armia Di Fratelli Sicilia"
+	location = 754
+	regiment = {
+		name="1st Sarajevo Infantry"
+		type=infantry
+		home=754
+	}
+	regiment = {
+		name="2nd Sarajevo Infantry"
+		type=infantry
+		home=754
+	}
+	regiment = {
+		name="3rd Sarajevo Infantry"
+		type=infantry
+		home=754
+	}
+	regiment = {
+		name="4th Sarajevo Infantry"
+		type=infantry
+		home=754
+	}
+	regiment = {
+		name="1st Sarajevo Cavalry"
+		type=cavalry
+		home=754
+	}
+	regiment = {
+		name="1st Sarajevo Artillery"
+		type=artillery
+		home=755
+	}
+	regiment = {
+		name="2nd Sarajevo Artillery"
+		type=artillery
+		home=755
+	}
+	regiment = {
+		name="3rd Sarajevo Artillery"
+		type=artillery
+		home=755
+	}
+	regiment = {
+		name="4th Sarajevo Artillery"
+		type=artillery
+		home=750
+	}
+	regiment = {
+		name="1st Mostar Artillery"
+		type=artillery
+		home=750
+	}
+}
+

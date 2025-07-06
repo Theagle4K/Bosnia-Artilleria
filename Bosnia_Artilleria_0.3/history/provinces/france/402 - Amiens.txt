@@ -1,0 +1,8 @@
+owner=FRA
+controller=FRA
+add_core=FRA
+add_core=LIG
+add_core=BEL
+trade_goods = fish
+life_rating = 35
+naval_base = 1

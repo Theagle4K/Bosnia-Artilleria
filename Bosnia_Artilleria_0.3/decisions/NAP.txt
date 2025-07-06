@@ -1,0 +1,169 @@
+political_decisions = {
+
+	form_two_sicilies = {
+			picture = award_order_of_st_francis
+			potential = {
+				ai = no
+				primary_culture = south_italian
+				NOT = { exists = SIC }
+				NOT = { exists = ITA }
+				NOT = { has_global_flag = southern_rome_formed }
+			}
+
+			allow = {
+				762 = {
+					OR = {
+						owned_by = THIS
+						owner = { in_sphere = THIS }
+					}
+				}
+				765 = {
+					OR = {
+						owned_by = THIS
+						owner = { in_sphere = THIS }
+					}
+				}
+				754 = {
+					OR = {
+						owned_by = THIS
+						owner = { in_sphere = THIS }
+					}
+				}
+			}
+			effect = {
+				prestige = 20
+				762 = { secede_province = THIS }
+				765 = { secede_province = THIS }
+				754 = { secede_province = THIS }
+				set_global_flag = southern_rome_formed
+				all_core = {
+					limit = {
+						owned_by = THIS
+					}
+					remove_core = THIS
+					add_core = SIC
+				}
+				change_tag = SIC
+				random_country = {
+					limit = {
+						primary_culture = THIS
+						in_sphere = THIS
+						OR = {
+							is_vassal = no
+							vassal_of = THIS
+						}
+					}
+					FROM = { inherit = THIS }
+				}
+			}
+			ai_will_do = {
+				factor = 1
+			}
+	}
+
+	una_facca_una_razza = {
+	
+		picture = megali_idea
+		potential = {
+			NOT = { has_country_flag = greece_claimed }
+			tag = SIC
+		}
+		
+		allow = {
+			nationalism_n_imperialism = 1
+			is_greater_power = yes
+			war = no
+			is_mobilised = no
+		
+			834 = {
+				OR = {
+					owned_by = THIS
+					owner= {
+						OR = {
+							in_sphere = THIS
+							is_vassal = yes
+						}
+					    war = no
+                        is_mobilised = no
+                        is_greater_power = no
+					}
+				}
+			}
+			863 = {
+				OR = {
+					owned_by = THIS
+					owner= {
+						OR = {
+							in_sphere = THIS
+							is_vassal = yes
+						}
+					    war = no
+                        is_mobilised = no
+                        is_greater_power = no
+					}
+				}
+			}
+		}
+
+		effect = {
+			prestige = 25
+			add_accepted_culture = greek
+			add_accepted_culture = chrurk
+			GRE = { all_core = { add_core= THIS } }
+			TOR = { all_core = { add_core= THIS } }
+			set_country_flag = greece_claimed
+			badboy = 5 
+			any_country = {
+				limit = {
+					OR = {
+						OR = {
+						primary_culture = greek
+						primary_culture = chrurk
+						}
+					}
+					in_sphere = THIS
+					NOT = { tag = THIS }
+					OR = {
+						is_vassal = no
+						vassal_of = THIS
+					}
+				}
+				country_event = 11106
+			}				
+		}
+			ai_will_do = {
+				factor = 1
+			}
+	}
+	
+    roman_catalonia = {
+		picture = enact_dual_monarchy
+		potential = {
+			NOT = { has_country_flag = catalonia_claimed }
+			tag = SIC
+			has_country_flag = greece_claimed
+		}
+		allow = {
+			nationalism_n_imperialism = 1
+			SIC = { all_core = { owned_by = THIS } }
+			is_greater_power = yes
+			war = no
+			is_mobilised = no
+		}
+		effect = {
+		 	prestige = 30	
+		 	add_accepted_culture = catalan
+			add_accepted_culture = basque	
+		 	SPA_498 = { add_core = THIS }
+			SPA_492 = { add_core = THIS }
+			503 = { add_core = THIS }   		
+		 	854 = { add_core = THIS }
+			464 = { add_core = THIS }	
+			517 = { add_core = THIS }
+		 	set_country_flag = catalonia_claimed
+		 	badboy = 10			
+		}
+ 	}
+
+
+}

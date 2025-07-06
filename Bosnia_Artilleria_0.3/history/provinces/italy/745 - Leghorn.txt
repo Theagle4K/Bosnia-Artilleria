@@ -1,0 +1,8 @@
+owner=TUS
+controller=TUS
+add_core=ITA
+add_core=TUS
+add_core=NRR
+trade_goods = fish
+life_rating = 40
+naval_base = 2

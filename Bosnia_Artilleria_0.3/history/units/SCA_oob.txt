@@ -1,0 +1,382 @@
+#Sphere of Influence
+
+BOS = {
+	value = 105
+	influence_value = 13
+	level = 4
+}
+PLC = {
+	value = 182
+	influence_value = 33
+	level = 4
+}
+POR = {
+	value = 0
+	level = 2
+}
+RIG = {
+	value = 147
+	influence_value = 24
+	level = 3
+}
+RUS = {
+	value = -175
+	level = 2
+	truce_until = "1838.1.1"
+}
+#Leaders
+
+leader = {
+	name = "Carl XIV Johan"
+	date = 1818.1.1
+	type = land
+	personality = charismatic
+	background = elderly
+	prestige = 0.5
+}
+
+leader = {
+	name = "Johan Tawast"
+	date = 1807.1.1
+	type = land
+	personality = soldierly
+	background = old_school
+	prestige = 0.3
+}
+
+leader = {
+	name = "Axel Mörner"
+	date = 1818.1.1
+	type = land
+	personality = unruly
+	background = generals_aide
+	prestige = 0.2
+}
+
+leader = {
+	name="Rettil Lunge"
+	date="1812.2.22"
+	type=sea
+	personality="soldierly"
+	background="war_college"
+}
+
+leader = {
+
+	name="Tomas J gerhorn"
+	date="1818.7.29"
+	type=sea
+	personality="unflinching"
+	background="cavalry_school"
+}
+
+
+#Armies
+
+army = {
+	name="1st Army"
+	location=318
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=317
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=305
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=317
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=321
+	}
+	regiment = {
+		name="Cavalry"
+		type=cavalry
+		home=346
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=345
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=343
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=349
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=350
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=997
+	}
+}
+	
+army = {
+	name="1st Army"
+	location=317
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=996
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=994
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=994
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=2580
+	}
+	regiment = {
+		name="Cavalry"
+		type=cavalry
+		home=1003
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=1006
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=1297
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=1298
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=1303
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=1300
+	}
+
+}
+
+
+navy = {
+	name="9th Fleet"
+	location=2711
+	ship = {
+		name="Desideira"
+		type=manowar
+	}
+	ship = {
+		name="St Olaf"
+		type=manowar
+	}
+	ship = {
+		name="Vainqueur"
+		type=frigate
+	}
+	ship = {
+		name="Delphin"
+		type=frigate
+	}
+	ship = {
+		name="Illerim"
+		type=frigate
+	}
+	ship = {
+		name="Lilla Phoenix"
+		type=frigate
+	}
+	ship = {
+		name="V xj "
+		type=frigate
+	}
+	ship = {
+		name="G vle"
+		type=frigate
+	}
+	ship = {
+		name="Baron Gustaf Bonde"
+		type=frigate
+	}
+	ship = {
+		name="Kong Sverre"
+		type=frigate
+	}
+	ship = {
+		name="Ellida"
+		type=frigate
+	}
+	ship = {
+		name="Nordssthernen"
+		type=frigate
+	}
+	ship = {
+		name="Nornen"
+		type=frigate
+	}
+	ship = {
+		name="Nidaros"
+		type=frigate
+	}
+	ship = {
+		name=" rnen"
+		type=frigate
+	}
+	ship = {
+		name="Najaden"
+		type=frigate
+	}
+	ship = {
+		name="Gesjer"
+		type=manowar
+	}
+	ship = {
+		name="Waldemar"
+		type=manowar
+	}
+	ship = {
+		name="2nd Helsinki Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="2nd Antwerp Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="3rd Antwerp Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="4th Antwerp Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="4th Oulu Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="Rota"
+		type=frigate
+	}
+	ship = {
+		name="5th Kolberg Frigate"
+		type=frigate
+	}
+}
+
+
+
+
+navy = {
+	name="11th Fleet"
+	location=2711
+	ship = {
+		name="Esbern Snare"
+		type=frigate
+	}
+	ship = {
+		name="Sj lland"
+		type=frigate
+	}
+	ship = {
+		name="Gefion"
+		type=frigate
+	}
+	ship = {
+		name="Thetis"
+		type=frigate
+	}
+	ship = {
+		name="Niels Juel"
+		type=frigate
+	}
+	ship = {
+		name="1st Stockholm Frigate"
+		type=frigate
+	}
+}
+navy = {
+	name="4th Fleet"
+	location=2728
+	ship = {
+		name="Hummer"
+		type=frigate
+	}
+	ship = {
+		name="Stralsund"
+		type=frigate
+	}
+	ship = {
+		name="S ridder"
+		type=frigate
+	}
+	ship = {
+		name="Leopard"
+		type=frigate
+	}
+	ship = {
+		name="Raae"
+		type=frigate
+	}
+	ship = {
+		name="1st Narva Frigate"
+		type=frigate
+	}
+}
+
+
+navy = {
+	name="11th Fleet"
+	location=2711
+	ship = {
+		name="Esbern Snare"
+		type=frigate
+	}
+	ship = {
+		name="Sj lland"
+		type=frigate
+	}
+	ship = {
+		name="Gefion"
+		type=frigate
+	}
+	ship = {
+		name="Thetis"
+		type=frigate
+	}
+	ship = {
+		name="Niels Juel"
+		type=frigate
+	}
+	ship = {
+		name="1st Stockholm Frigate"
+		type=frigate
+	}
+}
+

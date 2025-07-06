@@ -1,0 +1,19 @@
+owner=BYZ
+controller=BYZ
+add_core=FRA
+add_core=BYZ
+add_core=HIE
+add_core=OCC
+trade_goods = iron
+life_rating = 34
+fort = 1
+state_building= {
+    level=1
+    building = steel_factory
+    upgrade = yes
+}
+state_building= {
+    level=1
+    building = machine_parts_factory
+    upgrade = yes
+}

@@ -1,0 +1,24 @@
+name = "Restoration Of Kurdistan"
+
+1835.10.2 = {
+	add_attacker=BOS
+	add_defender=KDS
+
+	war_goal = {
+		casus_belli = conquest
+		actor = BOS
+		receiver = KDS
+		country = KDS
+	}
+		war_goal = {
+		casus_belli = status_quo
+		actor = KDS
+		receiver = BOS
+		country = BOS
+	}
+
+}
+1836.6.6 = {
+	rem_attacker = BOS
+	rem_defender = KDS
+}

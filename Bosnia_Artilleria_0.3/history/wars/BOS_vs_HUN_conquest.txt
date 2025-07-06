@@ -1,0 +1,32 @@
+name = "Reconquest of Croatia" 
+
+1835.10.2 = {
+	add_attacker=BOS
+	add_defender=HUN
+
+	war_goal = {
+		casus_belli = acquire_core_state
+		actor = BOS
+		receiver = HUN
+		country = HUN
+		state_province_id = 2538
+	}
+	war_goal = {
+		casus_belli = acquire_core_state
+		actor = BOS
+		receiver = HUN
+		country = HUN
+		state_province_id = 771
+	}
+		war_goal = {
+		casus_belli = status_quo
+		actor = HUN
+		receiver = BOS
+		country = BOS
+	}
+
+}
+1836.6.6 = {
+	rem_attacker = BOS
+	rem_defender = HUN
+}

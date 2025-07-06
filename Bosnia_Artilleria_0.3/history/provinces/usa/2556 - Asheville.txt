@@ -1,0 +1,6 @@
+owner=NOU
+controller=NOU
+add_core=NOU
+add_core=VRG
+trade_goods = tobacco
+life_rating = 35

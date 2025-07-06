@@ -1,0 +1,9 @@
+owner=SWI
+controller=SWI
+add_core = SWI
+add_core=LVN
+add_core=NRR
+add_core=ITA
+add_core=HIE
+trade_goods = iron
+life_rating = 35

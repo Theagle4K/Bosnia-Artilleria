@@ -1,0 +1,7 @@
+owner=VRG
+controller=VRG
+add_core=VRG
+add_core=ANS
+trade_goods = fish
+life_rating = 20
+terrain = new_world_boreal

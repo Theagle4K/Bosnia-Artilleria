@@ -1,0 +1,287 @@
+#Sphere of Influence
+
+BAV = {
+	value = 0
+	level = 2
+	truce_until = "1838.1.1"
+}
+BOH = {
+	value = 88
+	influence_value = 9
+	level = 2
+}
+BOS = {
+	value = -21
+	level = 2
+}
+FRA = {
+	value = -73
+	level = 2
+	#truce_until = "1838.1.1"
+}
+LIG = {
+	value = 20
+	influence_value = 0
+	level = 2
+}
+BAD = {
+	value = 200
+	influence_value = 100
+	level = 5
+}
+AUS = {
+	value = 200
+	influence_value = 100
+	level = 5
+}
+WUR = {
+	value = 200
+	influence_value = 100
+	level = 5
+}
+PAP = {
+	value = 237
+	influence_value = 46
+	level = 3
+}
+PLC = {
+	value = -7
+	level = 2
+}
+POR = {
+	value = 192
+	influence_value = 35
+	level = 2
+}
+RUS = {
+	value = 0
+	level = 2
+}
+SCA = {
+	value = -62
+	level = 2
+}
+WES = {
+	value = -291
+	level = 2
+	#truce_until = "1838.1.1"
+}
+
+#Leaders
+leader = {
+	name="Moritz Falkenberg"
+	date="1787.9.25"
+	type=land
+	personality="disciplined"
+	background="uncommonly_young"
+}
+
+leader = {
+	name="Friedrich Philipp Schaluyn"
+	date="1787.9.26"
+	type=land
+	personality="disciplined"
+	background="uncommonly_young"
+}
+
+leader = {
+	name="Friedrich X von Wittelsbach"
+	date="1810.9.12"
+	type=land
+	personality="resolute"
+	background="school_of_defense"
+}
+
+leader = {
+	name="Johann Friedrich von Leyen"
+	date="1792.6.14"
+	type=land
+	personality="chivalrous"
+	background="cavalry_school"
+}
+
+leader = {
+	name="Ruprecht Gruithausen"
+	date="1817.9.7"
+	type=land
+	personality="resolute"
+	background="school_of_defense"
+}
+
+leader = {
+	name="Friedrich Philipp Elmpt"
+	date="1818.6.17"
+	type=land
+	personality="unflinching"
+	background="cavalry_school"
+}
+
+
+#Armies
+army = {
+	name="1st Army"
+	location=408
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=408
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=407
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=432
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=411
+	}
+	regiment = {
+		name="Cavalry"
+		type=cavalry
+		home=414
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=429
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=428
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=430
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=431
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=433
+	}
+
+}
+
+army = {
+	name="2nd Army"
+	location=603
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=603
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=603
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=604
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=604
+	}
+	regiment = {
+		name="Cavalry"
+		type=cavalry
+		home=605
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=607
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=607
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=609
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=605
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=606
+	}
+
+}
+
+army = {
+	name="3rd Army"
+	location=625
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=587
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=586
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=571
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=594
+	}
+	regiment = {
+		name="Cavalry"
+		type=cavalry
+		home=631
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=589
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=629
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=626
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=631
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=625
+	}
+
+}

@@ -1,0 +1,8 @@
+owner = AND
+controller = AND
+add_core = AND
+add_core = VNZ
+trade_goods = precious_metal
+life_rating = 35
+colonial = 2
+terrain = new_world_small_island

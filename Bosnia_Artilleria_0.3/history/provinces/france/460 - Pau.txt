@@ -1,0 +1,9 @@
+owner=GYN
+controller=GYN
+add_core=FRA
+add_core=GYN
+add_core=OCC
+trade_goods = grain
+life_rating = 35
+naval_base = 2
+fort = 1

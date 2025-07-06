@@ -1,0 +1,129 @@
+#####################################
+#                                   #
+#      History of each country      #
+#                                   #
+#####################################
+
+#Anglicana
+country_event = {
+    id = 31001
+    title = "EVTNAMEHIS"
+    desc = "EVTDESC31001"
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = "EVTOPTTHANKS"
+        
+    }
+    
+}
+#Virginia
+country_event = {
+    id = 31002
+    title = "EVTNAMEHIS"
+    desc = "EVTDESC31002"
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = "EVTOPTTHANKS"
+        
+    }
+    
+}
+#Nouvellia
+country_event = {
+    id = 31003
+    title = "EVTNAMEHIS"
+    desc = "EVTDESC31003"
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = "EVTOPTTHANKS"
+        
+    }
+    
+}
+#Switzerland
+country_event = {
+    id = 31004
+    title = "EVTNAMEHIS"
+    desc = "EVTDESC31004"
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = "EVTOPTTHANKS"
+        
+    }
+    
+}
+#Austrasia
+country_event = {
+    id = 31005
+    title = "EVTNAMEHIS"
+    desc = "EVTDESC31005"
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = "EVTOPTTHANKS"
+        
+    }
+    
+}
+#Liege
+country_event = {
+    id = 31006
+    title = "EVTNAMEHIS"
+    desc = "EVTDESC31006"
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = "EVTOPTTHANKS"
+        
+    }
+    
+}
+#Bavaria
+country_event = {
+    id = 31007
+    title = "EVTNAMEHIS"
+    desc = "EVTDESC31007"
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = "EVTOPTTHANKS"
+        
+    }
+}
+#Trislavia
+country_event = {
+    id = 31008
+    title = "EVTNAMEHIS"
+    desc = "EVTDESC31008"
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = "EVTOPTTHANKS"
+        
+    }
+}
+#Russia
+country_event = {
+    id = 31009
+    title = "EVTNAMEHIS"
+    desc = "EVTDESC31009"
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = "EVTOPTTHANKS"
+        
+    }
+}

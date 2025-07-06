@@ -1,0 +1,9 @@
+owner=PLC
+controller=PLC
+add_core=PRU
+add_core=PLC
+add_core=SLC
+add_core=GER
+add_core=HIE
+trade_goods = coal
+life_rating = 35

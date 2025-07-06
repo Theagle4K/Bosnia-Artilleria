@@ -1,0 +1,145 @@
+
+vassal=
+{
+	first="PLC"
+	second="PRU"
+	start_date="1515.9.2"
+	end_date="1936.1.1"
+}
+vassal=
+{
+	first="PLC"
+	second="UKR"
+	start_date="1515.9.2"
+	end_date="1936.1.1"
+}
+
+vassal=
+{
+	first="PLC"
+	second="LIT"
+	start_date="1515.9.2"
+	end_date="1936.1.1"
+}
+
+vassal=
+{
+	first="RUS"
+	second="AKH"
+	start_date="1515.9.2"
+	end_date="1936.1.1"
+}
+vassal=
+{
+	first="RUS"
+	second="MCK"
+	start_date="1515.9.2"
+	end_date="1936.1.1"
+}
+
+vassal=
+{
+	first="RUS"
+	second="TAR"
+	start_date="1515.9.2"
+	end_date="1936.1.1"
+}
+vassal=
+{
+	first="RUS"
+	second="KAZ"
+	start_date="1515.9.2"
+	end_date="1936.1.1"
+}
+
+substate=
+{
+	first="AKH"
+	second="CIR"
+	start_date="1515.9.2"
+	end_date="1936.1.1"
+}
+substate=
+{
+	first="AKH"
+	second="CHY"
+	start_date="1515.9.2"
+	end_date="1936.1.1"
+}
+substate=
+{
+	first="AKH"
+	second="DAG"
+	start_date="1515.9.2"
+	end_date="1936.1.1"
+}
+
+vassal=
+{
+	first="BOS"
+	second="DON"
+	start_date="1515.9.2"
+	end_date="1936.1.1"
+}
+
+
+
+vassal=
+{
+	first="FRA"
+	second="GYN"
+	start_date="1515.9.2"
+	end_date="1936.1.1"
+}
+
+vassal=
+{
+	first="FRA"
+	second="BYZ"
+	start_date="1515.9.2"
+	end_date="1936.1.1"
+}
+
+vassal=
+{
+	first="LVN"
+	second="SVY"
+	start_date="1515.9.2"
+	end_date="1936.1.1"
+}
+
+vassal=
+{
+	first="LVN"
+	second="SRD"
+	start_date="1515.9.2"
+	end_date="1936.1.1"
+}
+vassal=
+{
+	first="LVN"
+	second="SYC"
+	start_date="1515.9.2"
+	end_date="1936.1.1"
+}
+vassal=
+{
+	first="SWI"
+	second="BAD"
+	start_date="1515.9.2"
+	end_date="1936.1.1"
+}
+vassal=
+{
+	first="SWI"
+	second="WUR"
+	start_date="1515.9.2"
+	end_date="1936.1.1"
+}
+vassal=
+{
+	first="SWI"
+	second="AUS"
+	start_date="1515.9.2"
+	end_date="1936.1.1"
+}

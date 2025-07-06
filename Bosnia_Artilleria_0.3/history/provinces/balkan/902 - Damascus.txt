@@ -1,0 +1,9 @@
+owner=BOS
+controller=BOS
+add_core=ARA
+add_core=SYR
+trade_goods = grain
+life_rating = 35
+terrain = semidesert
+colonial=2
+fort = 1

@@ -1,0 +1,108 @@
+alliance=
+{
+	first="DEN"
+	second="NOR"
+	start_date="1835.11.1"
+	end_date="1936.1.1"
+}
+alliance=
+{
+	first="DEN"
+	second="SWE"
+	start_date="1835.11.1"
+	end_date="1936.1.1"
+}
+alliance=
+{
+	first="SWE"
+	second="NOR"
+	start_date="1835.11.1"
+	end_date="1936.1.1"
+}
+alliance=
+{
+	first="SWE"
+	second="RUS"
+	start_date="1835.11.1"
+	end_date="1936.1.1"
+}
+alliance=
+{
+	first="RUS"
+	second="NOR"
+	start_date="1835.11.1"
+	end_date="1936.1.1"
+}
+
+
+alliance=
+{
+	first="SCA"
+	second="RIG"
+	start_date="1588.7.6"
+	end_date="1936.1.1"
+}
+
+alliance=
+{
+	first="RIG"
+	second="PLC"
+	start_date="1473.6.3"
+	end_date="1936.1.1"
+}
+
+alliance=
+{
+	first="PLC"
+	second="SCA"
+	start_date="1764.3.12"
+	end_date="1936.1.1"
+}
+
+alliance=
+{
+	first="WES"
+	second="PAP"
+	start_date="1819.1.17"
+	end_date="1936.1.1"
+}
+alliance=
+{
+	first="WES"
+	second="BAV"
+	start_date="1819.1.17"
+	end_date="1936.1.1"
+}
+
+alliance=
+{
+	first="POR"
+	second="LVN"
+	start_date="1810.10.10"
+	end_date="1936.1.1"
+}
+
+alliance=
+{
+	first="SLV"
+	second="PLC"
+	start_date="1763.4.3"
+	end_date="1936.1.1"
+}
+alliance=
+{
+	first="KOR"
+	second="DAI"
+	start_date="1475.7.8"
+	end_date="1936.1.1"
+}
+
+
+
+alliance=
+{
+	first="BUR"
+	second="DAI"
+	start_date="1716.1.1"
+	end_date="1936.1.1"
+}

@@ -1,0 +1,13 @@
+owner=SWI
+controller=SWI
+add_core=BOH
+add_core=HIE
+add_core=SWI
+trade_goods = coal
+life_rating = 35
+fort = 1
+state_building={
+    level=2
+    building = steel_factory
+    upgrade = yes
+}

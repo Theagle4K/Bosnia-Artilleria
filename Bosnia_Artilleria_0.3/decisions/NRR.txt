@@ -1,0 +1,177 @@
+political_decisions = {
+	form_northern_rr = {
+		picture = award_order_of_st_francis
+		potential = {	
+			primary_culture = north_italian	
+			NOT = { 
+				has_global_flag = northern_rome_claimed
+				tag = ITA
+			}
+			ai = no
+		}
+
+		allow = {
+			NRR = {
+				all_core= {
+					OR = {
+						owned_by = THIS
+						owner = { 
+							in_sphere = THIS 
+							is_vassal = THIS
+						}
+						
+					}
+				}
+			}
+		}
+		
+		effect = {
+			prestige = 20
+			set_global_flag = northern_rome_claimed
+			all_core = {
+				limit = {
+					owned_by = THIS
+				}
+				remove_core = THIS
+				add_core = NRR
+			}
+			change_tag = NRR
+			random_country = {
+				limit = {
+					primary_culture = THIS
+					in_sphere = THIS
+					OR = {
+						is_vassal = no
+						vassal_of = THIS
+					}
+				}
+				country_event = 11106
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ruler_of_alps = {
+		picture = build_eiffel_tower
+		potential = {
+			NOT = { has_country_flag = alps_claimed }
+			tag = NRR
+			}
+		allow = {
+			nationalism_n_imperialism = 1
+			NRR = { all_core = { owned_by = THIS } }
+			is_greater_power = yes
+			war = no
+			is_mobilised = no
+		}
+		effect = {
+			prestige = 25
+			add_accepted_culture = austrian
+			add_accepted_culture = swiss
+			add_accepted_culture = occitan
+			AUS = { 
+				all_core = { add_core = NRR } 
+				set_country_flag = neutrality_violated
+                remove_country_modifier = neutrality_modifier
+                relation = { who = THIS value = -200 }
+			}	
+			SWI_603 = { add_core = NRR }	
+			465 = { add_core = NRR }
+			466 = { add_core = NRR }
+			454 = { add_core = NRR }
+			469 = { add_core = NRR }
+			471 = { add_core = NRR }
+			768 = { add_core = NRR }
+			767 = { add_core = NRR }	
+			AUS_733 = { add_core = NRR }
+          	AUS_736 = { add_core = NRR }		
+			set_country_flag = alps_claimed
+			badboy = 20 				
+		}
+ 	}
+	ruler_of_occitania = {
+		picture = build_eiffel_tower
+		potential = {
+			NOT = { has_country_flag = occitania_claimed }
+			has_country_flag = alps_claimed
+			tag = NRR
+		}
+		allow = {
+			nationalism_n_imperialism = 1
+			NRR = { all_core = { owned_by = THIS } }
+			is_greater_power = yes
+			war = no
+			is_mobilised = no
+		}
+		effect = {
+			prestige = 25
+			OCC = { 
+			all_core = { add_core = NRR } 
+			}
+				464 = { add_core = NRR } 
+				AUS_771 = { add_core = CRO }
+				AUS_780 = { add_core = CRO }
+				set_country_flag = occitania_claimed
+				badboy = 10	
+				771 = { owner = { country_event = 27809 } }			
+		}
+ 	}
+	ruler_of_galia= {
+		picture = build_eiffel_tower
+		potential = {
+			NOT = { has_country_flag = galia_claimed }
+			tag = NRR
+			has_country_flag = occitania_claimed
+			has_country_flag = alps_claimed
+		}
+		allow = {
+			nationalism_n_imperialism = 1
+			NRR = { all_core = { owned_by = THIS } }
+			is_greater_power = yes
+			CRO = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner= {
+							OR = {
+								in_sphere = THIS
+								is_vassal = yes
+							}
+                            war = no
+                            is_mobilised = no
+                            is_greater_power = no
+						}
+					}
+				}
+			}
+			war = no
+			is_mobilised = no
+		}
+		effect = {
+			prestige = 25
+			add_accepted_culture = south_german
+			add_accepted_culture = french
+			add_accpeted_culture = croat	
+			FRA = { all_core = { add_core = NRR } }	
+			CRO = { all_core = { add_core = NRR } }		
+			set_country_flag = galia_claimed
+			badboy = 20 
+			any_country = {	
+				limit = {
+					primary_culture = croat
+					in_sphere = THIS
+					NOT = { tag = THIS }
+					OR = {
+						is_vassal = no
+						vassal_of = THIS
+					}
+				}
+				country_event = 11106
+            }				
+		}
+		ai_will_do = {
+			factor = 1			
+		}
+	}
+}

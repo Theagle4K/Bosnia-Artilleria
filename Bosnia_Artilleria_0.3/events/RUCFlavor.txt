@@ -1,0 +1,253 @@
+# Alaska Purchase 1/3
+country_event = {
+    id = 325092
+    title = "EVTNAME32509_NEW" #the Alaskan Purchase
+    desc = "EVTDESC32509_NEW"
+    picture = "alaska"
+
+    trigger = {
+        RUC = {
+            war = no
+            any_owned_province = { region = USA_1 }
+        }
+        NOT = {
+            has_global_flag = alaska_purchase_process_global
+            has_global_flag = alaska_purchase_completed
+            has_country_flag = refused_alaska
+            any_owned_province = { is_core = RUC }
+            truce_with = RUC
+        }
+        OR = {
+            tag = ANS
+            tag = MEX
+			tag = VRG
+			tag = UNF
+            relation = { who = RUS value = 0 }
+            alliance_with = RUC
+        }
+        #is_greater_power = yes
+        war = no
+        nationalism_n_imperialism = 1
+        has_country_flag = alaska_purchase_interest
+    }
+
+    mean_time_to_happen = {
+        months = 6
+        modifier = {
+            factor = 0.5
+			OR = {
+				tag = ANS
+				tag = UNF
+			}
+        }	
+        modifier = {
+            factor = 0.8
+            alliance_with = RUC
+        }
+        modifier = {
+            factor = 0.8
+            relation = { who = RUC value = 100 }
+        }
+        modifier = {
+            factor = 1.2
+            NOT = { relation = { who = RUC value = 50 } }
+        }
+        modifier = {
+            factor = 0.1
+            year = 1870
+        }
+    }
+
+    immediate = {
+        set_global_flag = alaska_purchase_process_global
+    }
+
+    option = {
+        name = "EVT32509OPTA"
+        RUC = { country_event = 325102 }
+        ai_chance = {
+            factor = 95
+        }
+    }
+
+    option = {
+        name = "EVT32509OPTB"
+        clr_country_flag = alaska_purchase_interest
+        set_country_flag = refused_alaska
+        ai_chance = {
+            factor = 5
+            modifier = {
+                factor = 0
+                OR = {
+                    tag = ANS
+                    tag = MEX
+					tag = VRG
+					tag = UNF
+                }
+            }
+        }
+    }
+}
+
+#the Alaskan Purchase
+country_event = {
+    id = 325102
+    title = "EVTNAME32510_NEW"
+    desc = "EVTDESC32510_NEW"
+    picture = "alaska"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "EVT32510OPTA"
+        set_global_flag = alaska_purchase_completed
+        prestige = 10
+        treasury = 100000
+        LSK = { all_core = { remove_core = RUC } }
+        FROM = {
+            random_owned = {
+                limit = {
+                    owner = {
+                        NOT = { money = 100000 }
+                        check_variable = { which = owed_cash_money value = 9 }
+                    }
+                }
+                owner = { change_variable = { which = owed_cash_money value = 100 } }
+            }
+            random_owned = {
+                limit = {
+                    owner = {
+                        NOT = { money = 100000 }
+                        NOT = { check_variable = { which = owed_cash_money value = 1 } }
+                    }
+                }
+                owner = { set_variable = { which = owed_cash_money value = 100 } }
+            }
+            random_owned = {
+                limit = { owner = { money = 100000 } }
+                owner = { treasury = -100000 }
+            }
+            country_event = 32511
+        }
+        ai_chance = {
+            factor = 75
+        }
+    }
+
+    option = {
+        name = "EVT32510OPTB"
+        clr_global_flag = alaska_purchase_process_global
+        FROM = {
+            clr_country_flag = alaska_purchase_interest
+            country_event = 325142
+        }
+        any_country = {
+            limit = {
+                NOT = { tag = RUC }
+                NOT = { has_country_flag = refused_alaska }
+                OR = {
+                    is_greater_power = yes
+                    is_secondary_power = yes
+                }
+                any_owned_province = {
+                    OR = {
+                        region = MEX_85
+                        region = USA_78
+                        region = USA_81
+                        region = CAN_13
+                        region = JAP_1088
+                    }
+                }
+            }
+            set_country_flag = alaska_purchase_interest
+        }
+        ai_chance = {
+            factor = 25
+            modifier = {
+                factor = 0
+                FROM = {
+                    OR = {
+                        tag = ANS
+                        tag = MEX
+						tag = VRG
+						tag = UNF 
+                    }
+                }
+            }
+        }
+    }
+
+    option = {
+        name = "EVT32510OPTC"
+        prestige = -10
+        USA_1 = { add_core = RUC }
+        ai_chance = {
+            factor = 0
+        }
+    }
+}
+
+country_event = {
+    id = 325142
+    title = "EVTNAME32514"
+    desc = "EVTDESC32514"
+    picture = "alaska"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "EVT32514OPTA"
+        prestige = -5
+        treasury = 250000
+        relation = { who = RUC value = -25 }
+    }
+}
+
+#Expansion Path For Golden Horde
+country_event = {
+    id = 54503
+    title = "EVTNAME54503"
+    desc = "EVTDESC54503"
+    picture = assault_on_russian_lands
+    
+    is_triggered_only = yes
+    
+
+    fire_only_once = yes
+
+    #Anatolia Path
+    option = {
+        name = "EVTOPTA54503"
+        set_country_flag = anatolia_focus
+        TUR_882 = { add_core = THIS }
+        prestige = 10
+        badboy = 15
+        
+        diplomatic_influence = { who = TUR value = -400 }
+        relation = { who = TUR value = -400 }
+        diplomatic_influence = { who = KDS value = -400 }
+        relation = { who = KDS value = -400 }
+        diplomatic_influence = { who = BOS value = -400 }
+        relation = { who = BOS value = -400 }
+
+        ai_chance = {
+            factor = 0.5
+
+        }
+    }
+    
+    #Persia Path
+    option = {
+        name = "EVTOPTB54503"
+        set_country_flag = khorosan_focus
+        1193 = { add_core = THIS }
+        1191 = { add_core = THIS }
+        1192 = { add_core = THIS }
+        prestige = 10
+        badboy = 10
+        ai_chance = {
+            factor = 0.5
+        }
+    }
+    
+}

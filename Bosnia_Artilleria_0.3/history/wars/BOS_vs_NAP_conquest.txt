@@ -1,0 +1,33 @@
+name = "Naples Revolution"
+
+1835.10.2 = {
+	add_attacker=NAP
+	add_defender=BOS
+
+	war_goal = {
+		casus_belli = status_quo
+		actor = BOS
+		receiver = NAP
+		country = NAP
+	}
+	war_goal = {
+		casus_belli = acquire_core_state
+		actor = NAP
+		receiver = BOS
+		country = BOS
+		state_province_id = 758
+	}
+	war_goal = {
+		casus_belli = acquire_core_state
+		actor = NAP
+		receiver = BOS
+		country = BOS
+		state_province_id = 759
+	}
+
+
+}
+1836.6.6 = {
+	rem_attacker = BOS
+	rem_defender = NAP
+}

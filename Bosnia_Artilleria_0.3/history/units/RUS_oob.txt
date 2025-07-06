@@ -1,0 +1,519 @@
+#Sphere of Influence
+
+NOR = {
+	value = 20
+	level = 3
+	influence_value=25	
+}
+BOS = {
+	value = 0
+	level = 2
+	truce_until = "1840.1.1"
+}
+ENG = {
+	value = 197
+	influence_value = 0
+	level = 2
+}
+JAP = {
+	value = -100
+	influence_value = 0
+	level = 0
+}
+ANS = {
+	value = 75
+	level = 2
+}
+MCK = {
+	value = 200
+	influence_value = 200
+	level = 5
+}
+AKH = {
+	value = 200
+	influence_value = 200
+	level = 5
+}
+CIR = {
+	value = 200
+	influence_value = 200
+	level = 5
+}
+DAG = {
+	value = 200
+	influence_value = 200
+	level = 5
+}
+CHY = {
+	value = 200
+	influence_value = 200
+	level = 5
+}
+TAR = {
+	value = 200
+	influence_value = 200
+	level = 5
+}
+KAZ = {
+	value = 200
+	influence_value = 200
+	level = 5
+}
+PLC = {
+	value = -96
+	level = 2
+	truce_until = "1840.1.1"
+}
+POR = {
+	value = -91
+	level = 2
+}
+SCA = {
+	value = -100
+	level = 0
+	truce_until = "1838.1.1"
+}
+
+#Leaders
+leader = {
+	name="Fyodor III Poloch"
+	date="1813.2.26"
+	type=land
+	personality=stalwart
+	background=bootlicker
+}
+
+leader = {
+	name="Lev Beketov"
+	date="1810.2.6"
+	type=land
+	personality=stalwart
+	background=generals_aide
+}
+
+leader = {
+	name="Anton Atlasov"
+	date="1810.2.8"
+	type=land
+	personality=stalwart
+	background=generals_aide
+}
+
+leader = {
+	name="Varfolomey Dolgorukov"
+	date="1813.2.27"
+	type=land
+	personality=coolminded
+	background=generals_aide
+}
+
+leader = {
+	name="Stanislav Menshikov"
+	date="1813.7.11"
+	type=land
+	personality=stalwart
+	background=uncommonly_young
+}
+
+leader = {
+	name="Arseniy Vishnevetski"
+	date="1814.10.18"
+	type=sea
+	personality=coolminded
+	background=generals_aide
+}
+
+leader = {
+	name="Ivan Yermak"
+	date="1819.2.8"
+	type=land
+	personality=disciplined
+	background=cavalry_school
+}
+
+leader = {
+	name="Andrei Skopin"
+	date="1820.6.25"
+	type=land
+	personality=stalwart
+	background=generals_aide
+}
+
+
+#Armies
+army = {
+	name="Army of Finland"
+	location=998
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=989
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=1001
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=998
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=999
+	}
+	regiment = {
+		name="Cavalry"
+		type=cavalry
+		home=943
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=943
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=1016
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=1016
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=1016
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=1015
+	}
+}
+
+army = {
+	name="Army of Ukraine"
+	location= 1019
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=1015
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=980
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=1014
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=1014
+	}
+	regiment = {
+		name="Cavalry"
+		type=cavalry
+		home=1010
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=1010
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=1010
+	}
+	regiment = {
+		name="Infantry"
+		type=artillery
+		home=1009
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=1009
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=1009
+	}
+}
+
+army = {
+	name="Army of Rus"
+	location= 1008
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=1008
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=1008
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=1008
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=1013
+	}
+	regiment = {
+		name="Cavalry"
+		type=cavalry
+		home=1013
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=1022
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=1022
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=1020
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=1025
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=1021
+	}
+}
+
+army = {
+	name="Army of Novyj Rus"
+	location= 979
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=979
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=979
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=991
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=1047
+	}
+	regiment = {
+		name="Cavalry"
+		type=cavalry
+		home=1021
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=1015
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=980
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=1017
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=1031
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=1019
+	}
+}
+
+army = {
+	name="Army of Novogorod"
+	location= 1024
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=1012
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=1011
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=1011
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=1021
+	}
+	regiment = {
+		name="Cavalry"
+		type=cavalry
+		home=1019
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=1019
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=1029
+	}
+	regiment = {
+		name="Infantry"
+		type=artillery
+		home=1020
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=1021
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=1021
+	}
+}
+
+
+navy = {
+	name="Black Sea Squadron"
+	location=979
+	ship = {
+		name="Razboinik"
+		type=clipper_transport
+	}
+	ship = {	
+		name="Strelok"
+		type=clipper_transport
+	}
+	ship = {
+		name="Dzhigit"
+		type=clipper_transport
+	}
+	ship = {
+		name="Oprichnik"
+		type=clipper_transport
+	}
+	ship = {
+		name="Nayezdnik"
+		type=clipper_transport
+	}
+	ship = {
+		name="Plastun"
+		type=clipper_transport
+	}
+	ship = {
+		name="Gaidamak"
+		type=clipper_transport
+	}
+	ship = {
+		name="Abrek"
+		type=clipper_transport
+	}
+	ship = {
+		name="Vsadnik"
+		type=clipper_transport
+	}
+	ship = {
+		name="Almaz"
+		type=clipper_transport
+	}
+}
+
+
+navy = {
+	name="White Squadron"
+	location=979
+	ship = {
+		name="Konstantin"
+		type=manowar
+	}
+	ship = {
+		name="Gavriil"
+		type=manowar
+	}
+	ship = {
+		name="Selafail"
+		type=manowar
+	}
+	ship = {
+		name="Varna"
+		type=manowar
+	}
+	ship = {
+		name="Yagudiil"
+		type=manowar
+	}
+	ship = {
+		name="Dvenadtsat Apostolov"
+		type=manowar
+	}
+	ship = {
+		name="Rostislav"
+		type=manowar
+	}
+	ship = {
+		name="Khrabryi"
+		type=manowar
+	}
+	ship = {
+		name="Sinop"
+		type=manowar
+	}
+	ship = {
+		name="Bosfor"
+		type=manowar
+	}
+	ship = {
+		name="Kulevtcha"
+		type=frigate
+	}
+	ship = {
+		name="Kagul"
+		type=frigate
+	}
+
+}
+

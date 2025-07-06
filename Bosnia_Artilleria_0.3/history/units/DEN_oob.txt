@@ -1,0 +1,454 @@
+#Sphere of Influence
+WES = {
+	value = -150
+	level = 0
+}
+SWE = {
+	value = 150
+	level = 2
+}
+NOR = {
+	value = 150
+	level = 2
+}
+SCA = {
+	value = -150
+	level = 0
+}
+
+#Leaders
+leader = {
+	name = "Rye"
+	date = 1836.1.1
+	type = land
+	personality = daring
+	background = adventurer
+}
+
+leader = {
+	name="Faere"
+	date="1812.2.22"
+	type=sea
+	personality="soldierly"
+	background="war_college"
+}
+
+leader = {
+
+	name="Lodkasus Valdemore"
+	date="1818.7.29"
+	type=sea
+	personality="unflinching"
+	background="cavalry_school"
+}
+
+#Armies
+navy = {
+	name="10th Fleet"
+	location=322
+	ship = {
+		name="Prins Christian Frederik"
+		type=manowar
+	}
+	ship = {
+		name="Skjold"
+		type=manowar
+	}
+	ship = {
+		name="Absalon"
+		type=manowar
+	}
+	ship = {
+		name="Ingolf"
+		type=manowar
+	}
+	ship = {
+		name="Dannebrog"
+		type=manowar
+	}
+	ship = {
+		name="Dagmar"
+		type=manowar
+	}
+	ship = {
+		name="1st Alesund Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="4th Onega Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Kalmar Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Bornholm Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="5th Onega Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Utrecht Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="6th Onega Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Lule  Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Antwerp Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="2nd Bornholm Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Oulu Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st K slin Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Sundsvall Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="7th Onega Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="2nd Copenhagen Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Malm  Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Aalborg Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="3rd Bornholm Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="2nd Malm  Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="2nd Kalmar Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Stockholm Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="3rd Copenhagen Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Scandinavian Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="Dronning Marie"
+		type=manowar
+	}
+	ship = {
+		name="Fredrik"
+		type=manowar
+	}
+	ship = {
+		name="3rd Oulu Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="2nd Onega Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="2nd St Petersburg Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="1st Stettin Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="3rd Kalmar Clipper Transport"
+		type=clipper_transport
+	}
+}
+
+navy = {
+	name="10th Fleet"
+	location=322
+	ship = {
+		name="Prins Christian Frederik"
+		type=manowar
+	}
+	ship = {
+		name="Skjold"
+		type=manowar
+	}
+	ship = {
+		name="Absalon"
+		type=manowar
+	}
+	ship = {
+		name="Ingolf"
+		type=manowar
+	}
+	ship = {
+		name="Dannebrog"
+		type=manowar
+	}
+	ship = {
+		name="Dagmar"
+		type=manowar
+	}
+	ship = {
+		name="1st Alesund Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="4th Onega Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Kalmar Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Bornholm Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="5th Onega Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Utrecht Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="6th Onega Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Lule  Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Antwerp Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="2nd Bornholm Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Oulu Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st K slin Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Sundsvall Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="7th Onega Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="2nd Copenhagen Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Malm  Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Aalborg Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="3rd Bornholm Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="2nd Malm  Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="2nd Kalmar Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Stockholm Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="3rd Copenhagen Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Scandinavian Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="Dronning Marie"
+		type=manowar
+	}
+	ship = {
+		name="Fredrik"
+		type=manowar
+	}
+	ship = {
+		name="3rd Oulu Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="2nd Onega Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="2nd St Petersburg Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="1st Stettin Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="3rd Kalmar Clipper Transport"
+		type=clipper_transport
+	}
+}
+
+army = {
+	name="1st Army"
+	location=369
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=372
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=372
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=373
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=366
+	}
+	regiment = {
+		name="Cavalry"
+		type=cavalry
+		home=567
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=2557
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=368
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=369
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=369
+	}
+	regiment = {
+		name="1st Karlstad Artillery"
+		type=artillery
+		home=529
+	}
+
+}
+
+army = {
+	name="2nd Army"
+	location=529
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=544
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=548
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=548
+	}
+	regiment = {
+		name="Infantry"
+		type=infantry
+		home=547
+	}
+	regiment = {
+		name="Cavalry"
+		type=cavalry
+		home=545
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=546
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=546
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=679
+	}
+	regiment = {
+		name="Artillery"
+		type=artillery
+		home=680
+	}
+	regiment = {
+		name="1st Karlstad Artillery"
+		type=artillery
+		home=692
+	}
+
+}

@@ -1,0 +1,10 @@
+owner=SVY
+controller=SVY
+add_core=SVY
+add_core=NRR
+add_core=ITA
+add_core=HIE
+trade_goods = grain
+life_rating = 33
+naval_base = 1
+fort = 1

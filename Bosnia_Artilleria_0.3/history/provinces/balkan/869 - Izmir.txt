@@ -1,0 +1,8 @@
+owner=BOS
+controller=BOS
+add_core=TUR
+add_core=TOR
+trade_goods = sulphur
+life_rating = 50
+naval_base = 1
+fort = 1

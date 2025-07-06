@@ -1,0 +1,340 @@
+Key;English;French;German;Polish;Spanish;Italian;Swedish;Czech;Hungarian;Dutch;Portuguese;Russian;Finnish;
+BOS;Bosnia;;;;;;;;;;;;;
+BOS_hms_government;Tsardom of Bosnia;x
+BOS_ADJ;Bosnian;;;;;;;;;;;;;
+BOS_absolute_monarchy;Tsardom Veliki;;;;;;;;;;;;;
+BOS_absolute_monarchy_ADJ;Bosnian;;;;;;;;;;;;;
+BOS_proleterian_dictatorship;SNJB;x
+BOS_fascist_dictatorship;Velika Bosanska Carstvo;x
+BOS_democracy;Bosnian Federation;x
+BOS_prussian_constitutionalism;Tsardom Veliki;x
+BOS_liberal;Liberalno D. Stranka Bosne i Hercegovine;;;;;;;;;;;;;
+BOS_conservative;Stranka Demokratske Akcije;;;;;;;;;;;;;
+BOS_socialist;Demokratska Fronta;;;;;;;;;;;;;
+BOS_reactionary;Partija Demokratskog Progresa;;;;;;;;;;;;;
+BOS_anarcho_liberal;Nezavisni blok;;;;;;;;;;;;;
+BOS_communist;Komunisti?ka Partija;;;;;;;;;;;;;
+BOS_fascist;Bosne Jeden;;;;;;;;;;;;;
+TOR;Tourkias;;;;;;;;;;;;;
+TOR_ADJ;Tourkian;;;;;;;;;;;;;
+bosniak;Visokian;;;;;;;;;;;;;
+chrurk;Latino-Turkish;;;;;;;;;;;;;
+austrian;Austrian;;;;;;;;;;;;;
+SCA;Scandinavian Empire;;;;;;;;;;;;;
+baltic_expansion_title;Unite the Baltics!;;;;;;;;;;;;;
+baltic_expansion_desc;As we established our presense in the Finland and finally ended the Republican Struggle over Scandinavia, we shall expand our influence over Russian Trade Center Novgorod and down to Baltics,Long Live the Swedish Republic!;;;;;;;;;;;;;
+form_germany_DEN_title;Tre Hurra For Tyskland!;;;;;;;;;;;;;
+form_germany_DEN_desc;The great republic of the Danes no longer exists, but the unification of Germany under Danish leadership, as perhaps it was always meant to be, still awaits us. Long live the Tyske Imperium, one people ruled from the great city of Kobenhavn!;;;;;;;;;;;;;
+TYS;Tyskland;;;;;;;;;;;;;
+TYS_ADJ;Tyske;;;;;;;;;;;;;
+TYS_absoulute_monarchy;Tyske Imperium;;;;;;;;;;;;;
+TYS_republic;Tyskland;;;;;;;;;;;;;
+TYS_communist_dictatorship;Tyske Folkerepublik ;;;;;;;;;;;;;
+form_north_german_confederation_DEN_title;Nortyskland-Foderasja!;;;;;;;;;;;;;
+form_north_german_confederation_DEN_desc;As our colonies grew in german coast and people of southern germanic people became a majority, we shall become the leaders of southerners and shall lead them to united Tyskland!;;;;;;;;;;;;;
+danish_norway_title;Norwish Bossom;;;;;;;;;;;;;
+danish_norway_desc;As Norwegians failled to liberate them fully from the Northern scum, we shall embrace them under our bossom and liberate them fully and completely!;;;;;;;;;;;;;
+EVTNAME27802;Lost Control Over Carpathia;;;;;;;;;;;;;
+EVTDESC27802;We failed to put down the rebelions in carpathia, and as the countries around the world started to look down on us and recognize Romania, Hungary and Slovakia we lose our say in the region and have to give up our claims. How unfortunate, our reign shall not forget them and our rule over them for 500 years.;;;;;;;;;;;;;
+EVTOPTA27802;We have nothing we can do...;;;;;;;;;;;;;
+EVTNAME27803;Lost Control Over Greece;;;;;;;;;;;;;
+EVTDESC27803;We failed to put down the rebelions in greece, and as the countries around the world started to look down on us and recognize Greece and their claims. We lose our say in the region and have to give up our claims. How unfortunate, our reign shall not forget them and our rule over them for 500 years.;;;;;;;;;;;;;
+EVTOPTA27803;We have nothing we can do...;;;;;;;;;;;;;
+EVTNAME27804;Lost Control Over Napole;;;;;;;;;;;;;
+EVTDESC27804;We failed to put down the rebelions in Rome, and as the countries around the world started to look down on us and recognize Napoli and their claims. We lose our say in the region and have to give up our claims. How unfortunate, our reign shall not forget them and our rule over them for 300 years. Rome shall not be forgotten!;;;;;;;;;;;;;
+EVTOPTA27804;Romans have stabbed us on our back;;;;;;;;;;;;;
+EVTNAME27805;Lost Control Over Anatolia and Caucauses;;;;;;;;;;;;;
+EVTDESC27805;We failed to put down the rebelions in Anatolia and Caucauses, and as the countries around the world started to look down on us and recognize Turkey, Sorani, Azerbaijan, Armenia and Georgia and their claims. We lose our say in the region and have to give up our claims. How unfortunate, our reign shall not forget them and our rule over them for 400 years.Turks shall not ever try to come to balkans!;;;;;;;;;;;;;
+EVTOPTA27805;Turks are free? Oh no, hopefully they won't come after us...;;;;;;;;;;;;;x
+portuguese_rivalry_title;Northern African Expedition;;;;;;;;;;;;;x
+portuguese_rivalry_desc;§RCosts 20 infamy. §!Portuguese have long rulled over North Africa and has been a problem for a long time! We have to step in and take what's rightfully ours from them and get our access out of Mediterranean Sea!;;;;;;;;;;;;;
+una_facca_una_razza_title;Una Faccia Una Razza!;;;;;;;;;;;;;x
+una_facca_una_razza_desc;We have been brothers with greeks and latin-turks for centuries, this gives us a reason to get them under of bosnian hegemony and embrace them with our Italian ambitions!;;;;;;;;;;;;;x
+SIC;Southern Roman Empire;;;;;;;;;;;;;x
+SIC_ADJ;Roman;;;;;;;;;;;;;x
+SIC_democracy;Southern Roman Republic;;;;;;;;;;;;;x
+NRR;Northern Roman Empire;;;;;;;;;;;;;x
+NRR_ADJ;Roman;;;;;;;;;;;;;x
+NRR_democracy;Northern Roman Republic;;;;;;;;;;;;;x
+form_northern_rr_title;Fratelli Di Roma;;;;;;;;;;;;;x
+form_northern_rr_desc;Since we united north romans, rather than following Roman ambitions and uniting with south, we set a sail to our own way and declare ourselves the Northern Empire of Roman Peninsula.Glory to our Cesare and glory to our nation!;;;;;;;;;;;;;x
+ruler_of_alps_title;Ruler of Alps;;;;;;;;;;;;;x
+ruler_of_alps_desc;Since we claimed the northern roman title, we shall start to claim the Alps as our rightful clay as decendents of Italians!;;;;;;;;;;;;;x
+ruler_of_occitania_title;Ruler of Occitania;;;;;;;;;;;;;x
+ruler_of_occitania_desc;Alps are our homes and latin and germanic people living here are our brothers but our brothers in France and Bosnia are suffering. We have to go there and claim our brothers for our Empire and we shall warn Bosnians of a war for freedom of Romans in Dalmatia!;;;;;;;;;;;;;x
+ruler_of_galia_title;Ruler of Gallia;;;;;;;;;;;;;x
+ruler_of_galia_desc;We have freed our brothers under the rule of France and Bosnia but now we have to unite with them and become one Empire from the forests of Artois to Venician Island!
+form_two_sicilies_title;Fratelli Di Roma;;;;;;;;;;;;;x
+form_two_sicilies_desc;Since we united south romans, rather than following roman ambitions and uniting with north, we set a sail to our own way and declare ourselves the Southern Empire of Roman Peninsula.Glory to our Cesare and glory to our nation!;;;;;;;;;;;;;x
+roman_catalonia_title;Revenge for Catania;;;;;;;;;;;;;x
+roman_catalonia_desc;We were ruled under Aragonese for so long in the not so far past. Now we shall take our revenge and vasalize them instead!;;;;;;;;;;;;;x
+GYN;Aquitanie;;;;;;;;;;;;;x
+GYN_ADJ;Aquitanian;;;;;;;;;;;;;x
+FRU;France-Unie;;;;;;;;;;;;;x
+FRU_absolute_monarchy;Kingdom of France;;;;;;;;;;;;;x
+FRU_proletarian_dictatorship;Ouvriers de la France;;;;;;;;;;;;;x
+FRU_fascist_dictatorship;Anta Baka;;;;;;;;;;;;;x
+FRU_reactionary;Partit de Comuna;;;;;;;;;;;;;x
+FRU_reactionary_2;Partit del Capital;;;;;;;;;;;;;x
+FRU_liberal;Los Seguidors de Joan;;;;;;;;;;;;;x
+FRU_liberal_2;La Libertat Untouc;;;;;;;;;;;;;x
+FRU_liberal_3;La Franca Liura;;;;;;;;;;;;;x
+FRU_conservative;La Peira;;;;;;;;;;;;;x
+FRU_conservative_2;La Franca Unida;;;;;;;;;;;;;x
+FRU_socialist;Las Socialas;;;;;;;;;;;;;x
+FRU_ADJ;French;;;;;;;;;;;;;x
+end_of_the_civil_war_fru_title;End of the Civil War;;;;;;;;;;;;;x
+end_of_the_civil_war_fru_desc;After so much fighting, the civil war has been won by no other than us. This will be a new starting point for France. France will lead nations to how to handle the issues with their minorities in a good manner. Today this is a big step for our nation and the nations of the world together! Viva La Franca!;;;;;;;;;;;;;x
+outer_state_time_title;Enemy Manifesto;x
+outer_state_time_desc;Our enemies have been getting too close to our capital, we are really stuck between a lot of countries that doesn't want us here. We shall strike first to make sure we aren't the ones who are occupied;x
+outer_state_fru_title;Republic of Acceptences!;x
+outer_state_fru_desc;Our republic is known for being accepting of every people living and sharing the same idea of being a nation. We all respect eachother's life styles and cultures. Unfortunately some of our neighbors are not that accepting us as a state though. A war is incoming in our way. We need to be prepared and for that we will ask the opinions of our people. They want to unify!;x
+end_of_the_civil_war_fra_title;End of the Civil War;;;;;;;;;;;;;x
+end_of_the_civil_war_fra_desc;After so much fighting, the civil war has been won by no other than us. This will be a new starting point for France. France will lead nations to how to become a nation state, a nation that is united under one court, one crown and one language. Today this is a big step for our nation and the nations of the world together! Vive La France!;;;;;;;;;;;;;x
+outer_state_fru_title;Kingdom of Kingdoms!;x
+outer_state_fru_desc;Our King, one of the descendents of Valois-Angoulemes, with he conquering Britany, he declares himself the Duke of Britany. This gives us the claims to royal land held by the old Duke of Britany, including the crowns of Pays-Bas and England. Our Monarch shall recieve what's rightfully theirs!;x
+reconstruction_fra;End of Rule;x
+AGO;Augustinian Order;x
+AGO_ADJ;Augustinian;x
+FRA_420;Lesser Britain;x
+british_place;Our Place in Sun;x
+sg_conquest;Unify South Germany;x
+take_capital;Take Capital;x
+negotiated_transfer;Negotiated Transfer;x
+british_place_setup;To make our place in the sun!;x
+british_tech_school;Ruler of The Seven Sea's School;x
+change_capital_to_london_title;England First!;x
+change_capital_to_london_desc;Our monarch has been rulled by the Lesser Britain region for a long time, BUT our kingdom is overwhelmingly English. Therefore we shall reconsider the balance of power in our country and give english throne the respect it deserves(Naval UK allied to France).;x
+reclaim_the_burgundy_throme_title;Reclaim the British Claim Over Burgundian Throne!;x
+reclaim_the_burgundy_throme_desc;Burgundy used to be part of our land under our throne in Lesser Britain, but we lost our lands against HRE in the Wallonian Wars. Now is the right time to claim it!;x
+become_uk_title;Rule Britannia Magna!;x
+become_uk_title;Britannia Magna, A province used to belong to Italian Empire, has never been unified ever since italians ever came to this island. This island has always been unified under the forces from outside of the Island, such as Italians, French, and Britons. It's finally time for it to be united by England, a nation belonging the isles;x
+north_italian;North Roman;
+south_italian;South Roman;
+ROM;Etalania;x
+ROM_ADJ;Etalanian;x
+romanian;Etalanian;x
+PROV749;Italy;x
+form_italy_title;Avanti Roma!;x
+form_italy_desc;By establishing a dominant position on the Roman peninsula, we can secure a national homeland for our people by proclaiming ourselves the motive power of a unified Roman state.;x
+annex_prussia_title;End of German Autonomy;x
+annex_prussia_desc;Idea of a united german nation doesn't seem to be too far off the reality now, and our nation has given germans authority to be able to be more productive for polish crown but it seems the sentiment of unifying with the rest of german fatherlabd seems like an idea that's too dangerous for our dual monarchy, we shall get rid of the german authority and therefore a risk of rebelion to unify with the fatherland.;x
+accept_the_greeks_title;Greeks of the Bosnian Empire;x
+accept_the_greeks_desc;Byzantium was liberated by us and became our vassals after the Battle of Vidin and ever since our people and greek people were like brothers. After the chaos in the civil war is over, we can finally embrace our brothers into the empire!;x
+accept_the_chrurks_title;Turks of the Catholic Empire;x
+accept_the_chrurks_desc;After many years it took in Anakataktisi, many turks especially ones near the coast that were under the Genoese have been converting to catholic faith and they always had better relations with the Byzantines and later on the Bosnian Empire. After our defeat of the Muslim turks in the civil war, they are more likely to be royal to the emperor therefore deserve a higher status than many other ethnicities of our country.;x
+bosnia_in_caucauses_title;Rivalry Against Russia;x
+bosnia_in_caucauses_desc;Russia for years have been our historical rivals and they have been trying to expand into the Caucauses which is rich in iron and historically have been controlled by both nations. But since the civil war we lost our grasp in the region and it's time to reclaim it.;x
+ukranian_spirit;Protest in Poland;x
+ukranian_spirit_desc;After the violent events in Gathering in Warszawa, Many of the Polish people have lost their faiths in the government of being equals to the Slovincians.;x
+italians_in_greece_title;Foot in Aegean;x
+italians_in_greece_desc;For ages, Rome and Greece have been regions interconnected to eachother and always worked with eachother like Eastern Italian Empire being continiued by greeks, and reconquest of Anatolia starting with genoese initiatives. We shall expand ourselves down there meanwhile an unseen chaos is waiting the region;x
+rhein_lig_title;Rheinish Rule;x
+rhein_lig_desc;We, A German nation which expanded towards the lowlands have forgotten our roots and now trying to figure a new one. But a new one doesn't exists. We are german and we have to pursue german dreams.;x
+conquest_low;Small Conquest;x
+integrate_south_germany_title;Integrate Southern Confederation;x
+integrate_south_germany_desc;Over many wars against the southern germans in our Empire, we have usurped the local duchies and proven ourselves as the true successor of the Danubian Confederation. Heil der Vaterland!;x
+annex_augustinian_order_title;War on the Order;x
+annex_augustinian_order_desc;The Augustinian Order has been rulling over the North West Africa for decades now but their theological ways of rulling over a muslim majority land without colonization never supposed to work. Now as their masters we shall send them the Ultimatum to either join our empire and let us send europeans to this land or die and become a colony just like any colony under our reign!;x
+STU;Stralsund Union;x
+STU_ADJ;Dutsisk;x
+STU_absolute_monarchy;Dutsland;x
+STU_proletarian_dictatorship;Arbeterisk Ferenning;x
+STU_fascist_dictatorship;Dutsisk Rik;x
+form_STU_title;Conference of Stralsund;x
+form_STU_desc;Linguists in Denmark and Westfalen have been working on a new language to unify the low german speakers of the south and the danish speakers in the north, and in the conference which took place in Stralsund, they finally showed people of this language and language was accepted as the unifying language of Denmark and Westfalen. This language will be the start of a new era of germanic world;x
+form_STU_DEN_title;Conference of Stralsund;x
+form_STU_DEN_desc;Linguists in Denmark have been working on a new language to unify the low german speakers of the south and the danish speakers in the north, and in the conference which took place in Stralsund, they finally showed people of this language and language was accepted as the unifying language of Denmark. This language will be the start of a new era of germanic world;x
+NORMAL_WAR_INDIAN_COLONIAL_NAME;$ORDER$$FIRST$ Indian Colony Conquest of $STATE$;$ORDER$$FIRST$ conquï¿½te coloniale de $STATE$;$ORDER$$FIRST$e Kolonialeroberung von $STATE$;;$ORDER$ Conquista colonial $FIRST$ de $STATE$;;;;;;;;;x;
+AGRESSION_WAR_INDIAN_COLONIAL_NAME;$ORDER$$FIRST$ Indian Colonial War for $STATE$;$ORDER$$FIRST$ guerre coloniale pour $STATE$;$ORDER$$FIRST$er Kolonialkrieg um $STATE$;;$ORDER$ Guerra colonial $FIRST$ por $STATE$;;;;;;;;;x;
+QNG;Xin;;;;;;;;;;;;;
+QNG_ADJ;Xin;;;;;;;;;;;;;
+QNG_absolute_monarchy;Emperor Xin of China;;;;;;;;;;;;;
+QNG_prussian_constitutionalism;Emperor Xin of China;;;;;;;;;;;;;
+QNG_hms_government;Emperor Xin of China;;;;;;;;;;;;;
+serbian_locals;Serbian Resistance;x
+serbian_locals_desc;Serbians won't let them push around from their own home that easily, n o t  a g a i n;x
+attack_on_virginia_title;Pax Anglicana!;x
+attack_on_virginia_desc;§R First decision that needs to be taken before forming United Federation!!.§! Anglicana, being the only British colony in the new world and weakest of all former colonies, has grown significantly after gaining independence with the colapse of Portuguese Empire, and now taking one step close to unifying older virginian claims!.;x 
+form_uf_ans_title;H.P.O.T.M.;x
+form_uf_ans_desc;§RForms United Federation§!H.P.O.T.M refers to old documents found amongst british plans on Virginia, this plan was not seen substainable for British back in the day due to portuguese presence. This document gives us justification to claim to be the legitimate North American government, it's up to us to realize this dream.;x 
+claim_canada_title;Intergrate Upperstates;x
+claim_canada_desc;We have conquered Northern Dakota Territories, we can form them into their respective states;x
+claim_centralstaten_title;Integrate Mountain-States;x
+claim_centralstaten_desc;We have conquered Mountainous Dakota Territories, we can form them into their respective states;x
+claim_midwest_serbia_title;Integrate Odchrivania;x
+claim_midwest_serbia_desc;Odchrivania, being one of the autonomous regions of our country has been enjoying this autonomy more than many countries and our United Federation is incomplete without the very heart of North America. With many rebelions and many issues, we dealt with serbian autonomy and it's time to declare this to the whole nation!;x
+serbian_autonomy;Serbian Autonomy;x
+serbian_autonomy_desc;Odchrivania, being one of the autonomous regions of American Empires and has been enjoying this autonomy more than many other countries. Serbian people care and will fight for their autonomy;x
+attack_on_anglia_title;Pax Virginica!;x
+attack_on_anglia_desc;§R First decision that needs to be taken before forming United Federation!!.§!British Crown Colony Virginia, is the first colony by the British to recieve local rule. Virginia has always been the strongest colony on North American soil, and it was the loyalest colony. Due to series of wars that have been lost to rebelious Anglican Church, now only few states are left of what was once a great colony. It's time to take our revenge on those pesky Anglicans and damn French.;x 
+form_uf_vrg_title;United Kingdom of Great Britain and Northern America.;x
+form_uf_vrg_desc;§RForms United Federation§!We are the true English government, exiled in North America due to British union over Great Britain. It's time for us to go back home.;x 
+UNF_return_to_home_title;Return Home;x
+UNF_return_to_home_desc;§RFirst step to form The Commonwealth. §!England and English people have been suffering under those pesky Bretons over a decade now. The old English monarch has escaped to the new world and conquered most of it, planning to turn back home one day and reclaim his thrown. That day seems closer than ever. We shall go back to London!;x
+UNF_form_commonwealth_title;Form the Commonwealth;x
+UNF_form_commonwealth_desc;§RForms Commonwealth. §!We have weakened the control of Bretons of Great Britain, and we have captured London. We can form the true Commonwealth, one that UK was always supposed to be rulled by;x
+NOU_anarcho_liberal;Parti des Égaux;x
+NOU_conservative;Les Trôneurs;x
+NOU_liberal;Les Centralistes;x
+NOU_liberal_2;Nouvelle Aube;x
+NOU_socialist;Parti de la Classe Ouvrière;x
+NOU_communist;Nouvelle Commune;x
+NOU_fascist;Anciens Plantateurs;x
+NOU_reactionary;Plantateurs du Sud;x
+buy_cuba_title;Purchase Cobana;x
+buy_cuba_desc;§RRequires 100k, also might need to use 5 infamy.§!Cobana is as small island of the coast of Floride, Since we are so close to them, and local population is quite similar to our people. So we might ask them to join us for some price?;x
+greater_nouvellia_title;French America;x
+greater_nouvellia_desc;§RCosts 10 infamy.§!Nouvellia have been stuck between a rock and a hard place ever since the first time it got discovered by the Spanish. For years Nouvelliens suffered from wars with first Portuguese, then English. Nouvellia lost a lot of land it used to claim in colonial era due to these wars. But now with our new found power and our independence allows us to reclaim those territories. This time we shall succeed under our banner that will fly until the last drop of blood of every Nouvellien is dropped!;x
+slavery_lifted;Slavery Lifted;x
+slavery_lifted_desc;We have lifted of slavery, setting an example to world stage that now we are a free nation where every citizen in our country has equal rights, where man no longer own of his kind. Slavery might have been a practice that's been going on since Romans, since Egyptians, we as a humankind evolve to learn and understand the value each life carries own its own. Now, it's time to embrace our breathern that were force away from their homelands and worked to death for generations;x
+integrate_afro_americans_title;Aftermath of Slavery;x
+integrate_afro_americans_desc;We have lifted of slavery, setting an example to world stage that now we are a free nation where every citizen in our country has equal rights, where man no longer own of his kind. Slavery might have been a practice that's been going on since Romans, since Egyptians, we as a humankind evolve to learn and understand the value each life carries own its own. Now, it's time to embrace our breathern that were force away from their homelands and worked to death for generations;x
+conquered_india;Conquerors of East India;x
+conquered_india_desc;We have conquered a part of India, now we need to wait for a year to attack again;x
+france_inner_state;Peaceful France;x
+france_inner_state_desc;Instead of following a path of destruction, our country decided a peaceful co-existence with our neighbors, making our people feel more secure about their futures;x
+reconstruction_fra;Resocietation;x
+reconstruction_fra_desc; Our society has diverged far from what we anticipated, time to force it into convergence;x
+take_native_state;Manifest Destiny;x
+take_native_state_setup;The natives of Americas are yet to be conquered;x
+take_native_state_short;Manifest Destiny;x
+NORMAL_WAR_NATIVE_COLONIAL_NAME;$ORDER$$FIRST$ Conquest of $STATE$;x
+AGRESSION_WAR_NATIVE_COLONIAL_NAME;$ORDER$$FIRST$ Native Colonial War for $STATE$;x
+conquered_native;Conquered Natives;x
+conquered_native_desc;We need to wait until our truce is over to go to war again;x
+form_WSD_title;Three Hurrays For Wesser-Donau League!;x
+form_WSD_desc;We came to agreement with our allies in HIE and it is time to attack destroy HIE once and for all, And unite germans that are afraid to be part of surrounding states. Time for us to take a dip in the river of Nationalism and Imperialism!;x
+form_RHI_title;Frankish Nationalism;x
+form_RHI_desc;Franks are a mix culture between Germans, Dutch and French (Think of it as Luxemburgish irl) and for many years it was considered same as German. But today, with the union of two countries with Frankish cultural background and being based around the Rhine river, we shall prove the world that how different Frankish culture is from German culture.;x
+hie_province;Princes of HIE;x
+hie_province_desc;Princes of HIE, even if not politically represented, still exist.;x
+hie_country;Tribute to the Emperor;x
+hie_country_desc;We need to pay tribute to the emperor as part of HIE;x
+hie_emperor;Holy Emperor of Italy and Germany;x
+hie_emperor_desc;We are the Emperor of Holy Italian Empire;x
+end_hie_title;End Holy Italian Empire;x
+end_hie_desc;Holy Italian Empire has been an annoying entity since the middle ages. All of its subjects are disloyal, the political entity is unstable and it does nothing but empower Swiss monarchy. We occupied the capital of Holy Italian Empire and we can destroy the Holy Crown once and for all.;x
+integrate_baden_wurttemberg_title;Integrate German Vassals;x
+integrate_baden_wurttemberg_desc;Baden Württemberg has been our loyal vassals inside HIE, they have been helping with our wars and our cause. We thought if we are going to integrate everyone into our empire, we should start with them, they'd be happy to join us afterall;x
+expansion_WSD_title;Ruler of Three Rivers;x
+expansion_WSD_desc;§RRequires Violating Austrian Neutrality and 10 infamy.§! Past civilizations depended heavily on the Rhine river and Danube to grow and trade. These rivers are good borders to defend ourselves from oncomming wars like ones in balkans and from Swiss whom might try to retake everything to ensure their existence, especially considering the Romans;x
+expansion_WSD_west_title;Southern Expedition;x
+expansion_WSD_west_desc;§RTirol will be returned to Austria.§! Southern Germans who are left under the control of the Swiss are unfortunately suffering especially ones in Baden and Wurttemberg, we need to go ahead and help our breathern and make sure we keep the peace in the balkans and Roman Peninsula. We should totally support the idea of having Austria as a neutral state to protect us from the things happening in balkans, even tho that might go against our interest on Danube;x
+violate_neutrality_title;Violate Austrian Neutrality;;;;;;;;;;;;;
+violate_neutrality_desc;The Austrians may have declared themselves 'neutral', but if they believe that will stop us-- if they believe the opinion of any of their allies will stop us -- then they are sorely mistaken.;;;;;;;;;;;;;
+scandinavia_to_union_title;Scandinavia to the Union!;x
+scandinavia_to_union_desc;After Conference of Stralsund, our influence in scandinavia has started to increase. We believe that these countries are also linguistically close to our home in Denmark. This linguistic union of people shall grow larger if possible and that can be achieved via expansion;x
+expansion_STU_title;Austsetlazonge;x
+expansion_STU_desc;With Ostsiedlung, many of German people immigrated to east of Oder and Vistula. These german people kept in contact with Holy Italian Empire and have found their own country when they fought against Slovincians. Now Slovincian crown has reconquered them back to their crown. We shall "liberate" them.;x
+frankish_winds;Winds of Frankish Revolt;x
+frankish_aggression;Frankish Chaos;x
+frankish_uprising;Frankish Uprsing;x
+form_netherlands_title;Ruller of 7 Seas;x
+form_netherlands_desc; Netherlands or the Low Lands, are colection of regions that have been dominated by different groups. ALl of these many groups being Traders of Holland, Sailors of Zeeland, Farmers or Friesland, Aristocracy of Lower Wallonia and Militants of Upper Wallonia. We have gathered control and influence over this region, and with the aproval of the both churches and people, we shall unify into one strong country!;x 
+end_of_hie;End of the Holy Italian Empire;x
+german_revolt_title;Ein Volk, Eine Nation;x
+german_revolt_desc;(§R Migth end with war with Frankia/Wesser-Donau §!) Ein Volk, Eine Nation is a popular book that was written in 1854 by Otto Von Bismarck, agitating for one and only unified German state. Due to the current politics of German region, that seems nothing more than a dream. But there are many of the common folk who deeply believe in this dream and has organized marches and parades. Common man ask for this person to give out a speech, for that speech to be heard in at least all of Low German region and create a Low North German state as a stepping stone for an actual German state.;x
+changed_focus;Change of Sphere of Influence;x
+changed_focus_desc;We have decided to change our goal, we have to wait for 5 years if we want to change it again;x
+change_focus_title;Change of Heart;x
+change_focus_desc;You can change which country you want to form if your plans didn't go as intended, but be careful there is a 10 year cooldown period;x
+int_baden_wurttemberg;Integrated Baden-Württemberg;x
+south_germany_integre;Integrated Bavarians;x
+form_hie_title;Thousand Year Reich;x
+form_hie_desc;§BRequires to Sphere all german nations and likes of Liege, Byzantines, and North Romans(Italians). Also you can check out which provinces have the modifier "Princes of HIE". Those who have that modifier in the HIE cores are members of HIE.§! Holy Italian Empire has been a thing for almost thousands of years. It was always supposed to be a feudal empire where local duchies and counts held more power than the Emperor when it came to local issues and such. But with ideologies like Nationalism and State Nations, idea of a unified Italian Empire where the Caeser was the sole power became more popular. With the Caesers proven power over his vassals, this dream is one that's about to become a reality. Ave Caesari Nostro Qui Totam Italiam Coniungit!;x 
+rhinish_crisis_title;Crisis in the Rhineland;x
+rhinish_crisis_desc;Frankish population in the the rhines have seen what has happened in Denmark and been effected to put up similar demonstrations towards the government. Their desire to be unified under Germany cannot be helt back at this point. One of our ministers have suggested us to make a deal with the Danish and Liege, for Rhineland we will offer them Holland. Hopefully that should be acceptable to Belgians.;x
+FRA_412;Alsace;x
+FRA_413;Lorraine;x
+european_raj;March into Indias;x
+european_raj_setup;Select a province;x
+european_raj_short;$ACTOR$ receives $STATE$ from $RECIPIENT$;x
+european_raj_desc;We can colonize India by state by state. However keep in mind that we have to wait a year after peace to use this Casus Belli again;x
+GC_NAME;Vremena Pada Carstva;x
+GC_DESC;After the war of Francea in Europe, many of the past empires have found themselves under the pressure of national uprisings, Veliki Tsar of Balkans and Byzantium lost control of Hungary, Romania. And now Turks and Greeks are also revolting. Scandinavian people have risen up against their monarchy. Holy Italian Empire has issues with German nationalism replacing the old Imperial systems. With the current trend of revolutions against monarchs, and rise of industrialism, Once again we might see Roman peninsula dominating European afairs. All is yours to imagine.;x
+dismantle_hie;Dismantle Holy Italian Empire;x
+dismantle_hie_desc;Dismantle the Holy Italian Empire, which has outgrown its usefulness;x
+dismantle_hie_setup;Dismantling Holy Italian Empire;x
+dismantle_hie_short;Dismantle Holy Italian Empire;x
+NORMAL_WAR_DISMANTLEHIE_NAME;$ORDER$$FIRST$ War of Dismantling of HIE;x
+AGRESSION_WAR_DISMANTLEHIE_NAME;$ORDER$$FIRST$ War of Dismantling of HIE;x
+cooldown_hie_dis;Cooldown against HIE;x
+cooldown_hie_dis_desc;Cooldown period for us to be able to use this cb again;x
+slovincian;Slovincian;x
+PROV546;Scetinj;x
+PROV679;Kòlobrcheha;x
+PROV680;Kòschalenø;x
+PROV681;Kòscérchënø;x
+PROV682;Wrátislaw;x
+PROV683;Walbrchich;x
+PROV684;Opolí;x
+PROV685;Katovice;
+PRU_690;East Pomerania;x
+PRU_695;Prussia;x
+PRU_546;West Pomerania
+PROV690;Dunjskimjastô;x
+PROV691;Wejrowø;x
+PROV692;Wôlc;x
+PROV694;Tôrnj;x
+PRU_701;Ôgolna Slowinjscø;x
+PROV699;Pôsnónj;x
+PROV700;Bëdgòscø;x
+PROV702;Lwów;x
+RUS_959;Wolyn;x
+PLC_706;Mazowieckie;x
+RUS_706;Pòrénch Slôwinjsc;;;;;;;;;;;;x
+polish_golden_age;Successful Demonstrations;x
+polish_golden_age_desc;Demonstrations held by the Polish citizens were effective to change the government and has led to prosperity in these provinces;x
+genius_kid;Leader of the Nation;x
+genius_kid_desc;Our heir has grown up to be a very good leader, and now we are blessed to be ruled under him;x
+polish_assimilation;Rule of Fear;x
+polish_assimilation_desc;As the events of Bloody Thursday spread around the country, more and more polish people are giving up their national identity for exchange of secure lives;x
+slovincian_slovakia_title;East of the West;x
+slovincian_slovakia_desc;Slovakia is one of the members of West Slavic family. It's been historically part of Hungary until Bosnia subjugated both of them. Now, Slovakia that recently got its independence shall once and for all join our nation and help us in our venture to unite West Slavs;x
+slovincian_czechia_title;Crown of Bohemia;x
+slovincian_czechia_desc;Crown of Bohemia has been part of the Swiss ever since the partition of Bohemia in 1600s. Due to Trislavia losing more lands later on to the Holy Italian Empire, Silesia was take away from us and all of Bohemia except Trescin got under the rule of the Emperor. But with the conquest of Prussia from the Empire in early 1800s, many people have figured that the Emperor was weak, and the reconquest of Bohemia was near. It's time for reuniting the West Slavic family, folks!;x
+true_western_slavia_title;Form Zapadoslavia;x
+true_western_slavia_desc;West Slavs have always been under the rule of the Germans, always have been threated like subjects, only Bohemia and Trislavia could achieve to get some resepect from Westerners. But with unification of our people, this will change. Our lands, our language and our pride will rule over all of us, all of  the Western Slavs, Slava Zapadoslaviu!;x
+baltic_dominance_title;Flow of Trade;x
+baltic_dominance_desc;The Baltic trade has always been the most well paying trade we took place. Baltic nations were usually free to have their own trade with no one influencing them, due to gentlemens agreement, but now with a power vacuume that was left in the Baltic node, we think we shall cease this opportunity and integrate the Baltic states to our union;x
+annex_lithuania_title;Annex Lithuania;x
+annex_lithuania_desc;Lithuania has enjoyed authonomy under our rule since the middle ages, but with the rise of the nationalism and the enemies that are surrounding and threathening both of our nations, we have decided that they shall join our union fully and protect us, as we always protected them from Scandinavians and Russians;x
+ruthenian_ambition_setup_title;Integration of the Vostock;x
+ruthenian_ambition_setup_desc;The crownlands of Ruthenia were more autonomous than many other Slavic state found in our union. With the rise of the Pan-Slavism, and Ukraine joining to the union to accomplish those Pan-slavic ambitions, we shall take the first step and integrate Ruthenia fully to the Union.;x
+ruthenian_ambition_second_title; Lands of the Sunrise!;x
+ruthenian_ambition_second_desc;With all of Ruthenia under our control, now it's time for the next action, Invading Russia and integrating it to our Empire. With this, Russians and Ruthenians will finally be unified under one state, Under our Union!;x
+form_kievan_rus_title;Form Kievan Rus';x
+form_kievan_rus_desc;Kievan Rus', also known as Kyivan Rus', was the first East Slavic state and later an amalgam of principalities in Eastern Europe from the late 9th to the mid-13th century. Encompassing a variety of polities and peoples, including East Slavic, Norse, and Finnic, it was ruled by the Rurik dynasty, founded by the Varangian prince Rurik. The name was coined by Russian historians in the 19th century to describe the period when Kiev was preeminent. At its greatest extent in the mid-11th century, Kievan Rus' stretched from the White Sea in the north to the Black Sea in the south and from the headwaters of the Vistula in the west to the Taman Peninsula in the east, uniting the East Slavic tribes.;x
+become_slovincia_title;Become Slovincia;x
+become_slovincia_desc;We have lost our control over the Trislavia, it's time for us to abandon imperialistic ambitions and set a new goal as a nation state;x
+annex_lithuania_title;Annex Ukraine;x
+annex_lithuania_desc;Ukraine has enjoyed authonomy under our rule since the middle ages, but with the rise of the nationalism and the enemies that are surrounding and threathening both of our nations, we have decided that they shall join our union fully and protect us, as we always protected them from Bosnians and Russians;x
+end_of_tatar_autonomy_title;End of Tatar Autonomy;
+end_of_tatar_autonomy_desc;Reminiscence of the Great Horde, Tatar people have had great influence in our politics and our state as a whole. Our Czar is Tatar, our economy is being suplied with Tatar trade. But in the recent years, as our nation and Russian irredentism grew, Tatars have started lose their powers. Their colonies were sold to cossacks, the frontiers were replaced with slavic people. And with the rise of nationalism, and the nation states, Our administration has led to the decision of incorporate Tatars to our state. This shall put us into an advantage in the times of our rivals becoming weaker and weaker for us to rise to great power;x 
+ruthenian_path_title;Gates of Europe;x
+ruthenian_path_desc;§R Mutually exclusive with the Form Golden Horde decision §!Russia is considered an Asian nation, disregarded when it came to the politics of Europe, a back doors to China. After being beaten by Scandinavians and Slovincians, Our Knyaz was expelled to China. Instead Tatars took over our crown and defended the Tatar interests only. However, with the end of the Tatar era over our realm, now we can reclaim the lost territories to the Poles and Slovincians and Ruthenians, and show our might to the European continent;
+ruthenian_path_second_title;Claim Ruthenia;x
+ruthenian_path_second_desc;We have proven our European neighbors that we are not just backwards Mongol nation that has been overdue it's existance, but a mighty empire that is reminiscent of Kievan Rus';x
+form_russia_major_title;The Mighty Russian Empire;x
+form_russia_major_desc;We have claimed our place in Europe, reconquered our lands from the foreigners. Integrated Ukrainians and Byelorussians. It's time for our Czar to be crowned as the Emperor of the Rus', and decide our further imperialistic ambitions;x
+form_golden_horde_title;Form Golden Horde;x
+form_golden_horde_desc;§R Mutually exclusive with the Gates of Europe decision §! Golden Horde has been the predecessor state to the Tatar kingdoms and Russian state. It was highly dominated by the Tatars at the time, and Moscovy was created as a puppet under Golden Horde to collect tribute from the Russian people. The roles have changed in many centuries. Now russians are the ones collecting tributes from the Tatars. But our ambitions and history remains one. A strong Asian state that terrorizes Europe. So we might as well put our differences aside and begin working together under the new Empire;x
+down_in_caucausia_title;Claim Caucasia;x
+down_in_caucausia_desc;§R Requires less than 15 infamy §!Caucauses have changed hands multiple times in history, Ilkhanate, Georgians, Persians and Bosnians all had their control over this important region. Thanks to the rebellion happened in all over Bosnia, Caucauses were free of rule for the first time in history, and united against outsiders. However they are still weaker than us, we shall take advantage of that;x
+deal_with_kurds_title;Doors to Anatolia;x
+deal_with_kurds_desc;Eastern Anatolia is the gateway to the rest of Anatolia, Turks have conquered and cooperated with Kurds in order to beat Greeks, so it's very natural for us to do the same.;x
+accept_the_kurds_title;Peace with Kurds;x
+accept_the_kurds_desc;Now the Eastern Anatolia has been incorporated to our empire, we can work with kurds, fellow muslims, to stabilize the region and integrate them to our society.;x
+turkish_anatolia_title;Battle for Ankara;x
+turkish_anatolia_desc;Ankara has been an important fort for many invaders of Anatolia before, Ilkhanates, Seljukids, Ottomans, and Mongols. If we are determined to rule over Anatolia, it is important that we take control over this fort, and rule over Pontus. It's only natural for us to claim this land for our great empire;x
+accept_the_turks_title;True Heir to the Roman Empire;x
+accept_the_turks_desc;We have conquered the lands of Rum, lands that have been home to greeks, romans and turks for centuries. Lands that make us one step closer to ruling over the lands of Rome. But for that we need to gain power and stabilty over these lands as much as we can, so we need to give turks rights and accept them into our society. We shall all together work for our Empire!;x
+bosnian_anatolia_title;Doors of Mediterranean;x
+bosnian_anatolia_desc;Another outpost used by Romans were Dorylaion, which kept them alert from all the attacks possible from Pontus and plains of Anatolia. This city caries an important value for us if we are willing to conquer all of Anatolia. This will probably put us in a hard situations with surrounding countries, but we have started to go through this path, so we shall see the end of it as well;x
+push_to_whitesea_title;Push to the West;x
+push_to_whitesea_desc;West Anatolia, or also known as Asia Minor, controlled by Greeks, Romans, Byzantines, Persians and many more... After the fall of Ottomans, these lands became under control of Byzantines for a while again, but with the union between Slavs and the Byzantines the land has entered a long period of Bosnian control. With Genoese influence in the area after the fall of Ottomans, many people moved here. People now who speak a turkic languague, practice Catholicism, and have Greek traditions and cuisine. A peaceful land that has been fought over for so long. The war that never ends for peace.;x
+claim_centralasiaRUC_title;Pacify the Deserts;x
+claim_centralasiaRUC_desc;Central Asia has been always a hard rock to deal for us, The hordes have been habitating there and reorganizing to counter against us from there. The Desert although being weaker compared to other places still kept us from attacking the tribes down there for several years. But with our technologies and superiour numbers we can plan an attack and push down towards India;x
+claim_persiaRUC_title;Reclaim Ilkhanate;x
+claim_persiaRUC_desc;One of the heirs to the Mongol Empire, Ilkhanate, who was settled around Persia today has been a strong nation that had a strong sense of unity in the region until various tribes from central asia taking control over the lands again. As we claimed Central Asia, we shall claim Persia for ourselves as well and get one step closer to the colonial race that's been taking place in India;x

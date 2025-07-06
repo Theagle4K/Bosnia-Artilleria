@@ -1,0 +1,6 @@
+owner=SWI
+controller=SWI
+add_core=SWI
+add_core=HIE
+trade_goods = fruit
+life_rating = 32

@@ -1,0 +1,113 @@
+political_decisions ={
+
+	end_of_the_civil_war_fru  = {
+	
+		picture = occitan
+		
+		potential = {
+			tag = FRU
+			has_global_flag = civil_war_has_happened
+			NOT = { 
+				war_with = FRA
+				has_global_flag = civil_war_has_finished 
+			}
+		}
+		allow = {
+			NOT = { 
+				exists = FRA
+				exists = BYZ 
+				exists = GYN
+			} 
+		}
+		effect = {
+			prestige = 25
+			set_global_flag = civil_war_has_finished
+			FRA = { 
+				all_core = 
+				{ 
+					add_core = FRU
+					remove_core = FRA 
+				}
+			}
+			GYN = { all_core = { remove_core = GYN } }
+			BYZ = { all_core = { remove_core = BYZ } }
+			OCC = { all_core = { remove_core = OCC } }
+			capital = 425
+			set_country_flag = fup_wins
+		}	
+	}
+	outer_state_fru = {
+		potential = {
+			has_global_flag = outer_state_t
+			NOT = { has_global_flag = outer_state_n }
+			tag = FRU	     
+			year = 1840
+		}
+		allow = {
+			THIS = { 
+				all_core = { 
+					owned_by = THIS
+				}
+			}
+			is_greater_power = yes
+			prestige = 75
+			war = no 
+		}
+		effect = {
+			SPA_492 = { add_core = THIS }
+			SPA_498 = { add_core = THIS }
+			505 = { add_core = THIS }
+			504 = { add_core = THIS }
+			503 = { add_core = THIS }
+			472 = { add_core = THIS }
+			SAR_720 = { add_core = THIS }
+			add_accepted_culture = catalan
+			add_accepted_culture = breton
+			add_accepted_culture = swiss
+			add_accepted_culture = wallonian
+			badboy = 25
+			set_global_flag = outer_state_n
+			prestige = 20	
+		}
+	}
+	outer_state_time = {
+		potential = {
+			has_global_flag = outer_state
+			NOT = { has_global_flag = outer_state_t }
+			OR = {
+				tag = FRA
+				tag = FRU
+			}
+			year = 1840
+		}
+		allow = {
+			THIS = { 
+				all_core = { 
+					OR = { 
+						owned_by = THIS
+						owner = { is_vassal = yes }
+					}
+				}
+			}
+			is_greater_power = yes
+			prestige = 45
+			war = no 
+		}
+		effect ={
+			#relation = { who = LIG value = -400 }
+			#diplomatic_influence = { who = LIG value = -400 }
+			relation = { who = ENG value = -400 }
+			diplomatic_influence = { who = ENG value = -400 }
+			FRA_420 = { add_core = THIS }
+			#FRA_400 = { add_core = THIS }
+			#FRA_412 = { add_core = THIS }
+			#FRA_413 = { add_core = THIS }
+			FRA_411 = { add_core = THIS }
+			#FRA_404 = { add_core = THIS }
+			set_global_flag = outer_state_t
+			prestige = 10	
+		}
+	}
+
+
+}

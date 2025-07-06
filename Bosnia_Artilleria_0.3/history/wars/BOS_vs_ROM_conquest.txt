@@ -1,0 +1,25 @@
+name = "Reconquest of  Dobridzha"
+
+1835.10.2 = {
+	add_attacker=BOS
+	add_defender=ROM
+
+	war_goal = {
+		casus_belli = acquire_core_state
+		actor = BOS
+		receiver = ROM
+		country = ROM
+		state_province_id = 674
+	}
+		war_goal = {
+		casus_belli = status_quo
+		actor = ROM
+		receiver = BOS
+		country = BOS
+	}
+
+}
+1836.6.6 = {
+	rem_attacker = BOS
+	rem_defender = ROM
+}
